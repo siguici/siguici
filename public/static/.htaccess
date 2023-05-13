@@ -1,0 +1,7 @@
+<IfModule mod_negotiation.c>
+	Options -MultiViews -Indexes
+</IfModule>
+
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php80___lsphp .php .php8 .phtml
+</IfModule>
