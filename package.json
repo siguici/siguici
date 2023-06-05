@@ -2,7 +2,7 @@
   "name": "sigui.ci",
   "description": "Sigui's web application",
   "engines": {
-    "node": ">=15.0.0"
+    "node": ">=16.20.0"
   },
   "private": true,
   "scripts": {
