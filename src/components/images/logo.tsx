@@ -1,4 +1,4 @@
-export const SiguiLogo = ({ width = 40, height = 40 }: { width?: number; height?: number }) => (
+export const SiguiLogo = ({ width = 32, height = 32 }: { width?: number; height?: number }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
