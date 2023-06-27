@@ -1,0 +1,9 @@
+.home {
+  @apply hero min-h-screen bg-base-200 text-2xl;
+
+  @media screen and (min-width: 768px) {
+    & p {
+      @apply text-4xl;
+    }
+  }
+}
