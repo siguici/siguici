@@ -64,12 +64,12 @@ The production build will generate client and server modules by running both cli
 pnpm build # or `yarn build`
 ```
 
-## Express Server
+## Deno Server
 
-This app has a minimal [Express server](https://expressjs.com/) implementation. After running a full build, you can preview the build using the command:
+This app has a minimal [Deno server](https://deno.com/manual/examples/http_server) implementation. After running a full build, you can preview the build using the command:
 
+```shell
+pnpm serve
 ```
-pnpm deploy
-```
 
-Then visit [http://localhost:8080/](http://localhost:8080/)
+Then visit [http://localhost:3000/](http://localhost:3000/)
