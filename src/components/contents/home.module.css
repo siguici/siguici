@@ -1,9 +1,13 @@
 .home {
-  @apply h-full w-auto -mt-20 flex flex-col items-center justify-center text-2xl;
+  @apply h-full w-auto relative flex flex-col items-center justify-center text-2xl;
 
   @media screen and (min-width: 768px) {
     & p {
       @apply text-4xl;
     }
+  }
+
+  &-content {
+    @apply text-center -mt-20;
   }
 }

@@ -4,7 +4,7 @@ import styles from './home.module.css';
 export default component$(() => {
   return (
     <div class={styles.home}>
-      <div class="hero-content text-center">
+      <div class={styles['home-content']}>
         <div>
         <h1 class="text-6xl font-bold">
           Welcome to <span class="text-blue-500">Sigui</span>!
