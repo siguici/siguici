@@ -11,3 +11,19 @@
     @apply text-center -mt-20;
   }
 }
+
+.buttons {
+  @apply flex flex-wrap justify-center space-x-8 mt-6;
+
+  & .button {
+    @apply rounded py-3 px-5;
+
+    &-primary {
+      @apply bg-blue-300 ring hover:bg-blue-400 focus:bg-blue-600 ring-blue-500;
+    }
+
+    &-secondary {
+      @apply bg-violet-300 ring hover:bg-violet-400 focus:bg-violet-600 ring-violet-500;
+    }
+  }
+}
