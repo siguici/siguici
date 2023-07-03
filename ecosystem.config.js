@@ -1,3 +1,9 @@
+const dotenv = require('dotenv');
+const dotenvExpand = require('dotenv-expand');
+
+const Env = dotenv.config();
+dotenvExpand.expand(Env);
+
 module.exports = {
   apps : [{
     name: 'sigui.ci',
@@ -10,6 +16,7 @@ module.exports = {
     restart_delay: 1000,
     env: {
       NODE_ENV: 'production',
+      ...process.env,
     },
     env_production: {
       NODE_ENV: 'production',
