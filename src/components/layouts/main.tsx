@@ -5,12 +5,12 @@ import Footer from '~/components/partials/footer/footer';
 
 export default component$(() => {
   return (
-    <>
-      <Header />
+    <div class="grid grid-cols-1 grid-rows-[auto_1fr_auto] h-screen w-screen">
+      <Header/>
       <main>
-        <Slot />
+        <Slot/>
       </main>
-      <Footer />
-    </>
+      <Footer/>
+    </div>
   );
 });

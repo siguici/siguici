@@ -1,19 +1,8 @@
+.footer {
+  @apply bg-slate-950 text-slate-50 py-3;
+}
+
 .paragraph {
-  @apply block text-white text-xs text-center no-underline;
-
-  & span:not(.spacer) {
-    @apply inline-block;
-  }
-
-  & span {
-    @media screen and (min-width: 768px) {
-      & {
-        @apply inline;
-      }
-    }
-  }
+  @apply block text-sm text-center no-underline;
 }
 
-.spacer {
-  @apply hidden py-0 px-4;
-}

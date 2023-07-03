@@ -1,22 +1,40 @@
 .wrapper {
-  @apply bg-base-100;
+  @apply flex justify-between bg-slate-50 p-5 border-b-4;
 }
 
-.header {
-  & ul {
-    @apply flex m-0 p-0 list-none gap-8;
+.brand {
+  @apply font-black text-xl text-slate-950;
+}
+
+.navbar {
+  &-start {
+    @apply self-start;
+  }
+
+  &-end {
+    @apply self-end;
+  }
+}
+
+.menu {
+  @apply flex m-0 p-0 list-none gap-8;
+
+  &-horizontal {
+    @apply flex-row;
+  }
+
+  &-vertical {
+    @apply flex-col;
   }
 
   & li {
-    @apply hidden m-0 p-0 text-xs;
+    @apply inline-flex content-center items-center m-0 p-0;
 
     & a {
-      @apply btn btn-link content-center;
-    }
+      @apply text-slate-900 hover:text-slate-700 active:text-slate-800;
 
-    @media (min-width: 450px) {
-      & {
-        @apply inline-block;
+      & svg {
+        @apply w-6 h-6;
       }
     }
   }
