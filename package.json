@@ -25,6 +25,7 @@
   "devDependencies": {
     "@builder.io/qwik": "1.2.4",
     "@builder.io/qwik-city": "~1.2.4",
+    "@qwikest/icons": "^0.0.8",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/nesting": "0.0.0-insiders.565cd3e",
     "@tailwindcss/typography": "^0.5.9",

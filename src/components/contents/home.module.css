@@ -1,5 +1,5 @@
 .home {
-  @apply hero min-h-screen bg-base-200 text-2xl;
+  @apply h-full w-auto -mt-20 flex flex-col items-center justify-center text-2xl;
 
   @media screen and (min-width: 768px) {
     & p {
