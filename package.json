@@ -1,8 +1,12 @@
 {
   "name": "sigui.ci",
-  "description": "Sigui's web application",
+  "description": "Sigui's web application.",
   "engines": {
     "node": ">=16.20.0"
+  },
+  "packageManager": "pnpm@8.6.6",
+  "publishConfig": {
+    "access": "public"
   },
   "private": true,
   "scripts": {
