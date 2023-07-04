@@ -1,18 +1,23 @@
 .wrapper {
-  @apply flex justify-between bg-slate-50 p-5 border-b-4;
+  @apply grid grid-rows-1 grid-cols-2 justify-between bg-slate-50 p-5 border-b-4;
 }
 
 .brand {
-  @apply font-black text-xl text-slate-950;
+  @apply font-black text-xl text-slate-950 h-16;
+  content: url('/logo.svg');
 }
 
 .navbar {
+  &-start, &-end {
+    @apply flex items-center h-full;
+  }
+
   &-start {
-    @apply self-start;
+    @apply self-start justify-start;
   }
 
   &-end {
-    @apply self-end;
+    @apply self-end justify-end;
   }
 }
 
