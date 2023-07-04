@@ -28,7 +28,7 @@ export default component$(() => {
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com/siguici/" target="_blank" rel="noreferrer" aria-label="Linkedin">
+              <a href="https://linkedin.com/in/siguici/" target="_blank" rel="noreferrer" aria-label="Linkedin">
                 <LinkedinIcon/>
               </a>
             </li>
