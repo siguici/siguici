@@ -2,14 +2,6 @@
 
 [![Hi 👋,  I'm Sigui.  💻 I'm a Senior Fullstack Web Developer, Freelancer, Open-sourcer and Digital Nomad. 🌍](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0ea5e9&width=1440&lines=Hi+👋,+I'm+Sigui.+💻+I'm+a+Senior+Fullstack+Web+Developer,+Freelancer,+Open-sourcer+and+Digital+Nomad.+🌍)](https://sigui.ci)
 
-![68747470733a2f2f7468756d62732e6766796361742e636f6d2f4576696c4e657874446576696c666973682d736d616c6c2e676966](https://user-images.githubusercontent.com/89845641/220167426-0c5f630e-6d56-4617-9775-71c2bd025b4f.gif)
-
-[![Profile Details](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=siguici&theme=tokyonight)](https://github.com/siguici)
-
-[![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=siguici&layout=compact&hide_border=true&theme=tokyonight)](https://github.com/siguici)
-
-![github-contribution-grid-snake](https://user-images.githubusercontent.com/89845641/218791674-c52db856-24d2-429f-8867-170c365730d1.svg)
-
 ## 🔖 Contents
 
 - [🎉 Welcome to Sigui's GitHub profile](#-welcome-to-siguis-github-profile)
@@ -23,9 +15,7 @@
 
 ## 👨‍💻 Professional profile
 
-Expert Fullstack Developer able to manage all business logic related to the analysis, design, development and deployment of a web, mobile, desktop or command line application.
-
-Passionate about design, creativity and innovation.
+Fullstack Developer able to manage all business logic related to the analysis, design, development and deployment of a web, mobile, desktop or command line application. Passionate about creativity and innovation.
 
 Autodidact, freelancer and digital nomad. Likes to work remotely.
 
@@ -76,8 +66,6 @@ Autodidact, freelancer and digital nomad. Likes to work remotely.
 [![Composer](https://img.shields.io/badge/composer-black?style=for-the-badge&logo=composer)](https://packagist.org/users/siguici/packages/)
 [![Packagist](https://img.shields.io/badge/packagist-black?style=for-the-badge&logo=packagist)](https://packagist.org/users/siguici/)
 
-[![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=siguici&langs_count=10&exclude_repo=&layout=default&card_width=default&hide_border=true&theme=tokyonight)](https://github.com/siguici)
-
 ## 🏆 Réalisations
 
 - 🌟 Several open-source projects available on [Sikessem](https://github.com/sikessem),
@@ -96,12 +84,14 @@ Graduated with a Bachelor's degree in Business Intelligence and a Master's degre
 
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=siguici&count_private=true&show_icons=true&include_all_commits=true&theme=tokyonight) ![GitHub Stats](https://github-readme-streak-stats.herokuapp.com/?user=siguici&card_width=default&theme=tokyonight)](https://github.com/siguici)
 
+[![Profile Details](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=siguici&theme=tokyonight)](https://github.com/siguici)
+
+[![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=siguici&hide_border=true&layout=donut-vertical&langs_count=10&theme=tokyonight)](https://github.com/siguici)
 ***
 
 <p align="center"><a href="https://github.com/siguici"><img alt="Profile views" src="https://komarev.com/ghpvc/?username=siguici"/></a><br/><sub>Made with ❤︎ by <a href="https://twitter.com/intent/follow?screen_name=siguici" style="content:url(https://img.shields.io/twitter/follow/siguici.svg?label=@siguici);margin-bottom:-6px">@siguici</a>.</sub></p>
 
 <!--
-
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
 - 👯 I’m looking to collaborate on ...
