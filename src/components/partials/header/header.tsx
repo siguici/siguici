@@ -1,4 +1,6 @@
 import { component$ } from '@builder.io/qwik';
+import { Form } from '@builder.io/qwik-city';
+import { useAuthSession, useAuthSignin } from '~/routes/plugin@auth';
 import {
   SiGithub as GithubIcon,
   SiTwitter as TwitterIcon,
@@ -7,6 +9,8 @@ import {
 import styles from './header.module.css';
 
 export default component$(() => {
+  const session = useAuthSession();
+  const signIn = useAuthSignin();
   return (
     <header class={styles.header}>
       <div class={[styles.navbar, styles.wrapper]}>
@@ -35,6 +39,8 @@ export default component$(() => {
           </ul>
         </div>
       </div>
+      <p>{session.value?.user?.email}</p>
+      <button onClick$={() => signIn.submit({ providerId: 'github', options: { callbackUrl: 'http://qwik-auth-example.com/dashboard' } })}>Sign In</button>
     </header>
   );
 });
