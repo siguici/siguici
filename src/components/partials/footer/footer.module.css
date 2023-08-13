@@ -1,8 +1,0 @@
-.footer {
-  @apply bg-slate-950 text-slate-50 py-3;
-}
-
-.paragraph {
-  @apply block text-sm text-center no-underline;
-}
-

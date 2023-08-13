@@ -9,7 +9,7 @@ module.exports = {
     name: 'sigui.ci',
     interpreter: 'deno',
     interpreter_args: 'run --allow-env --allow-net --allow-read',
-    script: 'server/entry.deno.js',
+    script: 'dist/server/entry.mjs',
     args: '',
     watch: true,
     autorestart: true,
