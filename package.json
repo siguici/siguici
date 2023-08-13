@@ -5,12 +5,11 @@
     "node": ">=16.20.0",
     "pnpm": ">=7.0.0"
   },
-  "packageManager": "pnpm@8.6.11",
+  "packageManager": "pnpm@8.6.12",
   "publishConfig": {
     "access": "public"
   },
   "private": true,
-  "type": "module",
   "scripts": {
     "astro": "astro",
     "build": "astro build",
