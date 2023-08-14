@@ -16,7 +16,7 @@
     "check": "astro check",
     "dev": "astro dev",
     "preview": "pnpm build && pnpm serve",
-    "serve": "deno run --allow-net --allow-read --allow-env server/entry.deno.js",
+    "serve": "deno run --allow-net --allow-read --allow-env dist/server/entry.mjs",
     "start": "astro dev"
   },
   "dependencies": {
