@@ -2,9 +2,9 @@
 /// <reference types="astro/client" />
 
 interface ImportMetaEnv {
-    readonly SERVER_PORT: number;
+  readonly SERVER_PORT: number | string;
 }
-  
+
 interface ImportMeta {
-    readonly env: ImportMetaEnv;
+  readonly env: ImportMetaEnv;
 }
