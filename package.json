@@ -17,7 +17,7 @@
     "dev": "astro dev",
     "preview": "pnpm build && pnpm serve",
     "serve": "deno run --allow-net --allow-read --allow-env dist/server/entry.mjs",
-    "start": "astro dev"
+    "start": "astro dev --open"
   },
   "dependencies": {
     "@astrojs/deno": "^5.0.1",
