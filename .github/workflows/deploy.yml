@@ -20,29 +20,27 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        node-version: [18.18.0]
+        bun-version: [1.0.3]
     
-    name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on ${{ matrix.node-version }}
+    name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on ${{ matrix.bun-version }}
     
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
 
       - name: 🔧 Setup Node.JS
-        uses: actions/setup-node@v3
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          version: ${{ matrix.bun-version }}
 
       - name: ⚡️ Install dependencies
-        run: |
-          corepack  enable
-          pnpm install
+        run: bun install
 
       - name: ✅ Check files
-        run: pnpm check
+        run: bun run check
 
       - name: 🍱 Build assets
-        run: pnpm build
+        run: bun run build
 
       - name: 📂 Upload to Deno Deploy
         uses: denoland/deployctl@v1
