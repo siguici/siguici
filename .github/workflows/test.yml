@@ -1,0 +1,41 @@
+name: Test
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ${{ matrix.operating-system }}
+    
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+        bun-version: [1.0.3]
+        deno-version: [1.37.1]
+    
+    name: 🧪 Test sigui.ci on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }} and Deno@${{ matrix.deno-version }}
+    
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: 🔧 Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          version: ${{ matrix.bun-version }}
+
+      - name: 🔨 Configure Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ matrix.deno-version }}
+
+      - name: ⚡️ Install dependencies
+        run: bun install
+
+      - name: ✅ Check files
+        run: bun run check
+
+      - name: 🍱 Build assets
+        run: bun run build
