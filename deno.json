@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window"],
+    "strict": true
+  },
+  "lint": {
+    "exclude": [".astro/", ".vscode/", "dist/"],
+    "rules": {
+      "tags": ["recommended"]
+    }
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "exclude": [".astro/", ".vscode/", "dist/"]
+  },
+  "lock": false,
+  "nodeModulesDir": false,
+  "test": {
+    "include": ["tests/"],
+    "exclude": [".astro/", ".vscode/", "dist/"]
+  },
+  "tasks": {
+    "check": "deno fmt --check",
+    "fix": "deno lint && deno fmt"
+  }
+}

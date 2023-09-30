@@ -1,9 +1,9 @@
+import deno from '@astrojs/deno';
+import tailwind from '@astrojs/tailwind';
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import deno from "@astrojs/deno";
 
 export default defineConfig({
-  output: "server",
+  output: 'server',
   adapter: deno({
     port: 3000,
   }),
@@ -11,5 +11,5 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-  ]
+  ],
 });

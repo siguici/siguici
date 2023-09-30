@@ -12,7 +12,7 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
-    "check": "astro check",
+    "check": "deno task check && astro check",
     "deploy": "deployctl deploy --project=sigui --no-static --include=./dist ./dist/server/entry.mjs",
     "dev": "astro dev",
     "preview": "bun run build && bun run serve",

@@ -21,6 +21,7 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
         bun-version: [1.0.3]
+        deno-version: [1.37.1]
     
     name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on ${{ matrix.bun-version }}
     
@@ -28,10 +29,15 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
 
-      - name: 🔧 Setup Node.JS
+      - name: 🔧 Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
           version: ${{ matrix.bun-version }}
+
+      - name: 🔨 Configure Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ matrix.deno-version }}
 
       - name: ⚡️ Install dependencies
         run: bun install
