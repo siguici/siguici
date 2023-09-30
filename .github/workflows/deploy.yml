@@ -1,15 +1,26 @@
-on: push
-
 name: Deploy
+
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
     runs-on: ${{ matrix.operating-system }}
+
+    environment: 
+      name: production
+      url: https://sigui.ci
+
+    permissions:
+      id-token: write
+      contents: read
     
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        node-version: [16.20.0]
+        node-version: [18.18.0]
     
     name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on ${{ matrix.node-version }}
     
@@ -24,20 +35,18 @@ jobs:
 
       - name: ⚡️ Install dependencies
         run: |
-          npm i -g pnpm
+          corepack  enable
           pnpm install
 
       - name: ✅ Check files
         run: pnpm check
 
-      - name: 🍱 Compile assets
+      - name: 🍱 Build assets
         run: pnpm build
 
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: 📂 Upload to Deno Deploy
+        uses: denoland/deployctl@v1
         with:
-          server: ftp.sikessem.com
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          timeout: 90000
+          project: sigui
+          entrypoint: server/entry.mjs
+          root: dist
