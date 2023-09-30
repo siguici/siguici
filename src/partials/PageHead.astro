@@ -7,7 +7,7 @@ interface Props {
 }
 
 const {
-	title = 'Sigui',
+	title = process.env.APP_NAME || 'Sigui',
 	description = 'The personal website of Sigui',
 } = Astro.props;
 ---
