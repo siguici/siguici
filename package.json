@@ -2,10 +2,10 @@
   "name": "sigui.ci",
   "description": "Sigui's web application.",
   "engines": {
-    "node": ">=16.20.0",
-    "pnpm": ">=7.0.0"
+    "node": ">=18.18.0",
+    "pnpm": ">=8.8.0"
   },
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@8.8.0",
   "publishConfig": {
     "access": "public"
   },
@@ -14,8 +14,10 @@
     "astro": "astro",
     "build": "astro build",
     "check": "astro check",
+    "deploy": "deployctl deploy --project=sigui --no-static --include=./dist ./dist/server/entry.mjs",
     "dev": "astro dev",
     "preview": "pnpm build && pnpm serve",
+    "prod": "pnpm build && pnpm deploy",
     "serve": "deno run --allow-net --allow-read --allow-env dist/server/entry.mjs",
     "start": "astro dev --open"
   },
@@ -29,8 +31,6 @@
     "@types/node": "^20.7.2",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
-    "dotenv": "^16.3.1",
-    "dotenv-expand": "^10.0.0",
     "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
     "postcss-load-config": "^4.0.1",
