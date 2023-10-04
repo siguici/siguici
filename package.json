@@ -2,9 +2,9 @@
   "name": "sigui.ci",
   "description": "Sigui's web application.",
   "engines": {
-    "bun": ">=1.0.3"
+    "bun": ">=1.0.4"
   },
-  "packageManager": "bun@1.0.3",
+  "packageManager": "bun@1.0.4",
   "publishConfig": {
     "access": "public"
   },

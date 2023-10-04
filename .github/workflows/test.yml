@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        bun-version: [1.0.3]
+        bun-version: [1.0.4]
         deno-version: [1.37.1]
     
     name: 🧪 Test sigui.ci on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }} and Deno@${{ matrix.deno-version }}
@@ -24,7 +24,7 @@ jobs:
       - name: 🔧 Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
-          version: ${{ matrix.bun-version }}
+          bun-version: ${{ matrix.bun-version }}
 
       - name: 🔨 Configure Deno
         uses: denoland/setup-deno@v1
