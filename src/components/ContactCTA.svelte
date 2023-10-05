@@ -1,7 +1,7 @@
----
-import CallToAction from './CallToAction.astro';
-import Icon from './Icon.astro';
----
+<script lang="ts">
+import CallToAction from './CallToAction.svelte';
+import Icon from './Icon.svelte';
+</script>
 
 <aside>
 	<h2>Interested in working together?</h2>

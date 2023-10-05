@@ -1,17 +1,17 @@
----
-interface Props {
-	title: string;
-	tagline?: string;
-	align?: 'start' | 'center';
-}
+<script lang="ts">
+let title: string;
+let tagline: string = '';
+let align: 'start' | 'center' = 'center';
 
-const { align = 'center', tagline, title } = Astro.props;
----
+export { align, tagline, title };
+</script>
 
-<header class:list={['hero stack gap-4', align]}>
+<header class={'hero stack gap-4 ' + align }>
 	<div class="stack gap-2">
 		<h1 class="title">{title}</h1>
-		{tagline && <p class="tagline">{tagline}</p>}
+		{#if tagline}
+		<p class:tagline>{tagline}</p>
+		{/if}
 	</div>
 	<slot />
 </header>
