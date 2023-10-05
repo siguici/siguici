@@ -1,6 +1,6 @@
----
-import Icon from './Icon.astro';
----
+<script>
+import Icon from './Icon.svelte';
+</script>
 
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">

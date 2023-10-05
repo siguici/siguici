@@ -1,14 +1,26 @@
----
-import Icon from './Icon.astro';
----
+<script lang="ts" client:only>
+import Icon from './Icon.svelte';
 
-<theme-toggle>
-	<button>
-		<span class="sr-only">Dark theme</span>
-		<span class="icon light"><Icon icon="sun" /></span>
-		<span class="icon dark"><Icon icon="moon-stars" /></span>
-	</button>
-</theme-toggle>
+const isDark = () => document.documentElement.classList.contains('theme-dark');
+
+const toogleTheme = (e) => {
+	const dark = !isDark();
+	setTheme(dark);
+	e.target.setAttribute('aria-pressed', String(dark));
+};
+
+const setTheme = (dark: boolean) => {
+	document.documentElement.classList[dark ? 'add' : 'remove']('theme-dark');
+};
+
+setTheme(isDark());
+</script>
+
+<button on:click={ toogleTheme } aria-pressed="false">
+	<span class="sr-only">Dark theme</span>
+	<span class="icon light"><Icon icon="sun" /></span>
+	<span class="icon dark"><Icon icon="moon-stars" /></span>
+</button>
 
 <style>
 	button {
@@ -64,30 +76,3 @@ import Icon from './Icon.astro';
 		}
 	}
 </style>
-
-<script>
-	class ThemeToggle extends HTMLElement {
-		constructor() {
-			super();
-
-			const button = this.querySelector('button')!;
-
-			/** Set the theme to dark/light mode. */
-			const setTheme = (dark: boolean) => {
-				document.documentElement.classList[dark ? 'add' : 'remove']('theme-dark');
-				button.setAttribute('aria-pressed', String(dark));
-			};
-
-			// Toggle the theme when a user clicks the button.
-			button.addEventListener('click', () => setTheme(!this.isDark()));
-
-			// Initialize button state to reflect current theme.
-			setTheme(this.isDark());
-		}
-
-		isDark() {
-			return document.documentElement.classList.contains('theme-dark');
-		}
-	}
-	customElements.define('theme-toggle', ThemeToggle);
-</script>
