@@ -12,6 +12,7 @@
   "type": "module",
   "scripts": {
     "astro": "astro",
+    "sync": "astro sync",
     "build": "astro build",
     "check": "deno task check && astro check",
     "deploy": "deployctl deploy --project=sigui --no-static --include=./dist ./dist/server/entry.mjs",
