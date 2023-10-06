@@ -13,7 +13,13 @@ const setTheme = (dark: boolean) => {
 	document.documentElement.classList[dark ? 'add' : 'remove']('theme-dark');
 };
 
-setTheme(isDark());
+const setDarkMode = () => {
+	setTheme(isDark());
+};
+
+setDarkMode();
+
+document.addEventListener('astro:after-swap', setDarkMode);
 </script>
 
 <button on:click={ toogleTheme } aria-pressed="false">
