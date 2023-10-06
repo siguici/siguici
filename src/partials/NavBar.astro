@@ -26,14 +26,14 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			{process.env.APP_NAME || 'Sigui'}
 		</a>
-		<siguicinu-button>
+		<menu-button>
 			<template>
 				<button class="menu-button" aria-expanded="false">
 					<span class="sr-only">Menu</span>
 					<Icon icon="list" />
 				</button>
 			</template>
-		</siguicinu-button>
+		</menu-button>
 	</div>
 	<div id="menu-content">
 		<ul class="nav-items">
