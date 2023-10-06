@@ -10,12 +10,13 @@ import Footer from '../partials/Footer.astro';
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	animate?: 'fade' | 'initial' | 'slide' | 'none';
 }
 
-const { title, description } = Astro.props;
+const { title, description, animate = 'fade' } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" transition:animate={animate}>
 	<head>
 		<PageHead title={title} description={description} />
 	</head>

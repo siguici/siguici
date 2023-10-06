@@ -1,14 +1,17 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import '../designs/global.css';
 
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	transitions?: 'animate' | 'swap' | 'none';
 }
 
 const {
 	title = process.env.APP_NAME || 'Sigui',
 	description = 'The personal website of Sigui',
+	transitions = 'animate',
 } = Astro.props;
 ---
 
@@ -25,6 +28,7 @@ const {
 	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
 	rel="stylesheet"
 />
+<ViewTransitions fallback={transitions} transition:persist />
 <script is:inline>
 	// This code is inlined in the head to make dark mode instant & blocking.
 	const getThemePreference = () => {
