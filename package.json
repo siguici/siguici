@@ -2,7 +2,8 @@
   "name": "sigui.ci",
   "description": "Sigui's web application.",
   "engines": {
-    "bun": ">=1.0.4"
+    "bun": ">=1.0.4",
+    "deno": ">=1.37.1"
   },
   "packageManager": "bun@1.0.4",
   "publishConfig": {
