@@ -9,6 +9,7 @@ const {
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://sigui.ci',
   output: 'server',
   adapter: deno({
     port: Number(SERVER_PORT || '4444'),
