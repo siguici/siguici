@@ -2,10 +2,10 @@
   "name": "sigui.ci",
   "description": "Sigui's web application.",
   "engines": {
-    "bun": ">=1.0.4",
-    "deno": ">=1.37.1"
+    "bun": ">=1.0.7",
+    "deno": ">=1.37.2"
   },
-  "packageManager": "bun@1.0.4",
+  "packageManager": "bun@1.0.7",
   "publishConfig": {
     "access": "public"
   },
@@ -24,17 +24,17 @@
     "start": "astro dev --open"
   },
   "dependencies": {
-    "@astrojs/check": "^0.2.0",
+    "@astrojs/check": "^0.2.1",
     "@astrojs/deno": "^5.0.1",
-    "@astrojs/svelte": "^4.0.2",
-    "@astrojs/tailwind": "^5.0.0",
-    "astro": "^3.2.0",
-    "svelte": "^4.0.0",
-    "tailwindcss": "^3.3.3",
+    "@astrojs/svelte": "^4.0.3",
+    "@astrojs/tailwind": "^5.0.2",
+    "astro": "^3.3.4",
+    "svelte": "^4.2.2",
+    "tailwindcss": "^3.3.4",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@types/node": "^20.7.2",
+    "@types/node": "^20.8.8",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
     "postcss": "^8.4.31",
