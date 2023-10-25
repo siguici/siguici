@@ -69,6 +69,22 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 				}
 			</div>
 
+			<div class="rss-feed">
+				<a href="/feed.xml" class="rss-link font-black ">
+					<span class="sr-only">RSS feed</span>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						style="fill: currentColor;transform: ;msFilter:;"
+						><path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"></path><path
+							d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"></path><circle cx="6" cy="18" r="2"
+						></circle>
+					</svg>
+				</a>
+			</div>
+
 			<div class="theme-toggle">
 				<ThemeToggle client:only="svelte" />
 			</div>
@@ -209,14 +225,14 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		box-shadow: var(--shadow-lg);
 	}
 
-	.socials {
+	.socials, .rss-feed {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.625rem;
 		font-size: var(--icon-size);
 	}
 
-	.social {
+	.social, .rss-link {
 		display: flex;
 		padding: var(--icon-padding);
 		text-decoration: none;
@@ -225,7 +241,9 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	}
 
 	.social:hover,
-	.social:focus {
+	.social:focus,
+	.rss-link:hover,
+	.rss-link:focus {
 		color: var(--accent-text-over);
 	}
 
