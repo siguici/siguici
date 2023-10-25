@@ -5,6 +5,7 @@
 // Component Imports
 import PageHead from '../partials/PageHead.astro';
 import NavBar from '../partials/NavBar.astro';
+import BackToTop from '../partials/BackToTop.astro';
 import Footer from '../partials/Footer.astro';
 
 interface Props {
@@ -24,6 +25,7 @@ const { title, description, animate = 'fade' } = Astro.props;
 		<div class="stack backgrounds">
 			<NavBar />
 			<slot />
+			<BackToTop />
 			<Footer />
 		</div>
 
