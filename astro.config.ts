@@ -12,6 +12,7 @@ export default defineConfig({
   site: 'https://sigui.ci',
   srcDir: './app',
   publicDir: './site',
+  compressHTML: true,
   output: 'server',
   adapter: deno({
     port: Number(SERVER_PORT || '4444'),
