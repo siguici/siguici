@@ -4,7 +4,7 @@ import rss, { pagesGlobToRssItems } from '@astrojs/rss';
 import { APP } from '../config';
 
 const projects = (await getCollection('work')).sort(
-  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
 export async function GET(context: APIContext) {
@@ -15,8 +15,9 @@ export async function GET(context: APIContext) {
     items: [
       ...projects.map((project) => ({
         title: project.data.title,
-        pubDate: project.data.publishDate,
+        pubDate: project.data.pubDate,
         description: project.data.description,
+        customData: project.data.customData,
         link: `/work/${project.slug}/`,
       })),
       ...await pagesGlobToRssItems(
