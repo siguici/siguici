@@ -7,7 +7,7 @@ User-agent: *
 
 Disallow:
 
-Sitemap: ${new URL('sitemap.xml', 'https://sigui.ci').href}
+Sitemap: ${new URL('sitemap-index.xml', 'https://sigui.ci').href}
 `.trim();
 
 export const GET: APIRoute = () =>
