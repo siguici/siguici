@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import { defineConfig } from 'astro/config';
 import { loadEnv } from 'vite';
 import svelte from '@astrojs/svelte';
+import sitemap from '@astrojs/sitemap';
 const {
   SERVER_PORT,
 } = loadEnv(process.env.NODE_ENV || 'local', process.cwd(), '');
@@ -22,6 +23,19 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     svelte(),
+    sitemap({
+      customPages: ['https://sikessem.com/sitemap.xml'],
+      changefreq: 'daily',
+      priority: 0.8,
+      lastmod: new Date(),
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          en: 'en-US',
+          fr: 'fr-CI',
+        },
+      },
+    }),
   ],
   vite: {
     ssr: {
