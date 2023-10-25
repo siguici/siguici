@@ -1,7 +1,0 @@
-# www.robotstxt.org/
-
-User-agent: *
-
-Disallow:
-
-Sitemap: https://sigui.ci/sitemap.xml
