@@ -4,6 +4,7 @@ import { defineConfig } from 'astro/config';
 import { loadEnv } from 'vite';
 import svelte from '@astrojs/svelte';
 import sitemap from '@astrojs/sitemap';
+import preact from '@astrojs/preact';
 const {
   SERVER_PORT,
 } = loadEnv(process.env.NODE_ENV || 'local', process.cwd(), '');
@@ -41,6 +42,9 @@ export default defineConfig({
           fr: 'fr-CI',
         },
       },
+    }),
+    preact({
+      compat: true,
     }),
   ],
   vite: {

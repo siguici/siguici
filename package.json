@@ -26,11 +26,13 @@
   "dependencies": {
     "@astrojs/check": "^0.2.1",
     "@astrojs/deno": "^5.0.1",
+    "@astrojs/preact": "^3.0.1",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.2",
     "@astrojs/svelte": "^4.0.3",
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.3.4",
+    "preact": "^10.6.5",
     "svelte": "^4.2.2",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
@@ -46,5 +48,9 @@
     "postcss-nested": "^6.0.1",
     "ts-node": "^10.9.1",
     "tslib": "^2.6.2"
+  },
+  "overrides": {
+    "react": "npm:@preact/compat@latest",
+    "react-dom": "npm:@preact/compat@latest"
   }
 }
