@@ -53,4 +53,4 @@ jobs:
         with:
           project: sigui
           entrypoint: start.ts
-          root: dist
+          root: app

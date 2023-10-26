@@ -14,13 +14,13 @@
   "scripts": {
     "astro": "astro",
     "sync": "astro sync",
-    "build": "astro build && cp app/start.ts dist/ && for pattern in \".\\(\\/\\)dist\" \"\\(\\)dist\"; do sed -i \"s|${pattern}\/|\\1|g\" dist/start.ts; done",
+    "build": "astro build",
     "check": "deno task check && astro check",
-    "deploy": "deployctl deploy --project=sigui --no-static --include=./dist ./dist/serve",
+    "deploy": "deployctl deploy --project=sigui --no-static --include=./app ./app/start.ts",
     "dev": "astro dev",
     "preview": "bun run build && bun run serve",
     "prod": "bun run build && bun run deploy",
-    "serve": "deno run -A ./dist/start.ts",
+    "serve": "deno run -A ./app/start.ts",
     "start": "astro dev --open"
   },
   "dependencies": {
