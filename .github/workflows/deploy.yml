@@ -52,5 +52,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: sigui
-          entrypoint: server/entry.mjs
+          entrypoint: start.ts
           root: dist
