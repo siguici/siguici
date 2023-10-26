@@ -1,4 +1,4 @@
-import { MiddlewareHandlerContext } from "$fresh/server.ts";
+import { MiddlewareHandlerContext } from '$fresh/server.ts';
 import { handle } from '../out/server/entry.mjs';
 
 interface State {
@@ -9,9 +9,9 @@ export async function handler(
   req: Request,
   ctx: MiddlewareHandlerContext<State>,
 ) {
-    const res = await handle(req);
-    if (res.ok) {
-        return res;
-    }
-    return await ctx.next();
+  const res = await handle(req);
+  if (res.ok) {
+    return res;
+  }
+  return await ctx.next();
 }
