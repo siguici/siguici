@@ -17,6 +17,7 @@ export default defineConfig({
   output: 'server',
   adapter: deno({
     port: Number(SERVER_PORT || '4444'),
+    start: false,
   }),
   integrations: [
     tailwind({
