@@ -42,11 +42,11 @@ jobs:
       - name: ⚡️ Install dependencies
         run: bun install
 
-      - name: ✅ Check files
-        run: bun run check
-
       - name: 🍱 Build assets
         run: bun run build
+
+      - name: ✅ Check files
+        run: bun run check
 
       - name: 📂 Upload to Deno Deploy
         uses: denoland/deployctl@v1
