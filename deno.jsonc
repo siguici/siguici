@@ -7,7 +7,7 @@
     "jsxImportSource": "preact"
   },
   "lint": {
-    "exclude": [".astro/", ".vscode/", "dist/"],
+    "exclude": [".astro/", ".vscode/", "dist/", "app/out/"],
     "rules": { "tags": ["fresh", "recommended"] }
   },
   "fmt": {
@@ -17,13 +17,13 @@
     "semiColons": true,
     "singleQuote": true,
     "proseWrap": "preserve",
-    "exclude": [".astro/", ".vscode/", "dist/"]
+    "exclude": [".astro/", ".vscode/", "dist/", "app/out/"]
   },
   "lock": false,
   "nodeModulesDir": false,
   "test": {
     "include": ["tests/"],
-    "exclude": [".astro/", ".vscode/", "dist/"]
+    "exclude": [".astro/", ".vscode/", "dist/", "app/out/"]
   },
   "tasks": {
     "build": "deno run -A app/dev.ts build",
