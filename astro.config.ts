@@ -12,9 +12,10 @@ const {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sigui.ci',
-  srcDir: './app/src',
+  root: './site',
+  srcDir: './site/src',
   outDir: './app/out',
-  publicDir: './site',
+  publicDir: './site/static',
   build: {
     client: './app/out/client',
     server: './app/out/server',
