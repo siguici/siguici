@@ -2,7 +2,7 @@ import { MiddlewareHandlerContext } from '$fresh/server.ts';
 import { handle } from '../out/server/entry.mjs';
 
 interface State {
-  data: string;
+  kv: Deno.Kv;
 }
 
 export async function handler(
@@ -13,5 +13,6 @@ export async function handler(
   if (res.ok) {
     return res;
   }
+  ctx.state.kv = await Deno.openKv();
   return await ctx.next();
 }

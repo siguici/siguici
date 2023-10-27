@@ -26,12 +26,12 @@
     "exclude": ["site/.astro/", ".vscode/", "dist/", "app/out/"]
   },
   "tasks": {
-    "build": "deno run -A app/dev.ts build",
+    "build": "deno run -A --unstable app/dev.ts build",
     "check": "deno fmt --check && deno check **/*.ts && deno check **/*.tsx",
-    "dev": "deno run -A --watch=fresh.config.ts,app/ app/dev.ts",
+    "dev": "deno run -A --unstable --watch=fresh.config.ts,app/ app/dev.ts",
     "fix": "deno lint && deno fmt",
-    "preview": "deno run -A app/start.ts",
-    "start": "deno run -A --watch=fresh.config.ts,app/ app/dev.ts",
+    "preview": "deno run -A --unstable app/start.ts",
+    "start": "deno run -A --unstable --watch=fresh.config.ts,app/ app/dev.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update app"
   },
   "exclude": ["**/_fresh/*"],
