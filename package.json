@@ -20,7 +20,7 @@
     "dev": "astro dev",
     "preview": "bun run build && bun run serve",
     "prod": "bun run build && bun run deploy",
-    "serve": "deno run -A ./app/start.ts",
+    "serve": "deno run -A --unstable ./app/start.ts",
     "start": "astro dev --open"
   },
   "dependencies": {
