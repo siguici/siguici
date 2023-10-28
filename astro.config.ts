@@ -1,6 +1,6 @@
 import deno from '@astrojs/deno';
 import tailwind from '@astrojs/tailwind';
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import { loadEnv } from 'vite';
 import svelte from '@astrojs/svelte';
 import sitemap from '@astrojs/sitemap';
@@ -21,6 +21,9 @@ export default defineConfig({
   },
   compressHTML: true,
   output: 'server',
+  image: {
+    service: passthroughImageService(),
+  },
   adapter: deno({
     port: Number(SERVER_PORT || '4444'),
     start: false,
