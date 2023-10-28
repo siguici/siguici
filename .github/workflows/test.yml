@@ -34,8 +34,8 @@ jobs:
       - name: ⚡️ Install dependencies
         run: bun install
 
-      - name: 🍱 Build assets
-        run: bun run build
-
       - name: ✅ Check files
         run: bun run check
+
+      - name: 🍱 Build assets
+        run: bun run build
