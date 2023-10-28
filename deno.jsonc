@@ -7,7 +7,7 @@
     "jsxImportSource": "preact"
   },
   "lint": {
-    "exclude": ["site/.astro/", ".vscode/", "dist/", "app/out/"],
+    "exclude": [".astro/", ".vscode/", "dist/", "app/out/"],
     "rules": { "tags": ["fresh", "recommended"] }
   },
   "fmt": {
@@ -17,13 +17,13 @@
     "semiColons": true,
     "singleQuote": true,
     "proseWrap": "preserve",
-    "exclude": ["site/.astro/", ".vscode/", "dist/", "app/out/"]
+    "exclude": [".astro/", ".vscode/", "dist/", "app/out/"]
   },
   "lock": false,
   "nodeModulesDir": false,
   "test": {
     "include": ["tests/"],
-    "exclude": ["site/.astro/", ".vscode/", "dist/", "app/out/"]
+    "exclude": [".astro/", ".vscode/", "dist/", "app/out/"]
   },
   "tasks": {
     "build": "deno run -A --unstable app/dev.ts build",
