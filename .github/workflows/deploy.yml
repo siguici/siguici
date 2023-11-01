@@ -49,7 +49,7 @@ jobs:
         run: bun run build
 
       - name: ⚗️ Check files
-        run: bun run check
+        run: deno task check
 
       - name: 📦️ Build app
         run: deno task build
