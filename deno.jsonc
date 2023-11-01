@@ -27,14 +27,14 @@
   },
   "tasks": {
     "build": "deno run -A --unstable app/dev.ts build",
-    "check": "deno fmt --check && deno check **/*.ts && deno check **/*.tsx",
+    "check": "deno fmt --check && deno check app/**/*.ts && deno check app/**/*.tsx",
     "dev": "deno run -A --unstable --watch=fresh.config.ts,app/ app/dev.ts",
     "fix": "deno lint && deno fmt",
     "preview": "deno run -A --unstable app/start.ts",
     "start": "deno run -A --unstable --watch=fresh.config.ts,app/ app/dev.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update app"
   },
-  "exclude": ["**/_fresh/*"],
+  "exclude": ["**/.astro/*", "**/_fresh/*"],
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.5.2/",
     "preact": "https://esm.sh/preact@10.18.1",
