@@ -54,9 +54,11 @@ jobs:
         run: bun run build
 
       - name: ⚗️ Check files
+        working-directory: ./app
         run: deno task check
 
       - name: 📦️ Build app
+        working-directory: ./app
         run: deno task build
 
       - name: 📂 Upload to Deno Deploy
