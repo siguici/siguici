@@ -7,7 +7,7 @@
     "jsxImportSource": "preact"
   },
   "lint": {
-    "exclude": [".astro/", ".vscode/", "dist/", "app/out/"],
+    "exclude": ["out/"],
     "rules": { "tags": ["fresh", "recommended"] }
   },
   "fmt": {
@@ -17,24 +17,24 @@
     "semiColons": true,
     "singleQuote": true,
     "proseWrap": "preserve",
-    "exclude": [".astro/", ".vscode/", "dist/", "app/out/"]
+    "exclude": ["out/"]
   },
   "lock": false,
   "nodeModulesDir": false,
   "test": {
     "include": ["tests/"],
-    "exclude": [".astro/", ".vscode/", "dist/", "app/out/"]
+    "exclude": ["out/"]
   },
   "tasks": {
-    "build": "deno run -A --unstable app/dev.ts build",
-    "check": "deno fmt --check && deno check app/**/*.ts && deno check app/**/*.tsx",
-    "dev": "deno run -A --unstable --watch=fresh.config.ts,app/ app/dev.ts",
+    "build": "deno run -A --unstable dev.ts build",
+    "check": "deno fmt --check && deno check **/*.ts && deno check **/*.tsx",
+    "dev": "deno run -A --unstable --watch=fresh.config.ts, dev.ts",
     "fix": "deno lint && deno fmt",
-    "preview": "deno run -A --unstable app/start.ts",
-    "start": "deno run -A --unstable --watch=fresh.config.ts,app/ app/dev.ts",
-    "update": "deno run -A -r https://fresh.deno.dev/update app"
+    "preview": "deno run -A --unstable start.ts",
+    "start": "deno run -A --unstable --watch=fresh.config.ts, dev.ts",
+    "update": "deno run -A -r https://fresh.deno.dev/update ."
   },
-  "exclude": ["**/.astro/*", "**/_fresh/*"],
+  "exclude": ["**/out/*", "**/_fresh/*"],
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.5.2/",
     "preact": "https://esm.sh/preact@10.18.1",
