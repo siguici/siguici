@@ -1,9 +1,9 @@
-import type { APIContext } from 'astro';
-import { getCollection } from 'astro:content';
-import rss, { pagesGlobToRssItems } from '@astrojs/rss';
-import { APP } from '../config';
+import rss, { pagesGlobToRssItems } from "@astrojs/rss";
+import type { APIContext } from "astro";
+import { APP } from "../config";
+import { getCollection } from "astro:content";
 
-const projects = (await getCollection('work')).sort(
+const projects = (await getCollection("work")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
@@ -20,11 +20,9 @@ export async function GET(context: APIContext) {
         customData: project.data.customData,
         link: `/work/${project.slug}/`,
       })),
-      ...await pagesGlobToRssItems(
-        import.meta.glob('./**/*.{md,mdx,}'),
-      ),
+      ...(await pagesGlobToRssItems(import.meta.glob("./**/*.{md,mdx,}"))),
     ],
     customData: `<language>${APP.locale}</language>`,
-    stylesheet: '/feed.xsl',
+    stylesheet: "/feed.xsl",
   });
 }
