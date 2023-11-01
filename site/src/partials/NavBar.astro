@@ -86,7 +86,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			</div>
 
 			<div class="theme-toggle">
-				<ThemeToggle client:only="svelte" />
+				<ThemeToggle transition:persist client:only="svelte" />
 			</div>
 		</div>
 	</div>
