@@ -42,6 +42,11 @@ jobs:
       - name: ⚡️ Install dependencies
         run: bun install
 
+      - name: 🏗️ Configure environment
+        run: |
+          cp .env.example .env
+          cat .env
+
       - name: ✅ Check types
         run: bun run check
 
