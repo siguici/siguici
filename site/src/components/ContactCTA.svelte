@@ -13,34 +13,27 @@ import Icon from './Icon.svelte';
 
 <style>
 	aside {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 3rem;
+		@apply flex flex-col items-center gap-12 px-6;
 		border-top: 1px solid var(--gray-800);
 		border-bottom: 1px solid var(--gray-800);
-		padding: 5rem 1.5rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
+
+		@media (min-width: 50em) {
+			& {
+				@apply p-32 flex-row flex-wrap justify-between;
+			}
+		}
 	}
 
 	h2 {
-		font-size: var(--text-xl);
-		text-align: center;
+		@apply text-xl text-center;
 		max-width: 15ch;
-	}
-
-	@media (min-width: 50em) {
-		aside {
-			padding: 7.5rem;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-between;
-		}
-
-		h2 {
-			font-size: var(--text-3xl);
-			text-align: left;
+	
+		@media (min-width: 50em) {
+			& {
+				@apply text-3xl text-left;
+			}
 		}
 	}
 </style>
