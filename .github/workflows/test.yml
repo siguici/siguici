@@ -41,4 +41,5 @@ jobs:
         run: bun run build
 
       - name: ⚗️ Check files
+        working-directory: ./app
         run: deno task check
