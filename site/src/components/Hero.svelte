@@ -18,8 +18,13 @@ export { align, tagline, title };
 
 <style>
 	.hero {
-		font-size: var(--text-lg);
-		text-align: center;
+		@apply text-lg text-center;
+
+		@media (min-width: 50em) {
+			& {
+				@apply text-xl;
+			}
+		}
 	}
 
 	.title,
@@ -29,26 +34,26 @@ export { align, tagline, title };
 	}
 
 	.title {
-		font-size: var(--text-3xl);
+		@apply text-3xl;
 		color: var(--gray-0);
+
+		@media (min-width: 50em) {
+			& {
+				@apply text-5xl;
+			}
+		}
 	}
 
-	@media (min-width: 50em) {
-		.hero {
-			font-size: var(--text-xl);
-		}
+	.start {
+		@media (min-width: 50em) {
+			& {
+				@apply text-start;
+			}
 
-		.start {
-			text-align: start;
-		}
-
-		.start .title,
-		.start .tagline {
-			margin-inline: unset;
-		}
-
-		.title {
-			font-size: var(--text-5xl);
+			& .title,
+			& .tagline {
+				margin-inline: unset;
+			}
 		}
 	}
 </style>

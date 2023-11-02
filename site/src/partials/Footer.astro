@@ -15,55 +15,44 @@ const currentYear = new Date().getFullYear();
 </footer>
 <style>
 	footer {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-		margin-top: auto;
-		padding: 3rem 2rem 3rem;
-		text-align: center;
+		@apply flex flex-col gap-12 mt-auto py-12 px-8 text-center text-sm;
 		color: var(--gray-400);
-		font-size: var(--text-sm);
-	}
 
-	footer a {
-		color: var(--gray-400);
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+		& a {
+			@apply underline underline-offset-2 decoration-solid decoration-transparent;
+			color: var(--gray-400);
+			transition: text-decoration-color var(--theme-transition);
+		}
 
-	footer a:hover,
-	footer a:focus {
-		text-decoration-color: currentColor;
+		& a:hover,
+		& a:focus {
+			@apply decoration-current;
+		}
+
+		@media (min-width: 50em) {
+			& {
+				@apply flex-row justify-between py-10 px-20;
+			}
+		}
 	}
 
 	.group {
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
+		@apply flex flex-col gap-1;
+
+		@media (min-width: 50em) {
+			& {
+				@apply flex-row flex-wrap;
+			}
+		}
 	}
 
 	.socials {
-		display: flex;
-		justify-content: center;
-		gap: 1rem;
-		flex-wrap: wrap;
-	}
+		@apply flex justify-center gap-4 flex-wrap;
 
-	@media (min-width: 50em) {
-		footer {
-			flex-direction: row;
-			justify-content: space-between;
-			padding: 2.5rem 5rem;
-		}
-
-		.group {
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-
-		.socials {
-			justify-content: flex-end;
+		@media (min-width: 50em) {
+			& {
+				@apply justify-end;
+			}
 		}
 	}
 </style>

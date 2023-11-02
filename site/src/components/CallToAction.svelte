@@ -6,15 +6,14 @@ export let href: string;
 
 <style>
 	a {
-		@apply relative flex place-content-center text-center px-2 py-8 leading-5 gap-3 no-underline rounded-full overflow-hidden whitespace-nowrap;
+		@apply relative flex place-content-center text-center px-8 py-2 leading-5 gap-3 no-underline rounded-full overflow-hidden whitespace-nowrap;
 		color: var(--accent-text-over);
 		background: var(--gradient-accent-orange);
 		box-shadow: var(--shadow-md);
 
 		/* Overlay for hover effects. */
 		&::after {
-			@apply absolute inset-0 pointer-events-none mix-blend-overlay;
-			content: '';
+			@apply absolute inset-0 pointer-events-none mix-blend-overlay content-[''];
 			transition: background-color var(--theme-transition);
 		}
 

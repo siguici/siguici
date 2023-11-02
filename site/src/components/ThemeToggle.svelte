@@ -30,55 +30,41 @@ document.addEventListener('astro:after-swap', setDarkMode);
 
 <style>
 	button {
-		display: flex;
-		border: 0;
-		border-radius: 999rem;
-		padding: 0;
+		@apply flex border-0 rounded-full p-0 cursor-pointer;
 		background-color: var(--gray-999);
 		box-shadow: inset 0 0 0 1px var(--accent-overlay);
-		cursor: pointer;
 	}
 
 	.icon {
-		z-index: 1;
-		position: relative;
-		display: flex;
-		padding: 0.5rem;
-		width: 2rem;
-		height: 2rem;
-		font-size: 1rem;
+		@apply z-10 relative flex p-2 w-8 h-8 text-base;
 		color: var(--accent-overlay);
-	}
 
-	.icon.light::before {
-		content: '';
-		z-index: -1;
-		position: absolute;
-		inset: 0;
-		background-color: var(--accent-regular);
-		border-radius: 999rem;
+		&.light::before {
+			@apply -z-10 absolute inset-0 rounded-full content-[''];
+			background-color: var(--accent-regular);
+		}
+
+		@media (prefers-reduced-motion: no-preference) {
+			&,
+			&.light::before {
+				transition: transform var(--theme-transition), color var(--theme-transition);
+			}
+		}
+
+		@media (forced-colors: active) {
+			&.light::before {
+				background-color: SelectedItem;
+			}
+		}
 	}
 
 	:global(.theme-dark) .icon.light::before {
-		transform: translateX(100%);
+		@apply translate-x-full;
 	}
 
 	:global(.theme-dark) .icon.dark,
 	:global(html:not(.theme-dark)) .icon.light,
 	button[aria-pressed='false'] .icon.light {
 		color: var(--accent-text-over);
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.icon,
-		.icon.light::before {
-			transition: transform var(--theme-transition), color var(--theme-transition);
-		}
-	}
-
-	@media (forced-colors: active) {
-		.icon.light::before {
-			background-color: SelectedItem;
-		}
 	}
 </style>

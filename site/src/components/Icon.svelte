@@ -44,7 +44,7 @@ const gradientId = 'icon-gradient-' + Math.round(Math.random() * 10e12).toString
 
 <style>
 	svg {
-		vertical-align: middle;
+		@apply align-middle;
 		width: var(--size, 1em);
 		height: var(--size, 1em);
 	}
