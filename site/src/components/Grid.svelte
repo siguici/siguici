@@ -4,60 +4,51 @@ let variant: 'offset' | 'small';
 export { variant };
 </script>
 
-<ul class:offset={variant === 'offset'} class:small={variant === 'small'} class='grid'>
+<ul class:offset={variant === 'offset'} class:small={variant === 'small'} class='list-grid'>
 	<slot />
 </ul>
 
 <style>
-	.grid {
-		display: grid;
-		grid-auto-rows: 1fr;
-		gap: 1rem;
-		list-style: none;
-		padding: 0;
-	}
+	.list-grid {
+		@apply grid auto-rows-fr gap-4 list-none p-0;
 
-	.grid.small {
-		grid-template-columns: 1fr 1fr;
-		gap: 1.5rem;
-	}
-
-	/* If last row contains only one item, make it span both columns. */
-	.grid.small > :global(:last-child:nth-child(odd)) {
-		grid-column: 1 / 3;
-	}
-
-	@media (min-width: 50em) {
-		.grid {
-			grid-template-columns: 1fr 1fr;
-			gap: 4rem;
+		&.small {
+			@apply grid-cols-1 gap-6;
 		}
 
-		.grid.offset {
-			--row-offset: 7.5rem;
-			padding-bottom: var(--row-offset);
+		/* If last row contains only one item, make it span both columns. */
+		&.small > :global(:last-child:nth-child(odd)) {
+			grid-column: 1 / 3;
 		}
 
-		/* Shift first item in each row vertically to create staggered effect. */
-		.grid.offset > :global(:nth-child(odd)) {
-			transform: translateY(var(--row-offset));
-		}
+		@media (min-width: 50em) {
+			& {
+				@apply grid-cols-2 gap-16;
+			}
 
-		/* If last row contains only one item, display it in the second column. */
-		.grid.offset > :global(:last-child:nth-child(odd)) {
-			grid-column: 2 / 3;
-			transform: none;
-		}
+			&.offset {
+				--row-offset: 7.5rem;
+				padding-bottom: var(--row-offset);
+			}
 
-		.grid.small {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 2rem;
-		}
+			/* Shift first item in each row vertically to create staggered effect. */
+			&.offset > :global(:nth-child(odd)) {
+				transform: translateY(var(--row-offset));
+			}
 
-		.grid.small > :global(*) {
-			flex-basis: 20rem;
+			/* If last row contains only one item, display it in the second column. */
+			&.offset > :global(:last-child:nth-child(odd)) {
+				@apply transform-none;
+				grid-column: 2 / 3;
+			}
+
+			&.small {
+				@apply flex flex-wrap justify-center gap-8;
+			}
+
+			&.small > :global(*) {
+				@apply basis-80;	
+			}
 		}
 	}
 </style>

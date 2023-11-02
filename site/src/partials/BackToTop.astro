@@ -1,13 +1,11 @@
 <button
 	type="button"
 	aria-label="Back to top button"
-	class="fixed bottom-5 right-5 inline-block rounded-full bg-black p-3 text-xs font-medium uppercase leading-tight shadow-md transition duration-150 ease-in-out hover:bg-purple hover:shadow-lg focus:outline-none focus:ring-0 dark:bg-purple dark:hover:bg-white dark:hover:text-black"
 	id="back-to-top">
 	<svg
 		aria-hidden="true"
 		focusable="false"
 		data-prefix="fas"
-		class="h-4 w-4"
 		role="img"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 448 512"
@@ -41,3 +39,13 @@
         document.documentElement.scrollTop = 0;
     }
 </script>
+
+<style>
+    button {
+        @apply fixed bottom-5 right-5 inline-block rounded-full bg-black p-3 text-xs font-medium uppercase leading-tight shadow-md transition duration-150 ease-in-out hover:bg-purple-500 hover:shadow-lg focus:outline-none focus:ring-0 dark:bg-purple-500 dark:hover:bg-white dark:hover:text-black;
+    }
+
+    svg {
+        @apply h-5 w-5;
+    }
+</style>
