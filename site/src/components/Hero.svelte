@@ -18,11 +18,11 @@ export { align, tagline, title };
 
 <style>
 	.hero {
-		@apply text-lg text-center;
+		@apply text-2xl text-center font-thin leading-snug;
 
 		@media (min-width: 50em) {
 			& {
-				@apply text-xl;
+				@apply text-5xl leading-normal;
 			}
 		}
 	}
@@ -31,17 +31,21 @@ export { align, tagline, title };
 	.tagline {
 		max-width: 37ch;
 		margin-inline: auto;
+		color: var(--gray-0);
 	}
 
 	.title {
-		@apply text-3xl;
-		color: var(--gray-0);
+		@apply text-5xl leading-none;
 
 		@media (min-width: 50em) {
 			& {
-				@apply text-5xl;
+				@apply text-7xl leading-none;
 			}
 		}
+	}
+
+	.tagline {
+		@apply my-5;
 	}
 
 	.start {
