@@ -37,22 +37,25 @@ import Icon from './Icon.svelte';
 	.skills {
 		@apply flex flex-col gap-12;
 
-		& h2 {
-			@apply text-lg;
-		}
-
-		& p {
-			color: var(--gray-400);
-		}
-
 		@media (min-width: 50em) {
 			& {
 				@apply grid grid-cols-3 gap-20;
 			}
+		}
 
-			& h2 {
-				@apply text-2xl;
+		& h2 {
+			@apply text-2xl my-3;
+			color: var(--gray-100);
+
+			@media (min-width: 50em) {
+				& {
+					@apply text-4xl;
+				}
 			}
+		}
+
+		& p {
+			color: var(--gray-400);
 		}
 	}
 </style>
