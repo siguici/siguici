@@ -18,34 +18,35 @@ export { align, tagline, title };
 
 <style>
 	.hero {
-		@apply text-2xl text-center font-thin leading-snug;
-
-		@media (min-width: 50em) {
-			& {
-				@apply text-5xl leading-normal;
-			}
-		}
+		@apply text-center;
 	}
 
 	.title,
 	.tagline {
 		max-width: 37ch;
 		margin-inline: auto;
-		color: var(--gray-0);
 	}
 
 	.title {
 		@apply text-5xl leading-none;
+		color: var(--gray-0);
 
 		@media (min-width: 50em) {
 			& {
-				@apply text-7xl leading-none;
+				@apply text-7xl leading-tight;
 			}
 		}
 	}
 
 	.tagline {
-		@apply my-5;
+		@apply my-5 text-xl font-thin leading-snug;
+		color: var(--gray-200);
+
+		@media (min-width: 50em) {
+			& {
+				@apply text-2xl leading-relaxed;
+			}
+		}
 	}
 
 	.start {
