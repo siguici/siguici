@@ -138,7 +138,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	}
 
 	.site-title {
-		@apply flex gap-2 items-center leading-tight no-underline;
+		@apply flex gap-2 items-center leading-relaxed no-underline;
 		color: var(--gray-0);
 	}
 
@@ -228,7 +228,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		}
 
 		.site-title {
-			@apply text-lg;
+			@apply text-xl;
 		}
 
 		#menu-content {
