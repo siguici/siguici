@@ -131,15 +131,34 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	nav {
 		@apply relative z-[9999] font-medium mb-14;
 		font-family: var(--font-brand);
+
+		@media (min-width: 50em) {
+			& {
+				@apply grid items-center py-10 px-20 gap-4;
+				grid-template-columns: 1fr auto 1fr;
+			}
+		}
 	}
 
 	.menu-header {
 		@apply flex justify-between gap-2 p-6;
+
+		@media (min-width: 50em) {
+			& {
+				@apply p-0;
+			}
+		}
 	}
 
 	.site-title {
 		@apply flex gap-2 items-center leading-relaxed no-underline;
 		color: var(--gray-0);
+
+		@media (min-width: 50em) {
+			& {
+				@apply text-xl;
+			}
+		}
 	}
 
 	.menu-button {
@@ -166,12 +185,31 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 	#menu-content {
 		@apply absolute left-0 right-0;
+
+		@media (min-width: 50em) {
+			& {
+				@apply contents;
+			}
+		}
 	}
 
 	.nav-items {
 		@apply flex flex-col gap-4 m-0 text-sm list-none p-8;
 		background-color: var(--gray-999);
 		border-bottom: 1px solid var(--gray-800);
+
+		@media (min-width: 50em) {
+			& {
+				@apply relative flex-row text-sm rounded-full border-0 py-2 px-3;
+				background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
+				box-shadow: var(--shadow-md);
+
+				&::before {
+					@apply absolute -inset-[1px] content-[''] -z-[1] rounded-full;
+					background: var(--gradient-stroke);
+				}
+			}
+		}
 	}
 
 	.link {
@@ -181,16 +219,47 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		&.active {
 			color: var(--gray-0);
 		}
+
+		@media (min-width: 50em) {
+			& {
+				@apply py-2 px-4 rounded-full;
+				transition: color var(--theme-transition), background-color var(--theme-transition);
+
+				&:hover,
+				&:focus {
+					@apply text-black dark:text-white;
+					background-color: var(--accent-subtle-overlay);
+				}
+
+				&.active {
+					color: var(--accent-text-over);
+					background-color: var(--accent-regular);
+				}
+
+				@media (forced-colors: active) {
+					&.active {
+						color: SelectedItem;
+					}
+				}
+			}
+		}
 	}
 
 	.menu-footer {
-		--icon-size: var(--text-xl);
-		--icon-padding: 0.5rem;
+		--icon-size: theme('fontSize.2xl');
+		--icon-padding: theme('spacing.1');
 
 		@apply flex justify-between gap-3 py-6 pr-8 pl-6;
 		background-color: var(--gray-999);
 		border-radius: 0 0 0.75rem 0.75rem;
 		box-shadow: var(--shadow-lg);
+
+		@media (min-width: 50em) {
+			& {
+				--icon-padding: theme('spacing.2');
+				@apply self-end items-center p-0 bg-transparent shadow-none;
+			}
+		}
 	}
 
 	.socials, .rss-feed {
@@ -198,89 +267,34 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		font-size: var(--icon-size);
 	}
 
+	.socials {
+		@media (min-width: 50em) {
+			& {
+				@apply hidden;
+
+				@media (min-width: 60em) {
+					& {
+						@apply flex justify-end gap-0 w-full;
+					}
+				}
+			}
+		}
+	}
+
 	.social, .rss-link {
 		@apply flex no-underline;
 		padding: var(--icon-padding);
 		color: var(--accent-dark);
 		transition: color var(--theme-transition);
-	}
 
-	.social:hover,
-	.social:focus,
-	.rss-link:hover,
-	.rss-link:focus {
-		color: var(--accent-text-over);
+		&:hover,
+		&:focus {
+			color: var(--accent-text-over);
+		}
 	}
 
 	.theme-toggle {
 		@apply flex items-center;
 		height: calc(var(--icon-size) + 2 * var(--icon-padding));
-	}
-
-	@media (min-width: 50em) {
-		nav {
-			@apply grid items-center py-10 px-20 gap-4;
-			grid-template-columns: 1fr auto 1fr;
-		}
-
-		.menu-header {
-			@apply p-0;
-		}
-
-		.site-title {
-			@apply text-xl;
-		}
-
-		#menu-content {
-			@apply contents;
-		}
-
-		.nav-items {
-			@apply relative flex-row text-sm rounded-full border-0 py-2 px-3;
-			background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
-			box-shadow: var(--shadow-md);
-
-			&::before {
-				@apply absolute -inset-[1px] content-[''] -z-[1] rounded-full;
-				background: var(--gradient-stroke);
-			}
-		}
-
-		.link {
-			@apply py-2 px-4 rounded-full;
-			transition: color var(--theme-transition), background-color var(--theme-transition);
-
-			&:hover,
-			&:focus {
-				color: var(--gray-100);
-				background-color: var(--accent-subtle-overlay);
-			}
-
-			&.active {
-				color: var(--accent-text-over);
-				background-color: var(--accent-regular);
-			}
-
-			@media (forced-colors: active) {
-				&.active {
-					color: SelectedItem;
-				}
-			}
-		}
-
-		.menu-footer {
-			--icon-padding: 0.375rem;
-			@apply self-end items-center p-0 bg-transparent shadow-none;
-		}
-
-		.socials {
-			@apply hidden;
-
-			@media (min-width: 60em) {
-				.socials {
-					@apply flex justify-end gap-0;
-				}
-			}
-		}
 	}
 </style>
