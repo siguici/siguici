@@ -12,8 +12,8 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        bun-version: [1.0.7]
-        deno-version: [1.37.2]
+        bun-version: [1.0.11]
+        deno-version: [1.38.0]
     
     name: 🧪 Test sigui.ci on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }} and Deno@${{ matrix.deno-version }}
     
