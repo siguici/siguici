@@ -6,17 +6,16 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  site:
     runs-on: ${{ matrix.operating-system }}
-    
+
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
         bun-version: [1.0.11]
-        deno-version: [1.38.0]
-    
-    name: 🧪 Test sigui.ci on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }} and Deno@${{ matrix.deno-version }}
-    
+
+    name: 🧪 CI sigui.ci website on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
+
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
@@ -25,11 +24,6 @@ jobs:
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: ${{ matrix.bun-version }}
-
-      - name: 🔨 Configure Deno
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: ${{ matrix.deno-version }}
 
       - name: ⚡️ Install dependencies
         run: bun install
@@ -40,6 +34,46 @@ jobs:
       - name: 🍱 Build assets
         run: bun run build
 
-      - name: ⚗️ Check files
+      - name: 🚚 Upload distribution files
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: app/out
+
+  app:
+    needs: site
+    runs-on: ${{ matrix.operating-system }}
+    defaults:
+      run:
         working-directory: ./app
+
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+        deno-version: [1.38.0]
+
+    name: 🧪 CI sigui.ci web app on ${{ matrix.operating-system }} using Deno@${{ matrix.deno-version }}
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: 🔨 Configure Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ matrix.deno-version }}
+
+      - name: 🚚 Download distribution files
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-files
+          path: out
+
+      - name: 📂  List public/
+        run: ls out
+
+      - name: ⚗️ Check files
         run: deno task check
+
+      - name: 📦️ Build app
+        run: deno task build

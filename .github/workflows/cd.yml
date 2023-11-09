@@ -4,10 +4,15 @@ on:
   push:
     branches:
       - main
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
 
 jobs:
   deploy:
     runs-on: ${{ matrix.operating-system }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     environment: 
       name: production
@@ -23,7 +28,7 @@ jobs:
         bun-version: [1.0.11]
         deno-version: [1.38.0]
     
-    name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on ${{ matrix.bun-version }}
+    name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on Deno-${{ matrix.deno-version }} with  Bun-${{ matrix.bun-version }}
     
     steps:
       - name: 🚚 Get latest code
@@ -47,15 +52,8 @@ jobs:
           cp .env.example .env
           cat .env
 
-      - name: ✅ Check types
-        run: bun run check
-
       - name: 🍱 Build site
         run: bun run build
-
-      - name: ⚗️ Check files
-        working-directory: ./app
-        run: deno task check
 
       - name: 📦️ Build app
         working-directory: ./app
