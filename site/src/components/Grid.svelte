@@ -14,11 +14,11 @@ export { variant };
 
 		&.small {
 			@apply grid-cols-1 gap-6;
-		}
 
-		/* If last row contains only one item, make it span both columns. */
-		&.small > :global(:last-child:nth-child(odd)) {
-			grid-column: 1 / 3;
+			/* If last row contains only one item, make it span both columns. */
+			& > :global(:last-child:nth-child(odd)) {
+				grid-column: 1 / 3;
+			}
 		}
 
 		@media (min-width: 50em) {
@@ -29,25 +29,25 @@ export { variant };
 			&.offset {
 				--row-offset: 7.5rem;
 				padding-bottom: var(--row-offset);
-			}
 
-			/* Shift first item in each row vertically to create staggered effect. */
-			&.offset > :global(:nth-child(odd)) {
-				transform: translateY(var(--row-offset));
-			}
+				/* Shift first item in each row vertically to create staggered effect. */
+				& > :global(:nth-child(odd)) {
+					transform: translateY(var(--row-offset));
+				}
 
-			/* If last row contains only one item, display it in the second column. */
-			&.offset > :global(:last-child:nth-child(odd)) {
-				@apply transform-none;
-				grid-column: 2 / 3;
+				/* If last row contains only one item, display it in the second column. */
+				& > :global(:last-child:nth-child(odd)) {
+					@apply transform-none;
+					grid-column: 2 / 3;
+				}
 			}
 
 			&.small {
 				@apply flex flex-wrap justify-center gap-8;
-			}
 
-			&.small > :global(*) {
-				@apply basis-80;	
+				& > :global(*) {
+					@apply basis-80;	
+				}
 			}
 		}
 	}
