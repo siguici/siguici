@@ -6,8 +6,7 @@ export let href: string;
 
 <style>
 	a {
-		@apply relative flex place-content-center text-center px-8 py-2 leading-5 gap-3 no-underline rounded-full overflow-hidden whitespace-nowrap;
-		color: var(--accent-text-over);
+		@apply relative flex place-content-center text-center text-xl px-8 py-3 leading-5 gap-3 no-underline rounded-full overflow-hidden whitespace-nowrap text-[var(--accent-text-over)];
 		background: var(--gradient-accent-orange);
 		box-shadow: var(--shadow-md);
 
@@ -24,13 +23,13 @@ export let href: string;
 
 		@media (min-width: 20em) {
 			& {
-				@apply text-lg;
+				@apply text-2xl;
 			}
 		}
 
 		@media (min-width: 50em) {
 			& {
-				@apply py-5 px-10 text-xl;
+				@apply py-5 px-10 text-3xl;
 			}
 		}
 	}
