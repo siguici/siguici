@@ -67,9 +67,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist-files
-          path: out
+          path: app/out
 
-      - name: 📂  List public/
+      - name: 📂 List distribution files
         run: ls out
 
       - name: ⚗️ Check files
