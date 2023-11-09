@@ -13,18 +13,12 @@ const { data, slug } = project;
 
 <style>
 	.card {
-		display: grid;
+		@apply grid h-44 rounded-xl overflow-hidden no-underline text-xl font-medium;
 		grid-template: auto 1fr / auto 1fr;
-		height: 11rem;
 		background: var(--gradient-subtle);
 		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		overflow: hidden;
 		box-shadow: var(--shadow-sm);
-		text-decoration: none;
 		font-family: var(--font-brand);
-		font-size: var(--text-lg);
-		font-weight: 500;
 		transition: box-shadow var(--theme-transition);
 
 		&:hover {
