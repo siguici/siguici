@@ -13,9 +13,7 @@ import Icon from './Icon.svelte';
 
 <style>
 	aside {
-		@apply flex flex-col items-center gap-12 px-6;
-		border-top: 1px solid var(--gray-800);
-		border-bottom: 1px solid var(--gray-800);
+		@apply flex flex-col items-center gap-12 py-20 px-6 border-t border-t-[var(--gray-800)] border-b border-b-[var(--gray-800)];
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 
@@ -27,12 +25,12 @@ import Icon from './Icon.svelte';
 	}
 
 	h2 {
-		@apply text-xl text-center;
+		@apply text-3xl text-center;
 		max-width: 15ch;
 	
 		@media (min-width: 50em) {
 			& {
-				@apply text-3xl text-left;
+				@apply text-5xl text-left;
 			}
 		}
 	}
