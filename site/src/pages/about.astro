@@ -63,58 +63,52 @@ import Hero from '../components/Hero.svelte';
 
 <style>
 	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
+		@apply flex flex-col gap-14 my-14;
+
+		@media (min-width: 50em) {
+			& {
+				@apply grid;
+				grid-template-columns: 1fr 60% 1fr;
+			}
+
+			& > :global(:first-child) {
+				grid-column-start: 2;
+			}
+		}
 	}
 
 	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
+		@apply mt-6 rounded-3xl;
 		box-shadow: var(--shadow-md);
 	}
 
 	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
+		@apply flex flex-col gap-2 text-[var(--gray-200)];
+
+		@media (min-width: 50em) {
+			& {
+				@apply contents text-xl;
+			}
+		}
 	}
 
 	.section-title {
+		@apply text-2xl text-[var(--gray-0)];
 		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
 	}
 
 	.content {
-		grid-column: 2 / 4;
-	}
+    grid-column: 2 / 4;
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
+		& :global(a) {
+			text-decoration: 1px solid underline transparent;
+			text-underline-offset: 0.25em;
+			transition: text-decoration-color var(--theme-transition);
 		}
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
+		& :global(a:hover),
+		& :global(a:focus) {
+			text-decoration-color: currentColor;
 		}
 	}
 </style>

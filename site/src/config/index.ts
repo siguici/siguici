@@ -1,3 +1,3 @@
-import { AppConfig } from './app';
+import { AppConfig } from "./app";
 
 export const APP = AppConfig;

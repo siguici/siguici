@@ -4,59 +4,54 @@ let variant: 'offset' | 'small';
 export { variant };
 </script>
 
-<ul class:offset={variant === 'offset'} class:small={variant === 'small'} class='grid'>
+<ul class:offset={variant === 'offset'} class:small={variant === 'small'} class='list-grid'>
 	<slot />
 </ul>
 
 <style>
-	.grid {
-		display: grid;
-		grid-auto-rows: 1fr;
-		gap: 1rem;
-		list-style: none;
-		padding: 0;
-	}
+	.list-grid {
+		@apply grid auto-rows-fr gap-4 list-none p-0 my-4;
 
-	.grid.small {
-		grid-template-columns: 1fr 1fr;
-		gap: 1.5rem;
+    &.small {
+			@apply grid-cols-1 gap-6 my-4;
+		}
 	}
 
 	/* If last row contains only one item, make it span both columns. */
-	.grid.small > :global(:last-child:nth-child(odd)) {
+	.list-grid.small > :global(:last-child:nth-child(odd)) {
 		grid-column: 1 / 3;
 	}
 
 	@media (min-width: 50em) {
-		.grid {
+		.list-grid {
 			grid-template-columns: 1fr 1fr;
 			gap: 4rem;
 		}
 
-		.grid.offset {
+		.list-grid.offset {
 			--row-offset: 7.5rem;
 			padding-bottom: var(--row-offset);
 		}
 
 		/* Shift first item in each row vertically to create staggered effect. */
-		.grid.offset > :global(:nth-child(odd)) {
+		.list-grid.offset > :global(:nth-child(odd)) {
 			transform: translateY(var(--row-offset));
 		}
 
 		/* If last row contains only one item, display it in the second column. */
-		.grid.offset > :global(:last-child:nth-child(odd)) {
+		.list-grid.offset > :global(:last-child:nth-child(odd)) {
 			grid-column: 2 / 3;
 			transform: none;
 		}
 
-		.grid.small {
+		.list-grid.small {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			gap: 2rem;
 		}
 
-		.grid.small > :global(*) {
+		.list-grid.small > :global(*) {
 			flex-basis: 20rem;
 		}
 	}

@@ -1,31 +1,33 @@
-import deno from '@astrojs/deno';
-import tailwind from '@astrojs/tailwind';
-import { defineConfig, passthroughImageService } from 'astro/config';
-import { loadEnv } from 'vite';
-import svelte from '@astrojs/svelte';
-import sitemap from '@astrojs/sitemap';
-import preact from '@astrojs/preact';
-const {
-  SERVER_PORT,
-} = loadEnv(process.env.NODE_ENV || 'local', process.cwd(), '');
+import deno from "@astrojs/deno";
+import preact from "@astrojs/preact";
+import sitemap from "@astrojs/sitemap";
+import svelte from "@astrojs/svelte";
+import tailwind from "@astrojs/tailwind";
+import { defineConfig, passthroughImageService } from "astro/config";
+import { loadEnv } from "vite";
+const { SERVER_PORT } = loadEnv(
+  process.env.NODE_ENV || "local",
+  process.cwd(),
+  "",
+);
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sigui.ci',
-  srcDir: './site/src',
-  outDir: './app/out',
-  publicDir: './site/static',
+  site: "https://sigui.ci",
+  srcDir: "./site/src",
+  outDir: "./app/out",
+  publicDir: "./site/static",
   build: {
-    client: './app/out/client',
-    server: './app/out/server',
+    client: "./app/out/client",
+    server: "./app/out/server",
   },
   compressHTML: true,
-  output: 'server',
+  output: "server",
   image: {
     service: passthroughImageService(),
   },
   adapter: deno({
-    port: Number(SERVER_PORT || '4444'),
+    port: Number(SERVER_PORT || "4444"),
     start: false,
   }),
   integrations: [
@@ -34,15 +36,15 @@ export default defineConfig({
     }),
     svelte(),
     sitemap({
-      customPages: ['https://sikessem.com/sitemap.xml'],
-      changefreq: 'daily',
+      customPages: ["https://sikessem.com/sitemap.xml"],
+      changefreq: "daily",
       priority: 0.8,
       lastmod: new Date(),
       i18n: {
-        defaultLocale: 'en',
+        defaultLocale: "en",
         locales: {
-          en: 'en-US',
-          fr: 'fr-CI',
+          en: "en-US",
+          fr: "fr-CI",
         },
       },
     }),
@@ -52,7 +54,7 @@ export default defineConfig({
   ],
   vite: {
     ssr: {
-      noExternal: ['path-to-regexp'],
+      noExternal: ["path-to-regexp"],
     },
   },
 });

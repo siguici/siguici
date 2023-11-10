@@ -1,0 +1,95 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+        bun-version: [1.0.11]
+
+    name: 📦️ Build sigui.ci website on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: 🔧 Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: ${{ matrix.bun-version }}
+
+      - name: ⚡️ Install dependencies
+        run: bun install
+
+      - name: ✅ Check types
+        run: bun run check
+
+      - name: 🍱 Build assets
+        run: bun run build
+
+      - name: 🚚 Upload distribution files
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: app/out
+
+  deploy:
+    needs: site
+    runs-on: ${{ matrix.operating-system }}
+
+    environment: 
+      name: production
+      url: https://sigui.ci
+
+    permissions:
+      id-token: write
+      contents: read
+
+    defaults:
+      run:
+        working-directory: ./app
+
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+        deno-version: [1.38.0]
+
+    name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on Deno-${{ matrix.deno-version }}
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: 🔨 Configure Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ matrix.deno-version }}
+
+      - name: 🚚 Download distribution files
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-files
+          path: app/out
+
+      - name: 📂 List distribution files
+        run: ls out
+
+      - name: ⚗️ Check files
+        run: deno task check
+
+      - name: 📦️ Build app
+        run: deno task build
+
+      - name: 📂 Upload to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: sigui
+          entrypoint: start.ts
+          root: app

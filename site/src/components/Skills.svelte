@@ -22,41 +22,40 @@ import Icon from './Icon.svelte';
 
 <style>
 	.box {
+		@apply rounded-xl p-6;
 		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
+
+		@media (min-width: 50em) {
+			& {
+				@apply rounded-3xl p-10;
+			}
+		}
 	}
 
 	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
+		@apply flex flex-col gap-12;
 
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
-
-	.skills p {
-		color: var(--gray-400);
-	}
-
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
+		@media (min-width: 50em) {
+			& {
+				@apply grid grid-cols-3 gap-20;
+			}
 		}
 
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
+		& h2 {
+			@apply text-2xl my-3;
+			color: var(--gray-100);
+
+			@media (min-width: 50em) {
+				& {
+					@apply text-4xl;
+				}
+			}
 		}
 
-		.skills h2 {
-			font-size: var(--text-2xl);
+		& p {
+			color: var(--gray-400);
 		}
 	}
 </style>
