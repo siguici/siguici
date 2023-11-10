@@ -3,10 +3,10 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-import ContactCTA from '../../components/ContactCTA.svelte';
-import Hero from '../../components/Hero.svelte';
-import Icon from '../../components/Icon.svelte';
-import Pill from '../../components/Pill.svelte';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
 
 interface Props {
 	entry: CollectionEntry<'work'>;

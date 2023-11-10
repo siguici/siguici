@@ -1,7 +1,6 @@
 import deno from "@astrojs/deno";
 import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
-import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig, passthroughImageService } from "astro/config";
 import { loadEnv } from "vite";
@@ -34,7 +33,6 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    svelte(),
     sitemap({
       customPages: ["https://sikessem.com/sitemap.xml"],
       changefreq: "daily",
