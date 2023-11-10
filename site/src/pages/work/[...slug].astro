@@ -86,11 +86,13 @@ const { Content } = await work!.render();
 	}
 
 	.content {
-		max-width: 65ch;
+    @apply my-8;
+
+    max-width: 65ch;
 		margin-inline: auto;
 
 		& > :global(* + *) {
-			@apply mt-4;
+			@apply my-4;
 		}
 
 		& :global(h1),

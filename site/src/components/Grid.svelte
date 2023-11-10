@@ -10,10 +10,10 @@ export { variant };
 
 <style>
 	.list-grid {
-		@apply grid auto-rows-fr gap-4 list-none p-0;
+		@apply grid auto-rows-fr gap-4 list-none p-0 my-4;
 
     &.small {
-			@apply grid-cols-1 gap-6;
+			@apply grid-cols-1 gap-6 my-4;
 		}
 	}
 

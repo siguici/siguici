@@ -145,30 +145,9 @@ const projects = (await getCollection('work'))
 	/* ====================================================== */
 
 	.section {
-		display: grid;
-		gap: 2rem;
-	}
+  	@apply grid gap-8 my-8;
 
-	.with-background {
-		@apply relative;
-
-		&::before {
-			@apply content-[''] absolute pointer-events-none left-1/2 w-screen top-0 -translate-y-3/4 -translate-x-1/2 -z-[1];
-			--hero-bg: var(--bg-image-subtle-2);
-			aspect-ratio: calc(2.25 / var(--bg-scale));
-			background: url('/assets/backgrounds/noise.png') top center/220px repeat,
-				var(--hero-bg) center center / var(--bg-gradient-size) no-repeat, var(--gray-999);
-			background-blend-mode: overlay, normal, normal, normal;
-			mix-blend-mode: var(--bg-blend-mode);
-		}
-
-		&.bg-variant::before {
-			--hero-bg: var(--bg-image-subtle-1);
-		}
-	}
-
-	.section {
-		&-header {
+    &-header {
 			@apply justify-self-center text-center text-lg;
 			max-width: 50ch;
 			color: var(--gray-300);
@@ -202,6 +181,24 @@ const projects = (await getCollection('work'))
 			&.with-cta {
 				grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
 			}
+		}
+	}
+
+	.with-background {
+		@apply relative;
+
+		&::before {
+			@apply content-[''] absolute pointer-events-none left-1/2 w-screen top-0 -translate-y-3/4 -translate-x-1/2 -z-[1];
+			--hero-bg: var(--bg-image-subtle-2);
+			aspect-ratio: calc(2.25 / var(--bg-scale));
+			background: url('/assets/backgrounds/noise.png') top center/220px repeat,
+				var(--hero-bg) center center / var(--bg-gradient-size) no-repeat, var(--gray-999);
+			background-blend-mode: overlay, normal, normal, normal;
+			mix-blend-mode: var(--bg-blend-mode);
+		}
+
+		&.bg-variant::before {
+			--hero-bg: var(--bg-image-subtle-1);
 		}
 	}
 
