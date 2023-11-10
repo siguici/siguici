@@ -12,43 +12,47 @@ export { variant };
 	.list-grid {
 		@apply grid auto-rows-fr gap-4 list-none p-0;
 
-		&.small {
+    &.small {
 			@apply grid-cols-1 gap-6;
+		}
+	}
 
-			/* If last row contains only one item, make it span both columns. */
-			& > :global(:last-child:nth-child(odd)) {
-				grid-column: 1 / 3;
-			}
+	/* If last row contains only one item, make it span both columns. */
+	.list-grid.small > :global(:last-child:nth-child(odd)) {
+		grid-column: 1 / 3;
+	}
+
+	@media (min-width: 50em) {
+		.list-grid {
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
 		}
 
-		@media (min-width: 50em) {
-			& {
-				@apply grid-cols-2 gap-16;
-			}
+		.list-grid.offset {
+			--row-offset: 7.5rem;
+			padding-bottom: var(--row-offset);
+		}
 
-			&.offset {
-				--row-offset: 7.5rem;
-				padding-bottom: var(--row-offset);
+		/* Shift first item in each row vertically to create staggered effect. */
+		.list-grid.offset > :global(:nth-child(odd)) {
+			transform: translateY(var(--row-offset));
+		}
 
-				/* Shift first item in each row vertically to create staggered effect. */
-				& > :global(:nth-child(odd)) {
-					transform: translateY(var(--row-offset));
-				}
+		/* If last row contains only one item, display it in the second column. */
+		.list-grid.offset > :global(:last-child:nth-child(odd)) {
+			grid-column: 2 / 3;
+			transform: none;
+		}
 
-				/* If last row contains only one item, display it in the second column. */
-				& > :global(:last-child:nth-child(odd)) {
-					@apply transform-none;
-					grid-column: 2 / 3;
-				}
-			}
+		.list-grid.small {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 2rem;
+		}
 
-			&.small {
-				@apply flex flex-wrap justify-center gap-8;
-
-				& > :global(*) {
-					@apply basis-80;	
-				}
-			}
+		.list-grid.small > :global(*) {
+			flex-basis: 20rem;
 		}
 	}
 </style>
