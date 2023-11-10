@@ -25,10 +25,10 @@
   "tasks": {
     "build": "deno run -A --unstable dev.ts build",
     "check": "deno fmt --check && deno check **/*.ts && deno check **/*.tsx",
-    "dev": "deno run -A --unstable --watch=fresh.config.ts, dev.ts",
+    "dev": "deno run -A --unstable --watch=fresh.config.ts dev.ts",
     "fix": "deno lint && deno fmt",
     "preview": "deno run -A --unstable start.ts",
-    "start": "deno run -A --unstable --watch=fresh.config.ts, dev.ts",
+    "start": "deno run -A --unstable --watch=fresh.config.ts dev.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update ."
   },
   "exclude": ["**/out/*", "**/_fresh/*"],
