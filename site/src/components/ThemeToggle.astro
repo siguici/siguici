@@ -72,7 +72,7 @@ import Icon from './Icon.astro';
 		}
 
 		isDark() {
-			return document.documentElement.classList.contains('theme-dark');
+			return document.documentElement.classList.contains('theme-dark') || localStorage.getItem('theme') === 'dark';
 		}
 	}
 	customElements.define('theme-toggle', ThemeToggle);
