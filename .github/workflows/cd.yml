@@ -41,7 +41,7 @@ jobs:
           path: app/out
 
   deploy:
-    needs: site
+    needs: build
     runs-on: ${{ matrix.operating-system }}
 
     environment: 
