@@ -59,7 +59,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        deno-version: [1.38.0]
+        deno-version: [1.38.1]
 
     name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on Deno-${{ matrix.deno-version }}
 

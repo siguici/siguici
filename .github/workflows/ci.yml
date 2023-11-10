@@ -50,7 +50,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        deno-version: [1.38.0]
+        deno-version: [1.38.1]
 
     name: 🧪 CI sigui.ci web app on ${{ matrix.operating-system }} using Deno@${{ matrix.deno-version }}
 
