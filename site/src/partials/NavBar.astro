@@ -1,6 +1,6 @@
 ---
-import Icon from '../components/Icon.svelte';
-import ThemeToggle from '../components/ThemeToggle.svelte';
+import Icon from '../components/Icon.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 import type { iconPaths } from '../components/IconPaths';
 
 /** Main menu items */
@@ -86,7 +86,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			</div>
 
 			<div class="theme-toggle">
-				<ThemeToggle transition:persist client:only="svelte" />
+				<ThemeToggle transition:persist />
 			</div>
 		</div>
 	</div>

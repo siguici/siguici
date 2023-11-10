@@ -1,10 +1,12 @@
-<script lang="ts">
-let variant: 'offset' | 'small';
+---
+interface Props {
+	variant?: 'offset' | 'small';
+}
 
-export { variant };
-</script>
+const { variant } = Astro.props;
+---
 
-<ul class:offset={variant === 'offset'} class:small={variant === 'small'} class='list-grid'>
+<ul class:list={['list-grid', { offset: variant === 'offset', small: variant === 'small' }]}>
 	<slot />
 </ul>
 
