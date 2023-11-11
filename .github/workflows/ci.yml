@@ -70,7 +70,7 @@ jobs:
           path: app/out
 
       - name: 📂 List distribution files
-        run: ls out
+        run: ls -R out
 
       - name: ⚗️ Check files
         run: deno task check
