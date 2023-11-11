@@ -5,9 +5,9 @@
 /// <reference lib="deno.ns" />
 /// <reference lib="deno.unstable" />
 
-import '$std/dotenv/load.ts';
 import { start } from '$fresh/server.ts';
-import manifest from './fresh.gen.ts';
+import '$std/dotenv/load.ts';
 import config from './fresh.config.ts';
+import manifest from './fresh.gen.ts';
 
 await start(manifest, config);
