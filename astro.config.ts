@@ -49,7 +49,7 @@ export default defineConfig({
     }),
     preact({
       compat: true,
-      include: ["**/widgets/*"],
+      include: ["**/preact/*", "**/react/*"],
     }),
     qwikdev(),
   ],
