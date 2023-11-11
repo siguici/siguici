@@ -18,7 +18,7 @@
     "check": "biome ci . && astro check",
     "check.format": "biome format .",
     "check.lint": "biome check .",
-    "deploy": "deployctl deploy --project=sigui --no-static --include=./app ./app/start.ts",
+    "deploy": "deployctl deploy --project=siguici --no-static --include=./app ./app/start.ts",
     "dev": "astro dev",
     "fix": "bun lint && bun format",
     "format": "biome format --write .",
