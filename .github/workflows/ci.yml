@@ -12,13 +12,13 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        bun-version: [1.0.11]
+        bun-version: [1.0.25]
 
     name: 🧪 CI sigui.ci website on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
 
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 🔧 Setup Bun
         uses: oven-sh/setup-bun@v1
@@ -35,7 +35,7 @@ jobs:
         run: bun run build
 
       - name: 🚚 Upload distribution files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist-files
           path: app/out
@@ -50,13 +50,13 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        deno-version: [1.38.1]
+        deno-version: [1.40.2]
 
     name: 🧪 CI sigui.ci web app on ${{ matrix.operating-system }} using Deno@${{ matrix.deno-version }}
 
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 🔨 Configure Deno
         uses: denoland/setup-deno@v1
@@ -64,7 +64,7 @@ jobs:
           deno-version: ${{ matrix.deno-version }}
 
       - name: 🚚 Download distribution files
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist-files
           path: app/out
