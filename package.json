@@ -11,6 +11,8 @@
   },
   "private": true,
   "type": "module",
+  "homepage": "https://sigui.deno.dev",
+  "repository": "https://github.com/siguici/sigui.ci",
   "scripts": {
     "astro": "astro",
     "sync": "astro sync",
