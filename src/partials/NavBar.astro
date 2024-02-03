@@ -2,6 +2,7 @@
 import Icon from '../components/Icon.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import type { iconPaths } from '../components/IconPaths';
+import { app } from '../config';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -21,7 +22,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	<div class="menu-header">
 		<a href="/" class="site-title">
 			<span class="logo h-12"></span>
-			{process.env.APP_NAME || 'Sigui'}
+			{process.env.APP_NAME || app.title}
 		</a>
 		<menu-button>
 			<template>

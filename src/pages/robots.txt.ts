@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { APP } from "../config";
+import { app } from "../config";
 
 const robots = `
 # www.robotstxt.org/
@@ -8,7 +8,7 @@ User-agent: *
 
 Disallow:
 
-Sitemap: ${new URL("sitemap-index.xml", APP.website).href}
+Sitemap: ${new URL("sitemap-index.xml", app.url).href}
 `.trim();
 
 export const GET: APIRoute = () =>

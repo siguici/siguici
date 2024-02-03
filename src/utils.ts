@@ -4,7 +4,7 @@ import {
   pagesGlobToRssItems,
 } from "@astrojs/rss";
 import type { APIContext } from "astro";
-import { APP } from "./config";
+import { app } from "./config";
 import { type CollectionEntry, getCollection } from "astro:content";
 
 export async function sortWork(): Promise<CollectionEntry<"work">[]> {
@@ -24,8 +24,8 @@ export async function sortWork(): Promise<CollectionEntry<"work">[]> {
 
 export async function rssWork(context: APIContext): Promise<RSSOptions> {
   return {
-    title: APP.title,
-    description: APP.description,
+    title: app.title,
+    description: app.description,
     site: context.site || import.meta.env.SITE,
     items: [
       ...(await workRssItems()),
@@ -33,7 +33,7 @@ export async function rssWork(context: APIContext): Promise<RSSOptions> {
         import.meta.glob("./pages/**/*.{md,mdx,}"),
       )) as RSSFeedItem[]),
     ],
-    customData: `<language>${APP.locale}</language>`,
+    customData: `<language>${app.locale}</language>`,
     stylesheet: "/feed.xsl",
   };
 }
@@ -48,9 +48,9 @@ export async function workRssItems(): Promise<RSSFeedItem[]> {
 
 export function workRssFeedItem(work: CollectionEntry<"work">): RSSFeedItem {
   return {
-    title: work.data.title || APP.title,
+    title: work.data.title || app.title,
     pubDate: work.data.pubDate || new Date(),
-    description: work.data.description || APP.description,
+    description: work.data.description || app.description,
     customData: work.data.customData,
     link: `/work/${work.slug}/`,
   };
