@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 @layer components {
-    .brand {
+    .logo {
         content: url('../assets/logo.svg');
     }
 }
