@@ -1,8 +1,8 @@
 export const AppConfig = {
-  name: "Sigui",
+  name: "sigui",
   locale: "en-US",
   title: "Sigui",
   description: "The Sigui website.",
-  website: "https://sigui.ci/",
+  website: "https://sigui.deno.dev/",
   sitemap: "sitemap-index.xml",
 };

@@ -5,6 +5,8 @@ import tailwind from "@astrojs/tailwind";
 import qwik from "@qwikdev/astro";
 import { defineConfig, passthroughImageService } from "astro/config";
 import { loadEnv } from "vite";
+import { APP } from "./src/config";
+
 const { SERVER_PORT } = loadEnv(
   process.env.NODE_ENV || "local",
   process.cwd(),
@@ -13,7 +15,7 @@ const { SERVER_PORT } = loadEnv(
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://sigui.ci",
+  site: APP.website,
   srcDir: "./src",
   outDir: "./app/out",
   publicDir: "./site",
