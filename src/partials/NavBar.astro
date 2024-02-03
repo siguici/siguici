@@ -65,9 +65,6 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 						</a>
 					))
 				}
-			</div>
-
-			<div class="rss-feed">
 				<a href="/feed.xml" class="rss-link font-black ">
 					<span class="sr-only">RSS feed</span>
 					<svg
@@ -247,7 +244,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		--icon-size: theme('fontSize.2xl');
 		--icon-padding: theme('spacing.1');
 
-		@apply flex justify-between gap-3 py-6 pr-8 pl-6;
+		@apply flex justify-between items-center h-full gap-3 py-6 pr-8 pl-6;
 		background-color: var(--gray-999);
 		border-radius: 0 0 0.75rem 0.75rem;
 		box-shadow: var(--shadow-lg);
@@ -260,7 +257,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		}
 	}
 
-	.socials, .rss-feed {
+	.socials {
 		@apply flex flex-wrap gap-3;
 		font-size: var(--icon-size);
 	}
