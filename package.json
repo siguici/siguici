@@ -20,7 +20,7 @@
     "check.lint": "biome check .",
     "deploy": "deployctl deploy --project=siguici --no-static --include=./app ./app/start.ts",
     "dev": "astro dev",
-    "fix": "bun lint && bun format",
+    "fix": "bun lint && bun format && bun sync",
     "format": "biome format --write .",
     "lint": "biome check --apply-unsafe .",
     "preview": "bun run build && bun run serve",

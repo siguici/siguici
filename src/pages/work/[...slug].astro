@@ -28,7 +28,7 @@ const { Content } = await work!.render();
 			<header>
 				<div class="wrapper stack gap-2">
 					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
-					<Hero title={work!.data.title} align="start">
+					<Hero title={work!.data.title ?? "Sigui's work"} align="start">
 						<div class="details">
 							<div class="tags">
 								{work!.data.tags.map((t) => <Pill>{t}</Pill>)}

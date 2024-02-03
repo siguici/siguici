@@ -1,6 +1,4 @@
 ---
-import { getCollection } from 'astro:content';
-
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -11,15 +9,14 @@ import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro'
 import PortfolioPreview from '../components/PortfolioPreview.astro';
+import { sortWork } from "../utils";
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
 
 // Content Fetching: List four most recent work projects
-const projects = (await getCollection('work'))
-	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 4);
+const projects = (await sortWork()).slice(0, 4);
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
