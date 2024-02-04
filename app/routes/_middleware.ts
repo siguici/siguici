@@ -1,5 +1,5 @@
 import { MiddlewareHandlerContext } from '$fresh/server.ts';
-import { handle } from '../out/server/entry.mjs';
+import { handle } from '@/out/server/entry.mjs';
 
 interface State {
   kv: Deno.Kv;
