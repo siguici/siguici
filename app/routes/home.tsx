@@ -11,7 +11,7 @@ export default function Home() {
           src='/favicon.svg'
           width='128'
           height='128'
-          alt='the Fresh logo: a sliced lemon dripping with juice'
+          alt='The Sigui Logo'
         />
         <h1 class='text-4xl font-bold'>Welcome to Sigui's</h1>
         <p class='my-4'>
