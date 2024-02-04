@@ -90,6 +90,6 @@ jobs:
       - name: 📂 Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: siguici
+          project: sigui
           entrypoint: start.ts
           root: app
