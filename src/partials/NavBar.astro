@@ -245,15 +245,13 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		--icon-size: theme('fontSize.2xl');
 		--icon-padding: theme('spacing.1');
 
-		@apply flex justify-between items-center h-full gap-3 py-6 pr-8 pl-6;
-		background-color: var(--gray-999);
-		border-radius: 0 0 0.75rem 0.75rem;
+		@apply flex justify-between items-center h-full gap-3 py-6 pr-8 pl-6 rounded-b-xl bg-purple-50 dark:bg-purple-900;
 		box-shadow: var(--shadow-lg);
 
 		@media (min-width: 50em) {
 			& {
 				--icon-padding: theme('spacing.2');
-				@apply self-end items-center p-0 bg-transparent shadow-none;
+				@apply self-end items-center p-0 bg-transparent dark:bg-transparent shadow-none;
 			}
 		}
 	}
@@ -278,14 +276,13 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	}
 
 	.social, .rss-link {
-		@apply flex no-underline;
+		@apply flex no-underline text-purple-950 dark:text-purple-50;
 		padding: var(--icon-padding);
-		color: var(--accent-dark);
 		transition: color var(--theme-transition);
 
 		&:hover,
 		&:focus {
-			color: var(--accent-text-over);
+			@apply text-purple-500;
 		}
 	}
 
