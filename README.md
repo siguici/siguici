@@ -3,11 +3,16 @@
     <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=7800fff0&height=120&section=header"/>
   </a>
 </div>
+
 <div align="center">
 
 # 🎉 Welcome to Sigui's GitHub profile
 
-**Autodidact, freelancer and digital nomad. Likes to work remotely.**
+**Senior Fullstack Software Developer and Linux Server Administrator.**
+
+[Website](https://sigui.deno.dev/) | [E-mail](mailto:dev.sigui@proton.me) | [Bento](https://bento.me/sigui) | [LinkedIn](https://linkedin.com/in/siguici) | [GitLab](https://gitlab.com/siguici) | [GitHub](https://github.com/siguici) | [npm](https://npmjs.org/~siguici) | [Composer - Packagist](https://packagist.org/users/siguici) | [Twitter](https://twitter.com/siguici)
+
+---
 
 [![committers.top badge](https://user-badge.committers.top/tunisia/siguici.svg)](https://user-badge.committers.top/tunisia/siguici) [![Profile views](https://komarev.com/ghpvc/?username=siguici)](https://github.com/siguici)
 
@@ -19,10 +24,7 @@
 
 [![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=siguici&hide_border=true&layout=donut-vertical&langs_count=10&theme=tokyonight)](https://github.com/siguici)
 
-***
-
-[Website](https://sigui.deno.dev/) | [E-mail](mailto:dev.sigui@proton.me) | [Bento](https://bento.me/sigui) | [LinkedIn](https://linkedin.com/in/siguici) | [GitLab](https://gitlab.com/siguici) | [GitHub](https://github.com/siguici) | [npm](https://npmjs.org/~siguici) | [Composer - Packagist](https://packagist.org/users/siguici) | [Twitter](https://twitter.com/siguici)
-
+---
   <a href="https://github.com/siguici/" title="Sigui"><img src="https://github.com/siguici/art/blob/HEAD/images/sigui.svg" alt="Sigui's logo" height="64"/></a>
 </div>
 
