@@ -1,0 +1,14 @@
+#!/usr/bin/env -S deno run --allow-all
+
+const command = new Deno.Command(Deno.execPath(), {
+  args: [
+    'task',
+    ...Deno.args,
+  ],
+  env: Deno.env.toObject(),
+  stdin: 'inherit',
+  stdout: 'inherit',
+  stderr: 'inherit',
+}).outputSync();
+
+Deno.exit(command.code);
