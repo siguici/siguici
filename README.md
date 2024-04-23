@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://sigui.deno.dev" style="position:relative;background-color:red;">
-    <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=7800fff0&height=120&section=header"/>
+    <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=7839fff0&height=120&section=header"/>
   </a>
 </div>
 
