@@ -10,7 +10,7 @@
 
 **Senior Fullstack Software Developer and Linux Server Administrator.**
 
-[Website](https://sigui.deno.dev/) | [E-mail](mailto:dev.sigui@proton.me) | [Bento](https://bento.me/sigui) | [LinkedIn](https://linkedin.com/in/siguici) | [GitLab](https://gitlab.com/siguici) | [GitHub](https://github.com/siguici) | [npm](https://npmjs.org/~siguici) | [Composer - Packagist](https://packagist.org/users/siguici) | [Twitter](https://twitter.com/siguici)
+[Website](https://sigui.deno.dev/) | [E-mail](mailto:siguici@proton.me) | [Bento](https://bento.me/siguici) | [LinkedIn](https://linkedin.com/in/siguici) | [GitLab](https://gitlab.com/siguici) | [GitHub](https://github.com/siguici) | [npm](https://npmjs.org/~siguici) | [Composer - Packagist](https://packagist.org/users/siguici) | [Twitter](https://twitter.com/siguici)
 
 ---
 
