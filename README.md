@@ -28,7 +28,9 @@
 [![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=siguici&hide_border=true&layout=donut-vertical&langs_count=10&theme=tokyonight)](https://github.com/siguici)
 
 ---
-  <a href="https://github.com/siguici/" title="Sigui"><img src="https://github.com/siguici/art/blob/HEAD/images/sigui.svg" alt="Sigui's logo" height="64"/></a>
+  <a href="https://sikessem.com/" title="Sikessem">
+    <img src="https://github.com/sikessem/art/blob/HEAD/images/mark.svg" alt="Sikessem mark" height="64"/>
+  </a>
 </div>
 
 <!--
