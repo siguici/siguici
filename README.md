@@ -1,8 +1,11 @@
 <div align="center">
-  <a href="https://sikessem.com" style="position:relative;background-color:#7878ff;">
+  <a href="https://sikessem.com" title="Sikessem" style="position:relative;background-color:#7878ff;">
     <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=7878fff0&height=120&section=header"/>
+    <img src="https://github.com/sikessem/art/blob/HEAD/images/sikessem.svg" alt="Sikessem" height="128"/>
   </a>
 </div>
+
+***
 
 <div align="center">
 
