@@ -25,8 +25,6 @@
 
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=siguici&layout=compact&theme=react&bg_color=0d111700&cache_seconds=7200&hide_border=true)](https://github.com/siguici)
 
-[![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=siguici&hide_border=true&layout=donut-vertical&langs_count=10&theme=tokyonight)](https://github.com/siguici)
-
 ---
   <a href="https://sikessem.com/" title="Sikessem">
     <img src="https://github.com/sikessem/art/blob/HEAD/images/mark.svg" alt="Sikessem mark" height="64"/>
