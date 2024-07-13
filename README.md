@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://sikessem.com" title="Sikessem" style="position:relative;background-color:#7878ff;">
+  <a href="https://github.com/sikessem" target="__blank" title="Sikessem" style="position:relative;background-color:#7878ff;">
     <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=7878fff0&height=120&section=header"/>
     <img src="https://github.com/sikessem/art/blob/HEAD/images/sikessem.svg" alt="Sikessem" height="128"/>
   </a>
@@ -28,7 +28,7 @@
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=siguici&layout=compact&theme=react&bg_color=0d111700&cache_seconds=7200&hide_border=true)](https://github.com/siguici)
 
 ---
-  <a href="https://sikessem.com/" title="Sikessem">
+  <a href="https://github.com/sikessem" target="__blank" title="Sikessem">
     <img src="https://github.com/sikessem/art/blob/HEAD/images/mark.svg" alt="Sikessem mark" height="64"/>
   </a>
 </div>
