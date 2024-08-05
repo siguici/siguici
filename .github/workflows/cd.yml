@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        bun-version: [1.0.25]
+        bun-version: [1.1.21]
 
     name: 📦️ Build sigui.ci website on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
 
@@ -59,7 +59,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        deno-version: [1.40.2]
+        deno-version: [1.45.5]
 
     name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on Deno-${{ matrix.deno-version }}
 
