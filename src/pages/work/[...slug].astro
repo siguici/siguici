@@ -9,7 +9,7 @@ import Icon from "../../components/Icon.astro";
 import Pill from "../../components/Pill.astro";
 
 interface Props {
-  entry: CollectionEntry<"work">;
+  work: CollectionEntry<"work">;
 }
 
 const works = await getCollection("work");
@@ -17,11 +17,12 @@ const works = await getCollection("work");
 const { slug } = Astro.params;
 
 const work = works.find((work) => work.slug === slug);
+
 if (!work) {
   return Astro.redirect("/404/");
 }
 
-const { Content } = await work?.render();
+const { Content } = await work.render();
 ---
 
 <BaseLayout title={work!.data.title} description={work!.data.description}>
