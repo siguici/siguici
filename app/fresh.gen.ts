@@ -9,7 +9,7 @@ import * as $api_joke from './routes/api/joke.ts';
 import * as $greet_name_ from './routes/greet/[name].tsx';
 import * as $home from './routes/home.tsx';
 import * as $Counter from './islands/Counter.tsx';
-import { type Manifest } from '$fresh/server.ts';
+import type { Manifest } from '$fresh/server.ts';
 
 const manifest = {
   routes: {
