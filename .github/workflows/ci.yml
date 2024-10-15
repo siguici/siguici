@@ -6,8 +6,12 @@ permissions:
   contents: read
 
 jobs:
-  site:
+  frontend:
     runs-on: ${{ matrix.operating-system }}
+
+    defaults:
+      run:
+        working-directory: ./apps/frontend
 
     strategy:
       matrix:
@@ -38,14 +42,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dist-files
-          path: app/out
+          path: apps/backend/out
 
-  app:
-    needs: site
+  backend:
+    needs: frontend
     runs-on: ${{ matrix.operating-system }}
     defaults:
       run:
-        working-directory: ./app
+        working-directory: ./apps/backend
 
     strategy:
       matrix:
@@ -67,7 +71,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-files
-          path: app/out
+          path: apps/backend/out
 
       - name: 📂 List distribution files
         run: ls -R out
