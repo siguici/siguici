@@ -1,9 +1,9 @@
 {
-  "name": "sigui.ci",
-  "description": "Sigui's web application.",
+  "name": "siguici-monorepo",
+  "description": "Sigui Kessé Emmanuel's personal monorepo",
   "engines": {
-    "bun": ">=1.1.30",
-    "deno": ">=2.0.0"
+    "bun": ">=1.1",
+    "deno": ">=2.0"
   },
   "packageManager": "bun@1.1.30",
   "publishConfig": {
@@ -12,56 +12,18 @@
   "private": true,
   "type": "module",
   "homepage": "https://sigui.deno.dev",
-  "repository": "https://github.com/siguici/sigui.ci",
+  "repository": "https://github.com/siguici/siguici",
   "scripts": {
-    "astro": "astro",
-    "sync": "astro sync",
-    "build": "bun fix && astro build",
-    "check": "biome ci . && astro check",
-    "check.format": "biome format .",
-    "check.lint": "biome check .",
-    "deploy": "deployctl deploy --project=siguici --no-static --include=./app ./app/start.ts",
-    "dev": "astro dev",
-    "fix": "bun lint && bun format && bun sync",
+    "check": "biome ci .",
+    "check:format": "biome format .",
+    "check:lint": "biome check .",
+    "deploy": "deployctl deploy --project=siguici --no-static --include=./apps/ ./apps/backend/start.ts",
+    "fix": "bun lint && bun format",
     "format": "biome format --write .",
     "lint": "biome check --write .",
-    "preview": "bun run build && bun run serve",
-    "prod": "bun run build && bun run deploy",
-    "serve": "deno run -A --unstable ./app/start.ts",
-    "start": "astro dev --open"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/deno": "^5.0.1",
-    "@astrojs/preact": "^3.5.3",
-    "@astrojs/rss": "^4.0.8",
-    "@astrojs/sitemap": "^3.2.0",
-    "@astrojs/tailwind": "^5.1.2",
-    "@builder.io/qwik": "^1.9.1",
-    "@qwikdev/astro": "^0.6.3",
-    "astro": "^4.16.3",
-    "caniuse-lite": "^1.0.30001668",
-    "preact": "^10.24.3",
-    "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.3"
+    "serve": "deno run -A --unstable ./apps/backend/start.ts"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.3",
-    "@types/fs-extra": "^11.0.4",
-    "@types/node": "^22.7.5",
-    "autoprefixer": "^10.4.20",
-    "bun-types": "^1.1.30",
-    "cssnano": "^7.0.6",
-    "fs-extra": "^11.2.0",
-    "postcss": "^8.4.47",
-    "postcss-import": "^16.1.0",
-    "postcss-load-config": "^6.0.1",
-    "postcss-nested": "^6.2.0",
-    "ts-node": "^10.9.2",
-    "tslib": "^2.7.0"
-  },
-  "overrides": {
-    "react": "npm:@preact/compat@latest",
-    "react-dom": "npm:@preact/compat@latest"
+    "@biomejs/biome": "^1.9.3"
   }
 }

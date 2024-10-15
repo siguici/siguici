@@ -1,8 +1,9 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["./apps/frontend/biome.json"],
   "organizeImports": {
     "enabled": true,
-    "ignore": [".astro", "app", "node_modules"]
+    "ignore": ["apps/backend", "node_modules"]
   },
   "linter": {
     "enabled": true,
@@ -14,13 +15,13 @@
         "noShoutyConstants": "warn"
       }
     },
-    "ignore": [".astro", "app", "node_modules"]
+    "ignore": ["apps/backend", "node_modules"]
   },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
     "indentStyle": "space",
     "lineWidth": 80,
-    "ignore": [".astro", "app", "node_modules"]
+    "ignore": ["apps/backend", "node_modules"]
   }
 }

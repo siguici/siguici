@@ -17,11 +17,11 @@ const { SERVER_PORT } = loadEnv(
 export default defineConfig({
   site: app.url,
   srcDir: "./src",
-  outDir: "./app/out",
-  publicDir: "./site",
+  outDir: "../backend/out",
+  publicDir: "./public",
   build: {
-    client: "./app/out/client",
-    server: "./app/out/server",
+    client: "../backend/out/client",
+    server: "../backend/out/server",
   },
   compressHTML: true,
   output: "server",

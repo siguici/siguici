@@ -1,0 +1,11 @@
+{
+  "organizeImports": {
+    "ignore": [".astro", "node_modules"]
+  },
+  "linter": {
+    "ignore": [".astro", "node_modules"]
+  },
+  "formatter": {
+    "ignore": [".astro", "node_modules"]
+  }
+}
