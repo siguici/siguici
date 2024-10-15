@@ -1,12 +1,13 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{js,ts,md,jsx,tsx,mdx}'],
-  theme: {
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/nesting'),
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
+import defaultTheme from "tailwindcss/defaultTheme";
+import type { Config } from 'tailwindcss';
+
+export const TailwindConfig: Config = {
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	theme: {
+		extend: {
+			sans: [...defaultTheme.fontFamily.sans],
+		},
+	},
 };
+
+export default TailwindConfig;

@@ -27,6 +27,9 @@ jobs:
           npm i -g pnpm
           pnpm install
 
+      - name: ✅ Check files
+        run: pnpm check
+
       - name: 🍱 Compile assets
         run: pnpm build
 
