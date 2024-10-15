@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+    paths:
+      - .github/workflows/*
+      - apps/**
+
 jobs:
   build:
     runs-on: ${{ matrix.operating-system }}
@@ -18,7 +22,7 @@ jobs:
         operating-system: [ubuntu-latest]
         bun-version: [1.1]
 
-    name: 📦️ Build sigui.ci website on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
+    name: 📦️ Building @siguici's assets on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
 
     steps:
       - name: 🚚 Get latest code
@@ -32,11 +36,8 @@ jobs:
       - name: ⚡️ Install dependencies
         run: bun install
 
-      - name: ✅ Check types
-        run: bun run check
-
-      - name: 🍱 Build assets
-        run: bun run build
+      - name: 📦️ Build assets for production
+        run: bun prod
 
       - name: 🚚 Upload distribution files
         uses: actions/upload-artifact@v4
@@ -48,7 +49,7 @@ jobs:
     needs: build
     runs-on: ${{ matrix.operating-system }}
 
-    environment: 
+    environment:
       name: production
       url: https://sigui.ci
 
@@ -65,7 +66,7 @@ jobs:
         operating-system: [ubuntu-latest]
         deno-version: [2.0]
 
-    name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on Deno-${{ matrix.deno-version }}
+    name: 🚀 Deploy @siguici apps on Deno-${{ matrix.deno-version }} under ${{ matrix.operating-system }}
 
     steps:
       - name: 🚚 Get latest code
@@ -82,7 +83,7 @@ jobs:
           name: dist-files
           path: apps/backend/out
 
-      - name: 📂 List distribution files
+      - name: 🗃️ List distribution files
         run: ls -R out
 
       - name: ⚗️ Check files
@@ -96,4 +97,4 @@ jobs:
         with:
           project: siguici
           entrypoint: start.ts
-          root: apps/backend
+          root: app

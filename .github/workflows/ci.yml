@@ -2,11 +2,8 @@ name: CI
 
 on: [push, pull_request]
 
-permissions:
-  contents: read
-
 jobs:
-  frontend:
+  test:
     runs-on: ${{ matrix.operating-system }}
 
     defaults:
@@ -18,7 +15,7 @@ jobs:
         operating-system: [ubuntu-latest]
         bun-version: [1.1]
 
-    name: 🧪 CI sigui.ci website on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
+    name: 🧪 Testing @siguici's apps on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
 
     steps:
       - name: 🚚 Get latest code
@@ -37,47 +34,3 @@ jobs:
 
       - name: 🍱 Build assets
         run: bun run build
-
-      - name: 🚚 Upload distribution files
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist-files
-          path: apps/backend/out
-
-  backend:
-    needs: frontend
-    runs-on: ${{ matrix.operating-system }}
-    defaults:
-      run:
-        working-directory: ./apps/backend
-
-    strategy:
-      matrix:
-        operating-system: [ubuntu-latest]
-        deno-version: [2.0]
-
-    name: 🧪 CI sigui.ci web app on ${{ matrix.operating-system }} using Deno@${{ matrix.deno-version }}
-
-    steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v4
-
-      - name: 🔨 Configure Deno
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: ${{ matrix.deno-version }}
-
-      - name: 🚚 Download distribution files
-        uses: actions/download-artifact@v4
-        with:
-          name: dist-files
-          path: apps/backend/out
-
-      - name: 📂 List distribution files
-        run: ls -R out
-
-      - name: ⚗️ Check files
-        run: deno task check
-
-      - name: 📦️ Build app
-        run: deno task build
