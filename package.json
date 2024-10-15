@@ -2,10 +2,10 @@
   "name": "sigui.ci",
   "description": "Sigui's web application.",
   "engines": {
-    "bun": ">=1.0.11",
-    "deno": ">=1.38.1"
+    "bun": ">=1.0.25",
+    "deno": ">=1.40.2"
   },
-  "packageManager": "bun@1.0.11",
+  "packageManager": "bun@1.0.25",
   "publishConfig": {
     "access": "public"
   },
@@ -29,28 +29,30 @@
     "start": "astro dev --open"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.4",
+    "@astrojs/check": "^0.4.1",
     "@astrojs/deno": "^5.0.1",
     "@astrojs/preact": "^3.5.3",
-    "@astrojs/rss": "^3.0.0",
+    "@astrojs/rss": "^4.0.8",
     "@astrojs/sitemap": "^3.2.0",
     "@astrojs/tailwind": "^5.1.2",
     "@builder.io/qwik": "^1.9.1",
-    "@qwikdev/astro": "^0.1.19",
-    "astro": "^3.6.5",
+    "@qwikdev/astro": "^0.5.16",
+    "astro": "^4.16.3",
     "preact": "^10.24.3",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.6.3"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.16.11",
     "autoprefixer": "^10.4.20",
     "bun-types": "^1.1.30",
     "cssnano": "^6.1.2",
+    "fs-extra": "^11.2.0",
     "postcss": "^8.4.47",
-    "postcss-import": "^15.1.0",
-    "postcss-load-config": "^4.0.2",
+    "postcss-import": "^16.1.0",
+    "postcss-load-config": "^5.1.0",
     "postcss-nested": "^6.2.0",
     "ts-node": "^10.9.2",
     "tslib": "^2.7.0"
