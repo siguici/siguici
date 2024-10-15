@@ -59,7 +59,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        deno-version: [1.45.5]
+        deno-version: [2.0]
 
     name: 🚀 Deploy sigui.ci to ${{ matrix.operating-system }} on Deno-${{ matrix.deno-version }}
 
@@ -90,6 +90,6 @@ jobs:
       - name: 📂 Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: sigui
+          project: siguici
           entrypoint: start.ts
           root: app
