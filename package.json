@@ -35,6 +35,8 @@
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.2.0",
     "@astrojs/tailwind": "^5.1.2",
+    "@builder.io/qwik": "^1.9.1",
+    "@qwikdev/astro": "^0.1.19",
     "astro": "^3.6.5",
     "preact": "^10.24.3",
     "tailwindcss": "^3.4.13",

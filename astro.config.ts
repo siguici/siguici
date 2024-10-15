@@ -2,6 +2,7 @@ import deno from "@astrojs/deno";
 import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
+import qwikdev from "@qwikdev/astro";
 import { defineConfig, passthroughImageService } from "astro/config";
 import { loadEnv } from "vite";
 const { SERVER_PORT } = loadEnv(
@@ -13,9 +14,9 @@ const { SERVER_PORT } = loadEnv(
 // https://astro.build/config
 export default defineConfig({
   site: "https://sigui.ci",
-  srcDir: "./site/src",
+  srcDir: "./src",
   outDir: "./app/out",
-  publicDir: "./site/static",
+  publicDir: "./site",
   build: {
     client: "./app/out/client",
     server: "./app/out/server",
@@ -48,7 +49,9 @@ export default defineConfig({
     }),
     preact({
       compat: true,
+      include: ["**/widgets/*"],
     }),
+    qwikdev(),
   ],
   vite: {
     ssr: {
