@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "sigui.ci",
+  "short_name": "Sigui's web application",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Discover everything about Sigui through its application."
+}
