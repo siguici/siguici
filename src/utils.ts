@@ -1,3 +1,4 @@
+import { type CollectionEntry, getCollection } from "astro:content";
 import {
   type RSSFeedItem,
   type RSSOptions,
@@ -5,7 +6,6 @@ import {
 } from "@astrojs/rss";
 import type { APIContext } from "astro";
 import { app } from "./config";
-import { type CollectionEntry, getCollection } from "astro:content";
 
 export async function sortWork(): Promise<CollectionEntry<"work">[]> {
   return (await getCollection("work")).sort((a, b) => {

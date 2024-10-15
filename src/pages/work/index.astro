@@ -1,10 +1,10 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import ContactCTA from '../../components/ContactCTA.astro';
-import PortfolioPreview from '../../components/PortfolioPreview.astro';
-import Hero from '../../components/Hero.astro';
-import Grid from '../../components/Grid.astro';
-import { sortWork } from '../../utils';
+import ContactCTA from "../../components/ContactCTA.astro";
+import Grid from "../../components/Grid.astro";
+import Hero from "../../components/Hero.astro";
+import PortfolioPreview from "../../components/PortfolioPreview.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { sortWork } from "../../utils";
 
 const projects = await sortWork();
 ---

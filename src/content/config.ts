@@ -1,5 +1,5 @@
-import { rssSchema } from "@astrojs/rss";
 import { defineCollection, z } from "astro:content";
+import { rssSchema } from "@astrojs/rss";
 
 const work = defineCollection({
   type: "content",

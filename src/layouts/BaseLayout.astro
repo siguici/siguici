@@ -2,19 +2,19 @@
 // Learn about using Astro layouts:
 // https://docs.astro.build/en/core-concepts/layouts/
 
+import BackToTop from "../partials/BackToTop.astro";
+import Footer from "../partials/Footer.astro";
+import NavBar from "../partials/NavBar.astro";
 // Component Imports
-import PageHead from '../partials/PageHead.astro';
-import NavBar from '../partials/NavBar.astro';
-import BackToTop from '../partials/BackToTop.astro';
-import Footer from '../partials/Footer.astro';
+import PageHead from "../partials/PageHead.astro";
 
 interface Props {
-	title?: string | undefined;
-	description?: string | undefined;
-	animate?: 'fade' | 'initial' | 'slide' | 'none';
+  title?: string | undefined;
+  description?: string | undefined;
+  animate?: "fade" | "initial" | "slide" | "none";
 }
 
-const { title, description, animate = 'fade' } = Astro.props;
+const { title, description, animate = "fade" } = Astro.props;
 ---
 
 <html lang="en" transition:animate={animate}>
