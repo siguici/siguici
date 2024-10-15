@@ -41,6 +41,7 @@ Feel free [to reach out via E-mail](mailto:siguici@proton.me) or [follow me on T
 </a>
 </div>
 
+<<<<<<< HEAD
 <!--
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
