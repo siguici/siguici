@@ -1,5 +1,5 @@
 ---
-import Icon from '../components/Icon.svelte';
+import Icon from '../components/Icon.astro';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -9,8 +9,8 @@ const currentYear = new Date().getFullYear();
 		<span>by Sigui Kessé Emmanuel &copy; {currentYear}</span>
 	</p>
 	<p class="socials">
-		<a href="https://twitter.com/siguici"> Twitter</a>
-		<a href="https://github.com/siguici"> GitHub</a>
+		<a href="https://twitter.com/siguici"><Icon icon="twitter-logo" size="1.2em" /> <span>Twitter</span></a>
+		<a href="https://github.com/siguici"><Icon icon="github-logo" size="1.2em" /> <span>GitHub</span></a>
 	</p>
 </footer>
 <style>
@@ -19,9 +19,13 @@ const currentYear = new Date().getFullYear();
 		color: var(--gray-400);
 
 		& a {
-			@apply underline underline-offset-2 decoration-solid decoration-transparent;
+			@apply inline-flex underline underline-offset-2 decoration-solid decoration-transparent;
 			color: var(--gray-400);
 			transition: text-decoration-color var(--theme-transition);
+
+			& span {
+				@apply ml-1;
+			}
 		}
 
 		& a:hover,

@@ -1,10 +1,12 @@
-<script lang="ts">
+---
 import type { CollectionEntry } from 'astro:content';
 
-export let project: CollectionEntry<'work'>;
-	
-const { data, slug } = project;
-</script>
+interface Props {
+	project: CollectionEntry<'work'>;
+}
+
+const { data, slug } = Astro.props.project;
+---
 
 <a class="card" href={`/work/${slug}`}>
 	<span class="title">{data.title}</span>
