@@ -39,7 +39,7 @@ or just a friendly chat over a virtual coffee ☕️.
 or [follow me on Twitter](https://x.com/intent/follow?screen_name=siguici) for updates!
 
 <a href="https://github.com/sikessem" target="__blank" title="Sikessem">
-    <img src="https://github.com/sikessem/art/blob/HEAD/images/mark.svg" alt="Sikessem mark" height="48"/>
+    <img src="https://github.com/sikessem/art/blob/HEAD/images/mark.svg" alt="Sikessem mark" height="32"/>
 </a>
 </div>
 
