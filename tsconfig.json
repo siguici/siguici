@@ -4,6 +4,6 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "@builder.io/qwik",
-    "moduleResolution": "Node",
+    "moduleResolution": "Node"
   }
 }
