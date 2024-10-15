@@ -2,7 +2,7 @@ import deno from "@astrojs/deno";
 import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-import qwikdev from "@qwikdev/astro";
+import qwik from "@qwikdev/astro";
 import { defineConfig, passthroughImageService } from "astro/config";
 import { loadEnv } from "vite";
 const { SERVER_PORT } = loadEnv(
@@ -51,7 +51,9 @@ export default defineConfig({
       compat: true,
       include: ["**/preact/*", "**/react/*"],
     }),
-    qwikdev(),
+    qwik({
+      exclude: ["**/preact/*", "**/react/*"],
+    }),
   ],
   vite: {
     ssr: {
