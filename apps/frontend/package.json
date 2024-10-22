@@ -10,6 +10,7 @@
   },
   "private": true,
   "type": "module",
+  "license": "AGPL-3.0-or-later",
   "homepage": "https://sigui.deno.dev",
   "repository": {
     "type": "git",
