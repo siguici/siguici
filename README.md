@@ -1,6 +1,6 @@
 <div align="center">
-  <a href="https://github.com/sikessem" target="__blank" title="Sikessem" style="position:relative;background-color:#7878ff;">
-    <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=7878fff0&height=120&section=header"/>
+  <a href="https://github.com/sikessem" target="__blank" title="Sikessem" style="position:relative;background-color:#00ced1f0;">
+    <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00ced1f0&height=120&section=header"/>
     <img src="https://github.com/sikessem/art/blob/HEAD/images/sikessem.svg" alt="Sikessem" height="96"/>
   </a>
 
