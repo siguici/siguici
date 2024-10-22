@@ -97,4 +97,4 @@ jobs:
         with:
           project: siguici
           entrypoint: start.ts
-          root: app
+          root: apps
