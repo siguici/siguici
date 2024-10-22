@@ -4,5 +4,5 @@ import twindConfig from '@/twind.config.ts';
 
 export default defineConfig({
   plugins: [twindPlugin(twindConfig)],
-  staticDir: './out/client',
+  staticDir: '../frontend/out/client',
 });

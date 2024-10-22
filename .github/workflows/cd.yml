@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dist-files
-          path: apps/backend/out
+          path: apps/frontend/out
 
   deploy:
     needs: build
@@ -81,10 +81,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist-files
-          path: apps/backend/out
+          path: apps/frontend/out
 
       - name: 🗃️ List distribution files
-        run: ls -R out
+        run: ls -R ../frontend/out
 
       - name: ⚗️ Check files
         run: deno task check
