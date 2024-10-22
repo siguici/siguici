@@ -96,5 +96,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: siguici
-          entrypoint: start.ts
+          entrypoint: backend/start.ts
           root: apps
