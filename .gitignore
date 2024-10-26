@@ -42,3 +42,10 @@ lerna-debug.log*
 
 # Fresh build directory
 _fresh/
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
