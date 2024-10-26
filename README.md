@@ -8,9 +8,7 @@
 
 # Hi there! 👋 I'm SIGUI Kessé Emmanuel, your friendly neighborhood developer. 😄
 
-**Full-Stack Developer
-| Open-Source Advocate
-| Founder of [@Sikessem](https://github.com/sikessem)**
+Welcome to [siguici](https://github.com/siguici)'s all-in-one hub for open-source projects and contributions.
 
 [E-mail](mailto:siguici@proton.me)
 | [Twitter](https://x.com/intent/follow?screen_name=siguici)
@@ -20,10 +18,11 @@
 | [Packagist](https://packagist.org/users/siguici)
 | [Bento](https://bento.me/siguici)
 
-Welcome to [siguici](https://github.com/siguici/siguici) – my all-in-one hub for open-source projects and contributions.
-
 [![committers.top badge](https://user-badge.committers.top/tunisia/siguici.svg)](https://user-badge.committers.top/tunisia/siguici)
 [![Profile views](https://komarev.com/ghpvc/?username=siguici)](https://github.com/siguici)
+
+</div>
+<div align="left">
 
 ## 🧑‍💻 About Me
 
@@ -48,6 +47,9 @@ from single-page apps to large, complex platforms.
 | Ahlabik                   | [https://ahlabik.tn](https://ahlabik.tn)         |
 | PDC                       | [http://pdc.com.tn](http://pdc.com.tn)           |
 | Glaxuss                   | [https://glaxuss.tech](https://glaxuss.tech)     |
+
+</div>
+<div align="center">
 
 ***
 
