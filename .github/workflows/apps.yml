@@ -1,4 +1,4 @@
-name: CD
+name: Apps
 
 on:
   push:
@@ -36,8 +36,11 @@ jobs:
       - name: ⚡️ Install dependencies
         run: bun install
 
-      - name: 📦️ Build assets for production
-        run: bun prod
+      - name: ✅ Check types
+        run: bun check
+
+      - name: 🍱 Build assets
+        run: bun run build
 
       - name: 🚚 Upload distribution files
         uses: actions/upload-artifact@v4
@@ -51,7 +54,7 @@ jobs:
 
     environment:
       name: production
-      url: https://sigui.ci
+      url: https://siguici.deno.dev
 
     permissions:
       id-token: write
@@ -86,15 +89,12 @@ jobs:
       - name: 🗃️ List distribution files
         run: ls -R ../frontend/out
 
-      - name: ⚗️ Check files
-        run: deno task check
-
-      - name: 📦️ Build app
-        run: deno task build
-
-      - name: 📂 Upload to Deno Deploy
-        uses: denoland/deployctl@v1
+      - name: 📂 Deploy to GitHub Pages
+        id: deployment
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
-          project: siguici
-          entrypoint: backend/start.ts
-          root: apps
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: docs/dist
+          destination_dir: .
+          external_repository: siguici/siguici.github.io
