@@ -71,7 +71,7 @@ jobs:
       - name: 🚚 Checkout the repository
         uses: actions/checkout@v4
 
-      - name: 🚚 Download distribution files
+      - name: 🍱 Download distribution files
         uses: actions/download-artifact@v4
         with:
           name: dist-files
@@ -80,9 +80,12 @@ jobs:
       - name: 🗃️ List distribution files
         run: ls -R dist
 
-      - name: ⚡️ Install, build, and upload
-        uses: withastro/action@v2
+      - name: 📂 Deploy to GitHub Pages
+        id: deployment
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
-          node-version: ${{ matrix.node-version }}
-          package-manager: bun@${{ matrix.bun-version }}
-          path: ./docs
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: docs/dist
+          destination_dir: .
+          external_repository: siguici/siguici.github.io

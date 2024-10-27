@@ -89,12 +89,15 @@ jobs:
       - name: 🗃️ List distribution files
         run: ls -R ../frontend/out
 
-      - name: 📂 Deploy to GitHub Pages
-        id: deployment
-        uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/main'
+      - name: ⚗️ Check files
+        run: deno task check
+
+      - name: 🍱 Build app
+        run: deno task build
+
+      - name: 📂 Upload to Deno Deploy
+        uses: denoland/deployctl@v1
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: docs/dist
-          destination_dir: .
-          external_repository: siguici/siguici.github.io
+          project: siguici
+          entrypoint: backend/start.ts
+          root: apps
