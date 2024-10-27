@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  test:
+  apps:
     runs-on: ${{ matrix.operating-system }}
 
     defaults:
@@ -34,3 +34,38 @@ jobs:
 
       - name: 🍱 Build assets
         run: bun run build
+
+  docs:
+    runs-on: ${{ matrix.os }}
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest]
+        bun: [1.1]
+        experimental: [false]
+
+    defaults:
+      run:
+        working-directory: ./docs
+
+    name: 🧪 Test Sigui's work using Bun-${{ matrix.bun }} under ${{ matrix.os }}
+
+    steps:
+      - name: 🚚 Fetch code
+        uses: actions/checkout@v4
+
+      - name: ⚡️ Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: ${{ matrix.bun }}
+
+      - name: ⚗️ Install dependencies
+        run: |
+          bun install
+
+      - name: 🍱 Compile assets
+        run: bun run build
+
+      - name: ✅ Check types
+        run: bun check
