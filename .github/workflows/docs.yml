@@ -1,0 +1,91 @@
+name: Docs
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+defaults:
+  run:
+    working-directory: ./docs
+
+jobs:
+  build:
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+        bun-version: [1.1]
+
+    name: 📦️ Building @siguici's assets on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: ${{ matrix.bun-version }}
+
+      - name: ⚡️ Install dependencies
+        run: bun install
+
+      - name: ✅ Check types
+        run: bun check
+
+      - name: 🍱 Build assets
+        run: bun run build
+
+      - name: 🚚 Upload distribution files
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-files
+          path: docs/dist
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment: 
+      name: production
+      url: https://siguici.github.io
+
+    strategy:
+      fail-fast: true
+      matrix:
+        operating-system: [ubuntu-latest]
+        bun-version: [1.1]
+
+    name: 🚀 Deploy siguici.github.io with Bun@${{ matrix.bun-version }} on ${{ matrix.operating-system }}
+
+    steps:
+      - name: 🚚 Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: 🍱 Download distribution files
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-files
+          path: docs/dist
+
+      - name: 🗃️ List distribution files
+        run: ls -R dist
+
+      - name: 📂 Deploy to GitHub Pages
+        id: deployment
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: docs/dist
+          destination_dir: .
+          external_repository: siguici/siguici.github.io
