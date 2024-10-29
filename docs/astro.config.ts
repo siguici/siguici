@@ -18,7 +18,7 @@ export default defineConfig({
         youtube: "https://youtube.com/@siguici",
       },
       editLink: {
-        baseUrl: "https://github.com/siguici/siguici.github.io/edit/0.x/",
+        baseUrl: "https://github.com/siguici/siguici/edit/0.x/docs/",
       },
       sidebar: [
         {
