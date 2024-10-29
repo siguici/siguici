@@ -21,40 +21,10 @@ Welcome to [siguici](https://github.com/siguici)'s all-in-one hub for open-sourc
 [![committers.top badge](https://user-badge.committers.top/tunisia/siguici.svg)](https://user-badge.committers.top/tunisia/siguici)
 [![Profile views](https://komarev.com/ghpvc/?username=siguici)](https://github.com/siguici)
 
-</div>
-<div align="left">
-
-## 🧑‍💻 About Me
-
-I’m a full-stack developer with a passion
-for building open-source software and empowering communities.
-I focus on delivering scalable and efficient digital solutions,
-from single-page apps to large, complex platforms.
-
-## 🧞 Technologies
-
-- **Full Stack**: Qwik City, [TALL stack](https://github.com/sikessem/starter)
-- **Backend**: Django, Laravel, AdonisJS, ([@abi-js](https://github.com/abi-js))
-- **Frontend**: TailwindCSS, Alpine.js, [Qwik & Astro](https://github.com/QwikDev/astro)
-- Databases: PostgreSQL, Redis, MongoDB
-- **Tools**: Ansible, Docker, Git
-- **Others**: PM2, Kubernetes, Deno Deploy, Astro Studio
-
-## 🚀 Projects
-
-| Name                      | URL                                              |
-| :------------------------ | :----------------------------------------------- |
-| Ahlabik                   | [https://ahlabik.tn](https://ahlabik.tn)         |
-| PDC                       | [http://pdc.com.tn](http://pdc.com.tn)           |
-| Glaxuss                   | [https://glaxuss.tech](https://glaxuss.tech)     |
-
-</div>
-<div align="center">
-
-***
-
 Let's connect! I'm open to discussions 💬, collaborations 🤝,
 or just a friendly chat over a virtual coffee ☕️.
+
+***
 
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=siguici&count_private=true&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/siguici)
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=siguici&card_width=default&theme=tokyonight)
