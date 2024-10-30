@@ -4,7 +4,7 @@
   "engines": {
     "bun": ">=1.1"
   },
-  "packageManager": "bun@1.1.32",
+  "packageManager": "bun@1.1.33",
   "publishConfig": {
     "access": "public"
   },

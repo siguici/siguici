@@ -11,7 +11,7 @@
     "yarn": "prefer using bun",
     "node": "prefer using bun"
   },
-  "packageManager": "bun@1.1.30",
+  "packageManager": "bun@1.1.33",
   "publishConfig": {
     "access": "public"
   },
