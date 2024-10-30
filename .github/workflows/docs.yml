@@ -57,8 +57,8 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    environment: 
-      name: production
+    environment:
+      name: github-pages
       url: https://siguici.github.io
 
     strategy:
