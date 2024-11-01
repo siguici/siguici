@@ -1,7 +1,6 @@
 <div align="center">
-  <a href="https://github.com/sikessem" target="__blank" title="Sikessem" style="position:relative;background-color:#00ced1f0;">
-    <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00ced1f0&height=120&section=header"/>
-    <img src="https://github.com/sikessem/art/blob/HEAD/images/sikessem.svg" alt="Sikessem" height="96"/>
+  <a href="https://ske.deno.dev" target="__blank" title="Sigui Kessé Emmanuel">
+    <img src="https://github.com/siguici/art/blob/HEAD/images/ske.svg" alt="SKE" height="96"/>
   </a>
 
 ***
@@ -33,8 +32,8 @@ or just a friendly chat over a virtual coffee ☕️.
 
 📫 Feel free [to reach out via E-mail](mailto:siguici@proton.me) for updates!
 
-<a href="https://github.com/sikessem" target="__blank" title="Sikessem">
-    <img src="https://github.com/sikessem/art/blob/HEAD/images/mark.svg" alt="Sikessem mark" height="32"/>
+<a href="https://ske.deno.dev" target="__blank" title="Sigui Kessé Emmanuel">
+    <img src="https://github.com/siguici/art/blob/HEAD/images/ske-armored.svg" alt="SKE" height="32"/>
 </a>
 </div>
 
