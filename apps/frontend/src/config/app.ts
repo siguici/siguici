@@ -1,8 +1,8 @@
 export const app = {
-  name: "sigui",
+  name: "SKE",
   locale: "en-US",
-  title: "Sigui",
-  description: "The Sigui website.",
-  url: "https://sigui.deno.dev/",
+  title: "Sigui Kessé Emmanuel",
+  description: "Sigui Kessé Emmanuel’s website.",
+  url: "https://ske.deno.dev/",
   sitemap: "sitemap-index.xml",
 };

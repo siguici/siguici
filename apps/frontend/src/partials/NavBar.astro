@@ -28,9 +28,8 @@ const iconLinks: {
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title">
+		<a href="/" class="site-title" title={process.env.APP_NAME || app.title}>
 			<span class="logo h-12"></span>
-			{process.env.APP_NAME || app.title}
 		</a>
 		<menu-button>
 			<template>

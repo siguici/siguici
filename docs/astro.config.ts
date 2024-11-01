@@ -7,10 +7,11 @@ export default defineConfig({
     starlight({
       favicon: "/favicon.svg",
       logo: {
-        src: "./src/assets/sigui.svg",
-        alt: "Sigui's logo",
+        src: "./src/assets/ske.svg",
+        alt: "The SKE logo",
+        replacesTitle: true,
       },
-      title: "Sigui Docs",
+      title: "Sigui Kessé Emmanuel",
       social: {
         github: "https://github.com/siguici",
         twitter: "https://twitter.com/siguici",
