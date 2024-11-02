@@ -1,14 +1,21 @@
 ---
-title: ColorWind
+title: ColorWind – Color Management Library for TailwindCSS
 pubDate: 2020-03-04 00:00:00
 img: /assets/colorwind.png
-img_alt: Pearls of silky soft white cotton, bubble up under vibrant lighting
+img_alt: ColorWind website screenshot displaying the library features and usage examples.
 description: |
-  We developed a virtual showcase for the softest bedding imaginable.
+  ColorWind is a library designed to simplify color management in TailwindCSS applications,
+  enabling easy handling of light and dark modes with a single class.
+  It supports various utilities for consistent theming.
 tags:
   - Design
   - Dev
-  - Branding
+  - Colors
+  - TailwindCSS
+  - JavaScript
+  - TypeScript
+  - UI Design
+  - Library
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere

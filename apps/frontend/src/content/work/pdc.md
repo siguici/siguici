@@ -1,14 +1,18 @@
 ---
-title: Punic Development Company
+title: PDC – Job Application Management Platform
 pubDate: 2024-09-25 00:00:00
 img: /assets/pdc.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: Screenshot of the PDC website highlighting the job application interface and user registration.
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  The PDC platform streamlines job application management for partner companies.
+  Users can submit CVs, which are generated as printable PDFs for administrators to manage easily.
+  I developed the site from concept to deployment using the TALL stack and MySQL.
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - Job Management
+  - PHP
+  - TypeScript
+  - TALL Stack
+  - MySQL
 ---
 
 ## Level-two heading

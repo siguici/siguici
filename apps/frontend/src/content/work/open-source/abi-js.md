@@ -1,14 +1,20 @@
 ---
-title: Abi.js
+title: Abi.js – Cross-Platform Development Framework
 pubDate: 2020-03-04 00:00:00
 img: /assets/abi.js.png
-img_alt: Pearls of silky soft white cotton, bubble up under vibrant lighting
+img_alt: Abi.js website screenshot showcasing the framework's features and documentation.
 description: |
-  We developed a virtual showcase for the softest bedding imaginable.
+  Abi.js is a versatile JavaScript/TypeScript framework
+  designed for seamless development across Node, Deno, and Bun.
+  It supports web applications, CLIs, and APIs while simplifying cross-platform coding.
 tags:
-  - Design
-  - Dev
-  - Branding
+  - Framework
+  - JavaScript
+  - TypeScript
+  - Node
+  - Deno
+  - Bun
+  - SQLite
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere

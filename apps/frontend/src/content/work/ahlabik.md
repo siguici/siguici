@@ -1,14 +1,21 @@
 ---
-title: Ahlabik Tunisia
+title: Ahlabik – E-commerce Platform
 pubDate: 2024-10-05 00:00:00
 img: /assets/ahlabik.png
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: Screenshot of the Ahlabik homepage showcasing the user-friendly interface and product listings.
 description: |
-  We developed brand positioning and design assets for the launch
-  of a new colored water product.
+  Ahlabik is a dynamic e-commerce platform that connects partners to a community,
+  enabling seamless product sales. As a co-founder and the initial developer,
+  I have implemented core features and ensured continuous deployment.
+  Currently, I serve as CTO, overseeing ongoing development and enhancements.
 tags:
-  - Design
-  - Branding
+  - E-commerce
+  - PHP
+  - TypeScript
+  - Laravel
+  - TALL Stack
+  - CTO
+  - PostgreSQL
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere

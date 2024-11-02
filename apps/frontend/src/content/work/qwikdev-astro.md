@@ -1,15 +1,20 @@
 ---
-title: QwikDev/astro
+title: QwikDev/Astro – Qwik Integration in Astro
 pubDate: 2024-09-30 00:00:00
 img: /assets/qwikdev-astro.png
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+img_alt: GitHub repository screenshot showing the QwikDev/Astro project structure and documentation.
 description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
+  QwikDev/Astro is a TypeScript library integrating the Qwik framework with Astro.
+  As a core maintainer, I have improved the codebase, implemented tests,
+  and added features to enhance usability and performance.
 tags:
-  - Dev
-  - Branding
-  - Backend
+  - Open Source
+  - TypeScript
+  - Qwik
+  - Astro
+  - Web Development
+  - CLI
+  - Library
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere

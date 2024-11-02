@@ -1,14 +1,20 @@
 ---
-title: Melanoderme
+title: Melanoderme – Clothing Brand E-commerce
 pubDate: 2024-09-10 00:00:00
 img: /assets/melanoderme.png
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: Screenshot of the Melanoderme website displaying various clothing items and a clean layout.
 description: |
-  We developed brand positioning and design assets for the launch
-  of a new colored water product.
+  Melanoderme is an e-commerce website developed
+  for a clothing brand created by Gabonese students in Tunisia.
+  The platform facilitates product display, delivery management, and user sales.
+  Built with the TALL stack and PostgreSQL, I also handle its VPS deployment.
 tags:
-  - Design
-  - Branding
+  - E-commerce
+  - Clothing
+  - PHP
+  - TypeScript
+  - TALL Stack
+  - PostgreSQL
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere
