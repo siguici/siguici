@@ -1,15 +1,14 @@
 ---
-title: Bloom Box
-pubDate: 2019-12-01 00:00:00
-img: /assets/stock-2.jpg
-img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
+title: Ahlabik Tunisia
+pubDate: 2024-10-05 00:00:00
+img: /assets/ahlabik.png
+img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
+  We developed brand positioning and design assets for the launch
+  of a new colored water product.
 tags:
-  - Dev
+  - Design
   - Branding
-  - Backend
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere

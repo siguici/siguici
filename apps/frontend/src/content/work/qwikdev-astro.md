@@ -1,14 +1,15 @@
 ---
-title: h2.0
-pubDate: 2019-10-02 00:00:00
-img: /assets/stock-4.jpg
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+title: QwikDev/astro
+pubDate: 2024-09-30 00:00:00
+img: /assets/qwikdev-astro.png
+img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
-  We developed brand positioning and design assets for the launch
-  of a new colored water product.
+  We paired with a cutting-edge music API and a team of horticulturalists
+  to build AI-generated playlists that maximize houseplant health.
 tags:
-  - Design
+  - Dev
   - Branding
+  - Backend
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere

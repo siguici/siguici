@@ -1,7 +1,7 @@
 ---
-title: Markdown Mystery Tour
-pubDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
+title: Punic Development Company
+pubDate: 2024-09-25 00:00:00
+img: /assets/pdc.png
 img_alt: Iridescent ripples of a bright blue and pink liquid
 description: |
   We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
