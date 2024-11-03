@@ -4,60 +4,48 @@ pubDate: 2024-09-10 00:00:00
 img: /assets/melanoderme.png
 img_alt: Screenshot of the Melanoderme website displaying various clothing items and a clean layout.
 description: |
-  Melanoderme is an e-commerce website developed
-  for a clothing brand created by Gabonese students in Tunisia.
-  The platform facilitates product display, delivery management, and user sales.
-  Built with the TALL stack and PostgreSQL, I also handle its VPS deployment.
+  Melanoderme is a clothing brand founded by Gabonese students in Tunisia, aiming to celebrate cultural identity through fashion.
 tags:
   - E-commerce
   - Clothing
-  - PHP
-  - TypeScript
   - TALL Stack
-  - PostgreSQL
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere
-commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit.
-In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper.
-Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras
-ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor,
-placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget
-tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada
-odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit
-non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+## Melanoderme
 
-Integer vitae nibh elit. Suspendisse eget urna eu neque bibendum pharetra. Sed
-interdum lectus sem, in pulvinar magna dignissim vel. Quisque maximus at urna
-nec laoreet. Suspendisse potenti. Vestibulum rhoncus sem ut mi pellentesque, in
-vestibulum erat blandit. Aliquam sodales dui ac maximus consectetur. Duis quis
-est vehicula, imperdiet nisl nec, fermentum erat. Duis tortor diam, pharetra eu
-euismod in, vehicula non eros. Curabitur facilisis dui at erat ultrices gravida.
-In at nunc ultricies, pulvinar mi vel, sagittis mauris. Praesent pharetra
-posuere purus ac imperdiet. Nulla facilisi.
+> Full-Stack Developer & DevOps
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar
-pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus
-tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at
-sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis
-dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id
-feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem
-vitae, varius tellus.
+I developed the [Melanoderme e-commerce platform](https://melanoderme.com) from the ground up,
+building a comprehensive solution for showcasing products, managing deliveries,
+and enabling a multi-vendor setup for other users to sell through the site.
 
-Mauris sed eros in ex maximus volutpat. Suspendisse potenti. Donec lacinia justo
-consectetur sagittis tempor. Proin ullamcorper nisi vitae auctor rhoncus. Sed
-tristique aliquam augue. Pellentesque vitae fringilla ligula. Nulla arcu elit,
-efficitur eu nunc malesuada, eleifend tincidunt orci. Interdum et malesuada
-fames ac ante ipsum primis in faucibus. Integer mattis orci in bibendum
-ultricies. Quisque a dui erat. Phasellus et vulputate ipsum. Proin metus ex,
-lobortis nec ornare eget, bibendum ut sapien. Aliquam in dolor lobortis, aliquam
-tellus a, congue augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+### Technologies and Architecture
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum
-quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta,
-finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi
-sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat.
-Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor.
-Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum
-mollis fringilla.
+Developed with the TALL stack (TailwindCSS, Alpine.js, Laravel, Livewire)
+to create a highly interactive, user-friendly shopping experience.
+
+Built with PostgreSQL for powerful and reliable data management,
+ensuring scalability as the platform grows.
+
+I handled the platform’s deployment on a VPS, overseeing server management
+to ensure high availability and performance.
+
+#### Key Features
+
+The platform allows Melanoderme to display its collection,
+while also offering other users the ability to list their own products,
+creating a vibrant multi-vendor marketplace.
+
+Administrators can manage orders, track deliveries,
+and maintain smooth logistics to enhance the customer experience.
+
+Built with TailwindCSS and Alpine.js, the site is fully responsive,
+ensuring a seamless shopping experience across devices.
+
+#### Impact & Vision
+
+- This platform has enabled Melanoderme to reach a wider audience
+and grow their brand while also fostering a community for other sellers.
+
+- The platform is designed to scale as the business expands,
+supporting the brand’s mission to celebrate and share cultural identity through fashion.
