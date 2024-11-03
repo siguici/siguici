@@ -1,0 +1,3 @@
+- Developed and deployed multiple web projects independently
+- Co-founded successful online platforms for sales, marketing, and digital solutions
+- Received honors in Bachelor's and High School studies

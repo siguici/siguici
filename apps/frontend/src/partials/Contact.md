@@ -1,0 +1,11 @@
+- **📫 Address**: Nabeul 8000, Tunisia  
+- **📱 Phone**: [+216 56 404 791](tel:0021656404791) /
+[+225 07 68 16 37 40](tel:002250768163740)  
+- **📧 Email**: [siguici@proton.me](mailto:siguici@proton.me))  
+- **🔗 LinkedIn**: [linkedin.com/in/siguici](https://linkedin.com/in/siguici)  
+- **🔗 GitHub**: [github.com/siguici](https://github.com/siguici)  
+- **🔗 GitLab**: [gitlab.com/siguici](https://gitlab.com/siguici)  
+- **🔗 Twitter**: [twitter.com/siguici](https://twitter.com/siguici)  
+- **🔗 YouTube**: [youtube.com/@siguici](https://youtube.com/@siguici)  
+- **🔗 Instagram**: [instagram.com/siguici](https://www.instagram.com/siguici/)  
+- **🔗 Facebook**: [facebook.com/siguici](https://www.facebook.com/siguici)

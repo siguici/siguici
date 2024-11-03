@@ -3,6 +3,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
+import Achievements from "../partials/Achievements.md";
+import Background from "../partials/Background.md";
+import Contact from "../partials/Contact.md";
+import Education from "../partials/Education.md";
+import Hobbies from "../partials/Hobbies.md";
+import Interships from "../partials/Interships.md";
+import Skills from "../partials/Skills.md";
 ---
 
 <BaseLayout title="About" description="About Sigui Kessé Emmanuel">
@@ -21,38 +28,65 @@ import Hero from "../components/Hero.astro";
 			</Hero>
 
 			<section>
-				<h2 class="section-title">Background</h2>
+				<h2 class="section-title">🧑‍💻 Profile</h2>
 				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
+          <p>
+            I am a passionate and self-motivated Full Stack Web Developer with expertise in Business Intelligence
+            and System Administration. Over the years, I have gained extensive experience in developing
+            and deploying various web projects independently. I thrive in challenging environments
+            and enjoy exploring new technologies to create innovative solutions.
+          </p>
+        </div>
+			</section>
+			<section>
+				<h2 class="section-title">💼 Background</h2>
+				<div class="content">
+          <Background />
+        </div>
+			</section>
+			<section>
+				<h2 class="section-title">🧑‍💼 Internships</h2>
+				<div class="content">
+          <Interships />
+        </div>
+			</section>
+			<section>
+				<h2 class="section-title">🎓 Education</h2>
+				<div class="content">
+          <Education />
+        </div>
+			</section>
+			<section>
+				<h2 class="section-title">🏆 Achievements</h2>
+				<div class="content">
+          <Achievements />
+        </div>
+			</section>
+			<section>
+				<h2 class="section-title">💻 Skills</h2>
+				<div class="content">
+					<Skills />
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">🌍 Languages</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<ul>
+            <li><b>French:</b> Native</li>
+            <li><b>English:</b> Fluent</li>
+					</ul>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Skills</h2>
+				<h2 class="section-title">🎨 Hobbies</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<Hobbies />
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">📞 Contact</h2>
+				<div class="content">
+					<Contact />
 				</div>
 			</section>
 		</main>
