@@ -4,58 +4,52 @@ pubDate: 2024-09-25 00:00:00
 img: /assets/pdc.png
 img_alt: Screenshot of the PDC website highlighting the job application interface and user registration.
 description: |
-  The PDC platform streamlines job application management for partner companies.
-  Users can submit CVs, which are generated as printable PDFs for administrators to manage easily.
-  I developed the site from concept to deployment using the TALL stack and MySQL.
+  I developed the official website for Punic Development Company, from concept to deployment on a dedicated server.
 tags:
   - Job Management
-  - PHP
-  - TypeScript
   - TALL Stack
+  - TypeScript
   - MySQL
 ---
 
-## Level-two heading
+## Punic Development Company
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+> Full-Stack Developer
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes
-people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices
-in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim
-lobortis scelerisque fermentum dui faucibus in ornare.
+Leveraging the TALL stack (TailwindCSS, Alpine.js, Laravel, Livewire)
+and a MySQL database, I created a comprehensive job application management platform
+to streamline the hiring process for [PDC](http://pdc.com.tn)’s partners.
 
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum
-sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin
-nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget
-velit. Id diam vel quam elementum pulvinar etiam non.
+### Technologies and Architecture
 
-### Level-three heading
+Built with the TALL stack to deliver a responsive, interactive user experience
+and facilitate fast, scalable web development.
 
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra
-aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat
-semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa
-tempor nec feugiat nisl pretium fusce.
+MySQL was chosen for data management, offering reliability
+and seamless integration with Laravel’s Eloquent ORM.
 
-### Level-three heading
+The platform dynamically generates a printable PDF of each applicant’s CV,
+making profiles readily accessible to administrators.
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar
-pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus
-tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at
-sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis
-dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id
-feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem
-vitae, varius tellus.
+The site was deployed on a dedicated server,
+ensuring optimized performance and security.
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum
-quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta,
-finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi
-sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat.
-Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor.
-Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum
-mollis fringilla.
+#### Key Features
 
-#### Level-four heading
+Applicants register and input their CV details directly on the platform.
+The system generates a formatted, downloadable CV for administrators,
+saving both applicants and recruiters time.
 
-- We noted this
-- And also this other point
+Administrators can filter applications by job position,
+enabling efficient candidate tracking and recruitment.
+
+The platform includes a search tool that allows administrators
+to quickly locate specific profiles, making the hiring process faster and more streamlined.
+
+#### Impact & Vision
+
+- This platform has optimized the recruitment process for PDC’s partners
+by centralizing applications and simplifying candidate management.
+
+- By providing automated, well-organized access to applicant profiles,
+PDC’s platform supports more effective and data-driven hiring decisions.
