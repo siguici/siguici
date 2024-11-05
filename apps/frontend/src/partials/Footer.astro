@@ -5,8 +5,8 @@ const currentYear = new Date().getFullYear();
 
 <footer>
 	<p class="group">
-		<span>Designed, Developed, and Deployed with ❤️</span>
-		<span>by Sigui Kessé Emmanuel &copy; {currentYear}</span>
+		<span class="relative">Made with ❤️ by Sigui Kessé Emmanuel</span>
+		<span>&copy; {currentYear} — All rights reserved</span>
 	</p>
 	<p class="socials">
 		<a href="https://twitter.com/siguici"><Icon icon="twitter-logo" size="1.2em" /> <span>Twitter</span></a>
@@ -41,7 +41,7 @@ const currentYear = new Date().getFullYear();
 	}
 
 	.group {
-		@apply flex flex-col gap-1;
+		@apply flex flex-col gap-1 justify-center items-center;
 
 		@media (min-width: 50em) {
 			& {
