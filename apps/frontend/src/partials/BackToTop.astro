@@ -17,6 +17,7 @@
 </button>
 
 <script>
+const backToTop = () => {
     let backToTopButton = document.getElementById('back-to-top') as HTMLButtonElement;
     window.onscroll = function (event: Event) {
         event.preventDefault();
@@ -38,6 +39,10 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+}
+
+document.addEventListener('DOMContentLoaded', backToTop);
+document.addEventListener('astro:page-load', backToTop);
 </script>
 
 <style>
