@@ -11,6 +11,16 @@
  *    (or add `stroke="none"` on shapes with no `fill` or `stroke` specified).
  */
 export const iconPaths = {
+  home: `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M40 120 128 40l88 80v72a24 24 0 0 1-24 24H64a24 24 0 0 1-24-24Zm56 56v-40a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8v40"/>`,
+  "info-circle": `<circle cx="128" cy="128" r="96" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 176v-48M128 96h.01"/>`,
+  lightning: `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M96 240 160 96h-64L128 16 64 160h64Z"/>`,
+  search: `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M232 232l-52-52m16-68a84 84 0 1 1-84-84 84.1 84.1 0 0 1 84 84Z"/>`,
+  lock: `<rect width="144" height="96" x="56" y="128" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" rx="8"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M84 128V84a44 44 0 0 1 88 0v44"/>`,
+  plus: `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 48v160m80-80H48"/>`,
+  minus: `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M208 128H48"/>`,
+  check: `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="m48 128 48 48 128-128"/>`,
+  close: `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M208 48 48 208m160 0L48 48"/>`,
+  upload: `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M216 144v40a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8v-40"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M94.1 86.1 128 52l33.9 34.1M128 148V56"/>`,
   "terminal-window": `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="m80 96 40 32-40 32m56 0h40"/><rect width="192" height="160" x="32" y="48" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.97" rx="8.5"/>`,
   trophy: `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M56 56v55.1c0 39.7 31.8 72.6 71.5 72.9a72 72 0 0 0 72.5-72V56a8 8 0 0 0-8-8H64a8 8 0 0 0-8 8Zm40 168h64m-32-40v40"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M198.2 128h9.8a32 32 0 0 0 32-32V80a8 8 0 0 0-8-8h-32M58 128H47.9a32 32 0 0 1-32-32V80a8 8 0 0 1 8-8h32"/>`,
   strategy: `<circle cx="68" cy="188" r="28" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="m40 72 40 40m0-40-40 40m136 56 40 40m0-40-40 40M136 80V40h40"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="m136 40 16 16c40 40 8 88-24 96"/>`,
