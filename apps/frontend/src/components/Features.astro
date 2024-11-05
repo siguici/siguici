@@ -1,0 +1,76 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Full-Stack</h2>
+		<p>Experienced in end-to-end development, from web apps to microservices. I build efficient, scalable solutions tailored to business needs.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="lightning" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Innovative</h2>
+		<p>I bring creativity to every project, solving complex problems with fresh ideas. My focus is always on enhancing user experience.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Versatile</h2>
+		<p>Skilled in SEO, CMS management, data analysis, and more. I adapt quickly to new tools and methodologies across projects.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Community</h2>
+		<p>I actively contribute to tech communities and support peer learning. Engaging and connecting with others is a core part of my work.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="check" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Quality</h2>
+		<p>I prioritize clean, well-tested code and meticulous attention to detail. Every line is crafted for stability and maintainability.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="pencil-line" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Educator</h2>
+		<p>Through content and mentorship, I share my expertise to uplift others. Teaching and empowering teams is a passion of mine.</p>
+	</div>
+</section>
+
+<style>
+	.box {
+		@apply rounded-xl p-6;
+		border: 1px solid var(--gray-800);
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+
+		@media (min-width: 50em) {
+			& {
+				@apply rounded-3xl p-10;
+			}
+		}
+	}
+
+	.skills {
+		@apply flex flex-col gap-12;
+
+		@media (min-width: 50em) {
+			& {
+				@apply grid grid-cols-3 gap-20;
+			}
+		}
+
+		& h2 {
+			@apply text-2xl my-3;
+			color: var(--gray-100);
+
+			@media (min-width: 50em) {
+				& {
+					@apply text-4xl;
+				}
+			}
+		}
+
+		& p {
+			color: var(--gray-400);
+		}
+	}
+</style>
