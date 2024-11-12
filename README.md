@@ -10,6 +10,7 @@
 Welcome to [siguici](https://github.com/siguici)'s all-in-one hub for open-source projects and contributions.
 
 [E-mail](mailto:siguici@proton.me)
+| [Blog](https://dev.to/siguici)
 | [Twitter](https://x.com/intent/follow?screen_name=siguici)
 | [LinkedIn](https://linkedin.com/in/siguici)
 | [GitLab](https://gitlab.com/siguici)
