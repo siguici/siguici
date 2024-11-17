@@ -1,10 +1,3 @@
-<div align="center">
-  <a href="https://ske.deno.dev" target="__blank" title="Sigui Kessé Emmanuel">
-    <img src="https://github.com/siguici/art/blob/HEAD/images/ske.svg" alt="SKE" height="96"/>
-  </a>
-
-***
-
 # Hi there! 👋 I'm SIGUI Kessé Emmanuel, your friendly neighborhood developer. 😄
 
 Welcome to [siguici](https://github.com/siguici)'s all-in-one hub for open-source projects and contributions.
