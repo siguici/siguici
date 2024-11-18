@@ -19,6 +19,8 @@ or just a friendly chat over a virtual coffee ☕️.
 
 ***
 
+<div align="center">
+
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=siguici&count_private=true&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/siguici)
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=siguici&card_width=default&theme=tokyonight)
 
