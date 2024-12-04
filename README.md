@@ -1,50 +1,45 @@
-# 👋 Hi there! I'm **SIGUI Kessé Emmanuel**
+# 👋🏽 Hi there! I'm **SIGUI Kessé Emmanuel**
 
-Welcome to [siguici](https://github.com/siguici), your one-stop hub for open-source projects, innovative solutions, and community contributions. I am passionate about building robust digital platforms and crafting elegant code.
+Welcome to my digital adventure! 😊 I’m the Lead Developer behind [**Ahlabik**](https://ahlabik.tn) and a [proud contributor](https://github.com/QwikDev/astro/graphs/contributors) to [the QwikDev/astro integration](https://github.com/QwikDev/astro).
 
-🌐 [Website](https://siguici.deno.dev)  
-📧 [E-mail](mailto:siguici@proton.me)  
-📝 [Blog](https://dev.to/siguici)  
-🐦 [Twitter](https://x.com/intent/follow?screen_name=siguici)  
-🔗 [LinkedIn](https://linkedin.com/in/siguici)  
-🦊 [GitLab](https://gitlab.com/siguici)  
-📦 [npm](https://npmjs.org/~siguici)  
-📚 [Packagist](https://packagist.org/users/siguici)  
-🎨 [Bento](https://bento.me/siguici)
+Curious about my work? [Visit my website 🌐](https://siguici.ahlabik.tn) or [send me an email 📧](mailto:siguici@ahlabik.tn). I’m always open to collaboration and tech discussions.
+
+For more insights, [check out my 📝 blog](https://dev.to/siguici) or [follow me on 𝕏 (fka Twitter 🐦)](https://x.com/intent/follow?screen_name=siguici).
 
 ---
 
 ## 🌟 Highlights
 
-- 🔭 **Currently Working On**:  
-  Developing [**Abi.js**](https://abi.js.org), a next-gen framework developer-friendly designed for **Node.js**, **Deno** and **Bun** with **SQLite** support.
+- 🔭 **Currently**:  
+  Leading [**Ahlabik**](https://ahlabik.tn) – an innovative platform for **buying, selling, and renting** products.
 
-- 🌱 **Always Learning**:  
-  Exploring innovative front-end frameworks, web optimization, and scalable system design.
-
-- 💬 **Let's Collaborate**:  
-  Reach out if you’re interested in **open-source projects**, need help solving tough problems, or just want to chat tech!
+- 🌱 **Always**:  
+  Contributing to the [Qwik integration with Astro](https://github.com/QwikDev/astro), where I’m a maintainer.
 
 ---
 
 ### 📊 Stats
 
-<div align="center">
-
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=siguici&count_private=true&show_icons=true&include_all_commits=true&theme=tokyonight)](https://github.com/siguici)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=siguici&card_width=default&theme=tokyonight)
+Here’s a snapshot 💻 of my journey and contributions:
 
 [![committers.top badge](https://user-badge.committers.top/tunisia/siguici.svg)](https://user-badge.committers.top/tunisia/siguici)
 [![Profile views](https://komarev.com/ghpvc/?username=siguici)](https://github.com/siguici)
 
-[![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=siguici&hide_border=true&layout=donut-vertical&langs_count=10&theme=tokyonight)](https://github.com/siguici)
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=siguici&count_private=true&show_icons=true&theme=tokyonight)](https://github.com/siguici)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=siguici&card_width=default&theme=tokyonight)](https://github.com/siguici)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=siguici&layout=compact&theme=tokyonight)](https://github.com/siguici)
 
 ---
 
-💡 *Got an idea or need help with a project? Let’s chat and build the future together!* 🚀  
-☕️ *Virtual coffee chats are welcome too!*
+## 🌍 Connect with me
 
-<a href="https://ske.deno.dev" target="__blank" title="Sigui Kessé Emmanuel">
-    <img src="https://github.com/siguici/art/blob/HEAD/images/ske-armored.svg" alt="SKE" height="32"/>
-</a>
-</div>
+Feel free to explore my other profiles where I share my projects, ideas, and work:
+
+- 🔗 [LinkedIn](https://linkedin.com/in/siguici)  
+- 🦊 [GitLab](https://gitlab.com/siguici)  
+- 📦 [npm](https://npmjs.org/~siguici)  
+- 📚 [Packagist](https://packagist.org/users/siguici)  
+- 🎨 [Bento](https://bento.me/siguici)
+
+💬 *Let’s build something amazing together!* 🚀  
+☕️ *Virtual coffee chats are always welcome!*
