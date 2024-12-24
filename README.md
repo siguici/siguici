@@ -1,6 +1,6 @@
 # 👋🏽 Hi there! I'm **SIGUI Kessé Emmanuel**
 
-Welcome to my digital adventure! 😊 I’m the Lead Developer behind [**Ahlabik**](https://ahlabik.tn) and a [proud contributor](https://github.com/QwikDev/astro/graphs/contributors) to [the QwikDev/astro integration](https://github.com/QwikDev/astro).
+Welcome to my digital adventure! 😊 I’m the Lead Developer behind [**Ahlabik**](https://ahlabik.tn) and a [proud contributor](https://github.com/QwikDev/astro/graphs/contributors) to the [QwikDev/astro integration](https://github.com/QwikDev/astro).
 
 Curious about my work? [Visit my website 🌐](https://siguici.ahlabik.tn) or [send me an email 📧](mailto:siguici@ahlabik.tn). I’m always open to collaboration and tech discussions.
 
