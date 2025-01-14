@@ -2,10 +2,11 @@
   "name": "siguici-monorepo",
   "description": "Sigui Kessé Emmanuel's personal monorepo",
   "engines": {
-    "bun": ">=1.1",
+    "node": ">=22.13",
+    "pnpm": ">=9.15",
     "deno": ">=2.0"
   },
-  "packageManager": "bun@1.1.43",
+  "packageManager": "pnpm@9.15.3",
   "publishConfig": {
     "access": "public"
   },
@@ -18,12 +19,11 @@
     "check:format": "biome format .",
     "check:lint": "biome check .",
     "deploy": "deployctl deploy --project=siguici --no-static --include=./apps/ ./apps/backend/start.ts",
-    "fix": "bun lint && bun format",
+    "fix": "pnpm lint && pnpm format",
     "format": "biome format --write .",
     "lint": "biome check --write .",
     "serve": "deno run -A --unstable ./apps/backend/start.ts"
   },
-  "workspaces": ["apps/*", "docs"],
   "devDependencies": {
     "@biomejs/biome": "^1.9.4"
   }

@@ -5,13 +5,11 @@
   "description": "📝 Centralized Documentation for Sigui Open-Source Projects.",
   "private": true,
   "engines": {
-    "bun": ">=1.1",
-    "npm": "prefer using bun",
-    "pnpm": "prefer using bun",
-    "yarn": "prefer using bun",
-    "node": "prefer using bun"
+    "node": ">=22.13",
+    "pnpm": ">=9.15",
+    "deno": ">=2.0"
   },
-  "packageManager": "bun@1.1.33",
+  "packageManager": "pnpm@9.15.3",
   "publishConfig": {
     "access": "public"
   },
