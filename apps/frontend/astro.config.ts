@@ -19,10 +19,6 @@ export default defineConfig({
   srcDir: "./src",
   outDir: "./out",
   publicDir: "./public",
-  build: {
-    client: "./out/client",
-    server: "./out/server",
-  },
   compressHTML: true,
   output: "server",
   image: {
