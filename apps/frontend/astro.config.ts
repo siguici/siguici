@@ -1,8 +1,10 @@
+import process from "node:process";
 import deno from "@astrojs/deno";
 import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import qwik from "@qwikdev/astro";
+import type { AstroIntegration } from "astro";
 import { defineConfig, passthroughImageService } from "astro/config";
 import { loadEnv } from "vite";
 import { app } from "./src/config";
@@ -17,7 +19,6 @@ const { SERVER_PORT } = loadEnv(
 export default defineConfig({
   site: app.url,
   srcDir: "./src",
-  outDir: "./out",
   publicDir: "./public",
   compressHTML: true,
   output: "server",
@@ -27,7 +28,7 @@ export default defineConfig({
   adapter: deno({
     port: Number(SERVER_PORT || "4444"),
     start: false,
-  }),
+  }) as AstroIntegration,
   integrations: [
     tailwind({
       applyBaseStyles: false,
