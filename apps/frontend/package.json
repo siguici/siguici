@@ -42,7 +42,8 @@
     "caniuse-lite": "^1.0.30001692",
     "preact": "^10.25.4",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
   },
   "devDependencies": {
     "@types/node": "^22.10.6",
