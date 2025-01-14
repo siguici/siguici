@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "extends": ["./apps/frontend/biome.json"],
+  "extends": ["./apps/frontend/biome.json", "./docs/biome.json"],
   "organizeImports": {
     "enabled": true,
     "ignore": ["apps/backend", "node_modules"]
