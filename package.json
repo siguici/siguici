@@ -23,6 +23,7 @@
     "lint": "biome check --write .",
     "serve": "deno run -A --unstable ./apps/backend/start.ts"
   },
+  "workspaces": ["apps/*", "docs"],
   "devDependencies": {
     "@biomejs/biome": "^1.9.4"
   }
