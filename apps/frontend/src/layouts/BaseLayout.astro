@@ -9,9 +9,9 @@ import NavBar from "../partials/NavBar.astro";
 import PageHead from "../partials/PageHead.astro";
 
 interface Props {
-  title?: string | undefined;
-  description?: string | undefined;
-  animate?: "fade" | "initial" | "slide" | "none";
+	title?: string | undefined;
+	description?: string | undefined;
+	animate?: "fade" | "initial" | "slide" | "none";
 }
 
 const { title, description, animate = "fade" } = Astro.props;
@@ -35,6 +35,8 @@ const { title, description, animate = "fade" } = Astro.props;
 		</script>
 
 		<style>
+      @reference '../design/global.css';
+
 			:root {
 				--_placeholder-bg: linear-gradient(transparent, transparent);
 				--bg-image-main: url('/assets/backgrounds/bg-main-light-800w.jpg');

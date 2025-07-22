@@ -3,10 +3,10 @@ import type { HTMLAttributes } from "astro/types";
 import { iconPaths } from "./IconPaths";
 
 interface Props {
-  icon: keyof typeof iconPaths;
-  color?: string;
-  gradient?: boolean;
-  size?: string;
+	icon: keyof typeof iconPaths;
+	color?: string;
+	gradient?: boolean;
+	size?: string;
 }
 
 const { color = "currentcolor", gradient, icon, size } = Astro.props;
@@ -14,7 +14,7 @@ const iconPath = iconPaths[icon];
 
 const attrs: HTMLAttributes<"svg"> = {};
 if (size) {
-  attrs.style = { "--size": size };
+	attrs.style = { "--size": size };
 }
 
 const gradientId = `icon-gradient-${Math.round(Math.random() * 10e12).toString(36)}`;
@@ -50,6 +50,8 @@ const gradientId = `icon-gradient-${Math.round(Math.random() * 10e12).toString(3
 </svg>
 
 <style>
+  @reference '../design/global.css';
+
 	svg {
 		@apply align-middle;
 		width: var(--size, 1em);

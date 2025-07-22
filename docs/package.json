@@ -1,41 +1,42 @@
 {
-  "name": "siguici.github.io",
-  "type": "module",
-  "version": "0.0.0",
-  "description": "📝 Centralized Documentation for Sigui Open-Source Projects.",
-  "private": true,
-  "engines": {
-    "node": ">=22.13",
-    "pnpm": ">=9.15",
-    "deno": ">=2.0"
-  },
-  "packageManager": "pnpm@9.15.3",
-  "publishConfig": {
-    "access": "public"
-  },
-  "homepage": "https://siguici.github.io",
-  "author": {
-    "name": "Sigui Kessé Emmanuel",
-    "email": "contact@sigui.ci",
-    "url": "https://sigui.ci"
-  },
-  "scripts": {
-    "astro": "astro",
-    "build": "astro build",
-    "check": "astro check",
-    "dev": "astro dev",
-    "preview": "astro preview",
-    "start": "astro dev --open",
-    "sync": "astro sync"
-  },
-  "dependencies": {
-    "@astrojs/starlight": "^0.31.0",
-    "astro": "^5.1.6",
-    "sharp": "^0.33.5"
-  },
-  "devDependencies": {
-    "@astrojs/check": "^0.9.4",
-    "typescript": "^5.7.3"
-  },
-  "trustedDependencies": ["sharp"]
+	"name": "siguici.github.io",
+	"type": "module",
+	"version": "0.0.0",
+	"description": "📝 Centralized Documentation for Sigui Open-Source Projects.",
+	"private": true,
+	"engines": {
+		"node": ">=22.17",
+		"pnpm": ">=10.13"
+	},
+	"packageManager": "pnpm@10.13.1",
+	"publishConfig": {
+		"access": "public"
+	},
+	"homepage": "https://siguici.github.io",
+	"author": {
+		"name": "Sigui Kessé Emmanuel",
+		"email": "contact@sigui.ci",
+		"url": "https://sigui.ci"
+	},
+	"scripts": {
+		"astro": "astro",
+		"build": "astro build",
+		"check": "astro check",
+		"dev": "astro dev",
+		"preview": "astro preview",
+		"start": "astro dev --open",
+		"sync": "astro sync"
+	},
+	"dependencies": {
+		"@astrojs/starlight": "^0.35.1",
+		"astro": "^5.12.3",
+		"sharp": "^0.34.3"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.9.4",
+		"typescript": "^5.8.3"
+	},
+	"trustedDependencies": [
+		"sharp"
+	]
 }

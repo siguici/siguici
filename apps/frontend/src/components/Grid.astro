@@ -1,6 +1,6 @@
 ---
 interface Props {
-  variant?: "offset" | "small";
+	variant?: "offset" | "small";
 }
 
 const { variant } = Astro.props;
@@ -11,6 +11,8 @@ const { variant } = Astro.props;
 </ul>
 
 <style>
+  @reference '../design/global.css';
+
 	.list-grid {
 		@apply grid auto-rows-fr gap-4 list-none p-0 my-4;
 

@@ -1,6 +1,6 @@
 ---
 interface Props {
-  href: string;
+	href: string;
 }
 
 const { href } = Astro.props;
@@ -9,6 +9,8 @@ const { href } = Astro.props;
 <a href={href}><slot /></a>
 
 <style>
+  @reference '../design/global.css';
+
 	a {
 		@apply relative flex place-content-center text-center text-xl px-8 py-3 leading-5 gap-3 no-underline rounded-full overflow-hidden whitespace-nowrap text-[var(--accent-text-over)];
 		background: var(--gradient-accent-orange);

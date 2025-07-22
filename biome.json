@@ -1,27 +1,28 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["./apps/frontend/biome.json", "./docs/biome.json"],
-  "organizeImports": {
-    "enabled": true,
-    "ignore": ["apps/backend", "node_modules"]
+  "files": {
+    "includes": ["**", "!**/apps/backend", "!**/node_modules"]
   },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
       "style": {
         "useBlockStatements": "error",
-        "useShorthandArrayType": "error",
-        "noShoutyConstants": "warn"
+        "noShoutyConstants": "warn",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": { "syntax": "shorthand" }
+        }
       }
-    },
-    "ignore": ["apps/backend", "node_modules"]
+    }
   },
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
     "indentStyle": "space",
-    "lineWidth": 80,
-    "ignore": ["apps/backend", "node_modules"]
+    "lineWidth": 80
   }
 }

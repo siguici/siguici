@@ -1,15 +1,13 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-
-import BaseLayout from "../../layouts/BaseLayout.astro";
-
 import ContactCTA from "../../components/ContactCTA.astro";
 import Hero from "../../components/Hero.astro";
 import Icon from "../../components/Icon.astro";
 import Pill from "../../components/Pill.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 interface Props {
-  work: CollectionEntry<"work">;
+	work: CollectionEntry<"work">;
 }
 
 const works = await getCollection("work");
@@ -19,7 +17,7 @@ const { slug } = Astro.params;
 const work = works.find((work) => work.slug === slug);
 
 if (!work) {
-  return Astro.redirect("/404/");
+	return Astro.redirect("/404/");
 }
 
 const { Content } = await work.render();
@@ -55,6 +53,8 @@ const { Content } = await work.render();
 </BaseLayout>
 
 <style>
+@reference '../../design/global.css';
+
 	header {
 		@apply pb-10 border-b border-[var(--gray-800)];
 	}

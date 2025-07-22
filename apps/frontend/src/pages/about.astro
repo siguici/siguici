@@ -1,8 +1,7 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Achievements from "../partials/Achievements.md";
 import Background from "../partials/Background.md";
 import Contact from "../partials/Contact.md";
@@ -96,6 +95,8 @@ import Skills from "../partials/Skills.md";
 </BaseLayout>
 
 <style>
+  @reference '../design/global.css';
+
 	.about {
 		@apply flex flex-col gap-14 my-14;
 

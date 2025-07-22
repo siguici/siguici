@@ -1,11 +1,7 @@
 {
-  "organizeImports": {
-    "ignore": [".astro", "dist"]
-  },
-  "linter": {
-    "ignore": [".astro", "dist"]
-  },
-  "formatter": {
-    "ignore": [".astro", "dist"]
-  }
+	"root": false,
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
+	"files": {
+		"includes": ["**", "!**/.astro", "!**/dist"]
+	}
 }

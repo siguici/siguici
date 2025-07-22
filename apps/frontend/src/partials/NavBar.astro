@@ -6,23 +6,23 @@ import { app } from "../config";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-  { label: "Home", href: "/" },
-  { label: "Portfolio", href: "/portfolio/" },
-  { label: "About", href: "/about/" },
+	{ label: "Home", href: "/" },
+	{ label: "Portfolio", href: "/portfolio/" },
+	{ label: "About", href: "/about/" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: {
-  label: string;
-  href: string;
-  icon: keyof typeof iconPaths;
+	label: string;
+	href: string;
+	icon: keyof typeof iconPaths;
 }[] = [
-  {
-    label: "Twitter",
-    href: "https://twitter.com/siguici",
-    icon: "twitter-logo",
-  },
-  { label: "GitHub", href: "https://github.com/siguici", icon: "github-logo" },
+	{
+		label: "Twitter",
+		href: "https://twitter.com/siguici",
+		icon: "twitter-logo",
+	},
+	{ label: "GitHub", href: "https://github.com/siguici", icon: "github-logo" },
 ];
 ---
 
@@ -131,6 +131,8 @@ const iconLinks: {
 </script>
 
 <style>
+  @reference '../design/global.css';
+
 	nav {
 		@apply relative z-[9999] font-medium mb-14;
 		font-family: var(--font-brand);

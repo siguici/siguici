@@ -51,7 +51,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        deno-version: [2.0]
+        deno-version: [2.4]
 
     name: 🚀 Deploy @siguici apps on Deno-${{ matrix.deno-version }} under ${{ matrix.operating-system }}
 
