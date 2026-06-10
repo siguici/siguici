@@ -2,10 +2,10 @@
   "name": "siguici-monorepo",
   "description": "Sigui Kessé Emmanuel's personal monorepo",
   "engines": {
-    "node": ">=22.17",
-    "pnpm": ">=10.13"
+    "node": ">=24.16",
+    "pnpm": ">=11.5"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@11.5.3",
   "publishConfig": {
     "access": "public"
   },
