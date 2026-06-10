@@ -1,18 +1,15 @@
 ---
-import Icon from "../components/Icon.astro";
 import type { iconPaths } from "../components/IconPaths";
-import ThemeToggle from "../components/ThemeToggle.astro";
-import { app } from "../config";
 
 /** Main menu items */
-const textLinks: { label: string; href: string }[] = [
+const _textLinks: { label: string; href: string }[] = [
 	{ label: "Home", href: "/" },
 	{ label: "Portfolio", href: "/portfolio/" },
 	{ label: "About", href: "/about/" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
-const iconLinks: {
+const _iconLinks: {
 	label: string;
 	href: string;
 	icon: keyof typeof iconPaths;

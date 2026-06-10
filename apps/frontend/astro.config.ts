@@ -1,7 +1,7 @@
 import process from "node:process";
-import deno from "@deno/astro-adapter";
 import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
+import deno from "@deno/astro-adapter";
 import qwik from "@qwik.dev/astro";
 import tailwindcss from "@tailwindcss/vite";
 import type { AstroIntegration } from "astro";
@@ -17,9 +17,9 @@ const { SERVER_PORT } = loadEnv(
 
 // https://astro.build/config
 export default defineConfig({
-  legacy: {
-    collectionsBackwardsCompat: true,
-  },
+	legacy: {
+		collectionsBackwardsCompat: true,
+	},
 	site: app.url,
 	srcDir: "./src",
 	outDir: "./out",
@@ -59,7 +59,7 @@ export default defineConfig({
 		ssr: {
 			noExternal: ["path-to-regexp"],
 		},
-		// @ts-ignore
+		// @ts-expect-error
 		plugins: [tailwindcss()],
 	},
 });

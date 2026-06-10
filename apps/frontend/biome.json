@@ -3,5 +3,10 @@
 	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"files": {
 		"includes": ["**", "!**/.astro", "!**/node_modules", "!**/out"]
-	}
+	},
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  }
 }

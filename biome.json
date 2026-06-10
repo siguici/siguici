@@ -2,7 +2,7 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["./apps/frontend/biome.json", "./docs/biome.json"],
   "files": {
-    "includes": ["**", "!**/apps/backend", "!**/node_modules"]
+    "includes": ["!**/apps/backend", "!**/node_modules"]
   },
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
@@ -16,6 +16,9 @@
           "level": "error",
           "options": { "syntax": "shorthand" }
         }
+      },
+      "correctness": {
+        "noUnusedVariables": "warn"
       }
     }
   },

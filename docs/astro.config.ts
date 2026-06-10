@@ -3,9 +3,9 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  legacy: {
-    collectionsBackwardsCompat: true,
-  },
+	legacy: {
+		collectionsBackwardsCompat: true,
+	},
 	integrations: [
 		starlight({
 			favicon: "/favicon.svg",
@@ -49,10 +49,10 @@ export default defineConfig({
 					label: "Getting started",
 					items: [{ label: "Quickstart", link: "/start/" }],
 				},
-        {
-      label: 'Reference',
-      items: [{ autogenerate: { directory: "reference" } }]
-    }
+				{
+					label: "Reference",
+					items: [{ autogenerate: { directory: "reference" } }],
+				},
 			],
 		}),
 	],

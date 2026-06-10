@@ -19,6 +19,7 @@
     "check:lint": "biome check .",
     "deploy": "deployctl deploy --project=siguici --no-static --include=./apps/ ./apps/backend/start.ts",
     "fix": "pnpm lint && pnpm format",
+    "fix:unsafe": "biome lint --write --unsafe",
     "format": "biome format --write .",
     "lint": "biome check --write .",
     "serve": "deno run -A --unstable ./apps/backend/start.ts"
