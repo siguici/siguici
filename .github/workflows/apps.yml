@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: 🔧 Setup JS
         uses: siguici/setup-js@v1
@@ -30,7 +30,7 @@ jobs:
           cwd: ./apps/frontend
 
       - name: 🚚 Upload distribution files
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: dist-files
           path: apps/frontend/out
@@ -51,16 +51,16 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        deno-version: [2.4]
+        deno-version: [2.8]
 
     name: 🚀 Deploy @siguici apps on Deno-${{ matrix.deno-version }} under ${{ matrix.operating-system }}
 
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: 🚚 Download distribution files
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: dist-files
           path: apps/frontend/out
