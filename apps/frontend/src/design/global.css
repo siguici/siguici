@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@config "../../tailwind.config.ts";
+@custom-variant dark (&:where(.theme-dark, .theme-dark *));
 
 @layer components {
 	.logo {

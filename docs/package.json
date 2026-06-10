@@ -28,13 +28,13 @@
 		"sync": "astro sync"
 	},
 	"dependencies": {
-		"@astrojs/starlight": "^0.35.1",
-		"astro": "^5.12.3",
-		"sharp": "^0.34.3"
+		"@astrojs/starlight": "^0.40.0",
+		"astro": "^6.4.6",
+		"sharp": "^0.34.5"
 	},
 	"devDependencies": {
-		"@astrojs/check": "^0.9.4",
-		"typescript": "^5.8.3"
+		"@astrojs/check": "^0.9.9",
+		"typescript": "^5.9.3"
 	},
 	"trustedDependencies": [
 		"sharp"

@@ -1,8 +1,8 @@
 import process from "node:process";
-import deno from "@astrojs/deno";
+import deno from "@deno/astro-adapter";
 import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
-import qwik from "@qwikdev/astro";
+import qwik from "@qwik.dev/astro";
 import tailwindcss from "@tailwindcss/vite";
 import type { AstroIntegration } from "astro";
 import { defineConfig, passthroughImageService } from "astro/config";
@@ -17,6 +17,9 @@ const { SERVER_PORT } = loadEnv(
 
 // https://astro.build/config
 export default defineConfig({
+  legacy: {
+    collectionsBackwardsCompat: true,
+  },
 	site: app.url,
 	srcDir: "./src",
 	outDir: "./out",
