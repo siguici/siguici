@@ -3,9 +3,9 @@
   "description": "Sigui Kessé Emmanuel's personal monorepo",
   "engines": {
     "node": ">=24.16",
-    "pnpm": ">=11.5"
+    "pnpm": ">=11.6"
   },
-  "packageManager": "pnpm@11.5.3",
+  "packageManager": "pnpm@11.6.0",
   "publishConfig": {
     "access": "public"
   },
