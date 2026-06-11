@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection, render } from "astro:content";
 import Icon from "../../components/Icon.astro";
 import Pill from "../../components/Pill.astro";
 import ContactCTA from "../../components/ContactCTA.astro";
@@ -14,13 +14,13 @@ const works = await getCollection("work");
 
 const { slug } = Astro.params;
 
-const work = works.find((work) => work.id.substring(0, work.id.lastIndexOf('.md')) === slug);
+const work = works.find((work) => work.id === slug);
 
 if (!work) {
 	return Astro.redirect("/404/");
 }
 
-const content = await work.rendered?.html;
+const { Content } = await render(work);
 ---
 
 <BaseLayout title={work!.data.title} description={work!.data.description}>
@@ -43,7 +43,7 @@ const content = await work.rendered?.html;
 				<div class="stack gap-10 content">
 					{work!.data.img && <img src={work!.data.img} alt={work!.data.img_alt || ''} />}
 					<div class="content">
-            {content}
+            <Content />
 					</div>
 				</div>
 			</main>

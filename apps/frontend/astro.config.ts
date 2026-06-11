@@ -17,9 +17,6 @@ const { SERVER_PORT } = loadEnv(
 
 // https://astro.build/config
 export default defineConfig({
-	legacy: {
-		collectionsBackwardsCompat: true,
-	},
 	site: app.url,
 	srcDir: "./src",
 	outDir: "./out",
