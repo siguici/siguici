@@ -25,7 +25,7 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
 
-    name: 📦️ Building @siguici's assets on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
+    name: 📦️ Building @siguici's assets on ${{ matrix.operating-system }}
 
     steps:
       - name: 🚚 Get latest code
@@ -56,9 +56,8 @@ jobs:
       fail-fast: true
       matrix:
         operating-system: [ubuntu-latest]
-        bun-version: [1.3]
 
-    name: 🚀 Deploy siguici.github.io with Bun@${{ matrix.bun-version }} on ${{ matrix.operating-system }}
+    name: 🚀 Deploy siguici.github.io on ${{ matrix.operating-system }}
 
     steps:
       - name: 🚚 Checkout the repository
