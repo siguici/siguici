@@ -24,7 +24,7 @@
 		"build": "astro build",
 		"check": "astro check",
 		"dev": "astro dev",
-		"preview": "pnpm build && pnpm serve",
+		"preview": "pnpm build && pnpm -C ../.. serve",
 		"prod": "pnpm check && pnpm build",
 		"start": "astro dev --open"
 	},

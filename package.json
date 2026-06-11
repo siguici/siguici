@@ -22,7 +22,7 @@
     "fix:unsafe": "biome lint --write --unsafe",
     "format": "biome format --write .",
     "lint": "biome check --write .",
-    "serve": "deno run -A --unstable ./apps/backend/start.ts"
+    "serve": "deno run -A ./apps/backend/start.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.16"
