@@ -14,13 +14,13 @@ const works = await getCollection("work");
 
 const { slug } = Astro.params;
 
-const work = works.find((work) => work.slug === slug);
+const work = works.find((work) => work.id.substring(0, work.id.lastIndexOf('.md')) === slug);
 
 if (!work) {
 	return Astro.redirect("/404/");
 }
 
-const { Content } = await work.render();
+const content = await work.rendered?.html;
 ---
 
 <BaseLayout title={work!.data.title} description={work!.data.description}>
@@ -43,7 +43,7 @@ const { Content } = await work.render();
 				<div class="stack gap-10 content">
 					{work!.data.img && <img src={work!.data.img} alt={work!.data.img_alt || ''} />}
 					<div class="content">
-						<Content />
+            {content}
 					</div>
 				</div>
 			</main>
