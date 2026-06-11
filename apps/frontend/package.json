@@ -30,15 +30,11 @@
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.9",
-		"@astrojs/preact": "^5.1.5",
 		"@astrojs/rss": "^4.0.18",
 		"@astrojs/sitemap": "^3.7.3",
 		"@deno/astro-adapter": "^0.5.2",
-		"@qwik.dev/astro": "^1.0.2",
-		"@qwik.dev/core": "2.0.0-beta.36",
 		"@tailwindcss/vite": "^4.3.0",
 		"astro": "^6.4.6",
-		"preact": "^10.29.2",
 		"tailwindcss": "^4.3.0",
 		"typescript": "^5.9.3",
 		"vite": "^7.3.5"
@@ -48,9 +44,5 @@
 		"autoprefixer": "^10.5.0",
 		"ts-node": "^10.9.2",
 		"tslib": "^2.8.1"
-	},
-	"overrides": {
-		"react": "npm:@preact/compat@latest",
-		"react-dom": "npm:@preact/compat@latest"
 	}
 }

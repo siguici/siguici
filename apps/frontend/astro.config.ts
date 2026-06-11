@@ -1,8 +1,6 @@
 import process from "node:process";
-import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
 import deno from "@deno/astro-adapter";
-import qwik from "@qwik.dev/astro";
 import tailwindcss from "@tailwindcss/vite";
 import type { AstroIntegration } from "astro";
 import { defineConfig, passthroughImageService } from "astro/config";
@@ -43,13 +41,6 @@ export default defineConfig({
 					fr: "fr-CI",
 				},
 			},
-		}),
-		preact({
-			compat: true,
-			include: ["**/preact/*", "**/react/*"],
-		}),
-		qwik({
-			exclude: ["**/preact/*", "**/react/*"],
 		}),
 	],
 	vite: {
