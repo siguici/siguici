@@ -4,9 +4,9 @@
 	"files": {
 		"includes": ["**", "!**/.astro", "!**/node_modules", "!**/out"]
 	},
-  "css": {
-    "parser": {
-      "tailwindDirectives": true
-    }
-  }
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	}
 }
