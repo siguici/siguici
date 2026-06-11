@@ -59,7 +59,6 @@ export default defineConfig({
 		ssr: {
 			noExternal: ["path-to-regexp"],
 		},
-		// @ts-expect-error
 		plugins: [tailwindcss()],
 	},
 });
