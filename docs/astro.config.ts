@@ -11,8 +11,7 @@ export default defineConfig({
 			favicon: "/favicon.svg",
 			logo: {
 				src: "./src/assets/logo.svg",
-				alt: "SKE",
-				replacesTitle: true,
+				alt: "S-shaped logo",
 			},
 			title: "Sigui Kessé Emmanuel",
 			social: [
