@@ -2,7 +2,21 @@
 	"root": false,
 	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"files": {
-		"includes": ["**", "!**/.astro", "!**/node_modules", "!**/out"]
+		"includes": [
+			"**",
+			"!**/.astro",
+			"!**/node_modules",
+			"!**/out",
+			"!src/assets/**/*",
+			"!public/**/*"
+		]
+	},
+	"linter": {
+		"rules": {
+			"a11y": {
+				"noSvgWithoutTitle": "off"
+			}
+		}
 	},
 	"css": {
 		"parser": {

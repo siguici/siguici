@@ -2,6 +2,12 @@
 	"root": false,
 	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"files": {
-		"includes": ["**", "!**/.astro", "!**/dist"]
+		"includes": [
+			"**",
+			"!**/.astro",
+			"!**/dist",
+			"!src/assets/**/*",
+			"!public/**/*"
+		]
 	}
 }
