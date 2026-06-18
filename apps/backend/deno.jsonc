@@ -34,6 +34,7 @@
   "exclude": ["**/out/*", "**/_fresh/*"],
   "imports": {
     "@/": "./",
+    "@astrojs/rss": "npm:@astrojs/rss@^4.0.18",
     "~/": "../",
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",
     "preact": "https://esm.sh/preact@10.22.0",
