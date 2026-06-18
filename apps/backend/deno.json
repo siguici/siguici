@@ -1,0 +1,72 @@
+{
+  "license": "AGPL-3.0-or-later",
+  "compilerOptions": {
+    "strict": true,
+    "lib": [
+      "dom",
+      "dom.asynciterable",
+      "dom.iterable",
+      "deno.ns"
+    ],
+    "jsx": "precompile",
+    "jsxImportSource": "preact",
+    "jsxPrecompileSkipElements": [
+      "a",
+      "img",
+      "source",
+      "body",
+      "html",
+      "head",
+      "title",
+      "meta",
+      "script",
+      "link",
+      "style",
+      "base",
+      "noscript",
+      "template"
+    ],
+    "types": [
+      "vite/client"
+    ]
+  },
+  "lint": {
+    "exclude": ["out/"],
+    "rules": { "tags": ["fresh", "recommended"] }
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "exclude": ["out/"]
+  },
+  "nodeModulesDir": "manual",
+  "lock": true,
+  "test": { "include": ["tests/"], "exclude": ["out/"] },
+  "tasks": {
+    "build": "vite build",
+    "check": "deno fmt --check . && deno check",
+    "dev": "vite",
+    "fix": "deno lint . && deno fmt .",
+    "preview": "vite preview",
+    "start": "deno serve -A --unstable-kv _fresh/server.js",
+    "update": "deno run -A -r jsr:@fresh/update ."
+  },
+  "exclude": ["**/out/*", "**/_fresh/*"],
+  "imports": {
+    "~/": "../",
+    "@/": "./",
+    "@astrojs/rss": "npm:@astrojs/rss@^4.0.18",
+    "fresh": "jsr:@fresh/core@^2.3.3",
+    "preact": "npm:preact@^10.29.1",
+    "@preact/signals": "npm:@preact/signals@^2.9.0",
+    "@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^1.1.2",
+    "vite": "npm:vite@^7.1.3",
+    "@types/babel__core": "npm:@types/babel__core@^7.20.5",
+    "tailwindcss": "npm:tailwindcss@^4.1.10",
+    "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.12"
+  }
+}

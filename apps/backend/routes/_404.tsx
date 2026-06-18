@@ -1,4 +1,4 @@
-import { Head } from '$fresh/runtime.ts';
+import { Head } from "fresh/runtime";
 
 export default function Error404() {
   return (
@@ -7,7 +7,7 @@ export default function Error404() {
         <title>404 - Page not found</title>
       </Head>
       <div class='px-4 py-8 mx-auto bg-[#86efac]'>
-        <div class='max-w-screen-md mx-auto flex flex-col items-center justify-center'>
+        <div class='max-w-3xl mx-auto flex flex-col items-center justify-center'>
           <img
             class='my-6'
             src='/favicon.svg'
