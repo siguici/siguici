@@ -17,7 +17,7 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
 
-    name: 📦️ Building @siguici's assets on ${{ matrix.operating-system }} using Bun@${{ matrix.bun-version }}
+    name: 📦️ Building @siguici's assets on ${{ matrix.operating-system }}
 
     steps:
       - name: 🚚 Get latest code
