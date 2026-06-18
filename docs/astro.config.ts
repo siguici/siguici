@@ -10,7 +10,7 @@ export default defineConfig({
 		starlight({
 			favicon: "/favicon.svg",
 			logo: {
-				src: "./src/assets/ske.svg",
+				src: "./src/assets/logo.svg",
 				alt: "SKE",
 				replacesTitle: true,
 			},
