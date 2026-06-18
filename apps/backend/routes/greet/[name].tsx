@@ -1,5 +1,9 @@
-import { PageProps } from '$fresh/server.ts';
+import { define } from '@/utils.ts';
 
-export default function Greet(props: PageProps) {
-  return <div>Hello {props.params.name}</div>;
-}
+export const handler = define.handlers({
+  GET(ctx) {
+    return new Response(
+      `<div>Hello ${ctx.params.name}</div>`,
+    );
+  },
+});

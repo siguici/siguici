@@ -1,12 +1,14 @@
 {
   "license": "AGPL-3.0-or-later",
+  "unstable": ["kv"],
   "compilerOptions": {
     "strict": true,
     "lib": [
       "dom",
       "dom.asynciterable",
       "dom.iterable",
-      "deno.ns"
+      "deno.ns",
+      "deno.unstable"
     ],
     "jsx": "precompile",
     "jsxImportSource": "preact",
@@ -52,7 +54,7 @@
     "dev": "vite",
     "fix": "deno lint . && deno fmt .",
     "preview": "vite preview",
-    "start": "deno serve -A --unstable-kv _fresh/server.js",
+    "start": "deno serve -A _fresh/server.js",
     "update": "deno run -A -r jsr:@fresh/update ."
   },
   "exclude": ["**/out/*", "**/_fresh/*"],
