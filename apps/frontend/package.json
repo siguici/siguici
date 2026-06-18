@@ -33,9 +33,9 @@
 		"@astrojs/rss": "^4.0.18",
 		"@astrojs/sitemap": "^3.7.3",
 		"@deno/astro-adapter": "^0.5.2",
-		"@tailwindcss/vite": "^4.3.0",
-		"astro": "^6.4.6",
-		"tailwindcss": "^4.3.0",
+		"@tailwindcss/vite": "^4.3.1",
+		"astro": "^6.4.7",
+		"tailwindcss": "^4.3.1",
 		"typescript": "^5.9.3",
 		"vite": "^7.3.5"
 	},

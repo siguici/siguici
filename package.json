@@ -2,10 +2,10 @@
   "name": "siguici-monorepo",
   "description": "Sigui Kessé Emmanuel's personal monorepo",
   "engines": {
-    "node": ">=24.16",
-    "pnpm": ">=11.6"
+    "node": ">=24.17",
+    "pnpm": ">=11.8"
   },
-  "packageManager": "pnpm@11.6.0",
+  "packageManager": "pnpm@11.8.0",
   "publishConfig": {
     "access": "public"
   },
@@ -25,6 +25,6 @@
     "serve": "deno run -A ./apps/backend/start.ts"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.16"
+    "@biomejs/biome": "^2.5.0"
   }
 }
