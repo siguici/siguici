@@ -52,6 +52,6 @@ export function workRssFeedItem(work: CollectionEntry<"work">): RSSFeedItem {
 		pubDate: work.data.pubDate || new Date(),
 		description: work.data.description || app.description,
 		customData: work.data.customData,
-		link: `/work/${work.slug}/`,
+		link: `/portfolio/${work.id}/`,
 	};
 }
