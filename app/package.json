@@ -19,7 +19,7 @@
 		"build": "astro build",
 		"check": "astro check",
 		"dev": "astro dev",
-		"preview": "nub run build && nub --cwd ../.. run serve",
+		"preview": "nub run build && ./task serve",
 		"prod": "nub run check && nub run build",
 		"start": "astro dev --open"
 	},

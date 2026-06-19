@@ -4,14 +4,7 @@ import deno from "@deno/astro-adapter";
 import tailwindcss from "@tailwindcss/vite";
 import type { AstroIntegration } from "astro";
 import { defineConfig, passthroughImageService } from "astro/config";
-import { loadEnv } from "vite";
 import { app } from "./src/config";
-
-const { SERVER_PORT } = loadEnv(
-	process.env.NODE_ENV || "local",
-	process.cwd(),
-	"",
-);
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,10 +17,7 @@ export default defineConfig({
 	image: {
 		service: passthroughImageService(),
 	},
-	adapter: deno({
-		port: Number(SERVER_PORT || "4444"),
-		start: false,
-	}) as AstroIntegration,
+	adapter: deno() as AstroIntegration,
 	integrations: [
 		sitemap({
 			customPages: ["https://sikessem.com/sitemap.xml"],
@@ -45,7 +35,7 @@ export default defineConfig({
 	],
 	vite: {
 		ssr: {
-			noExternal: ["path-to-regexp", "devalue"],
+			noExternal: ["path-to-regexp"],
 		},
 		plugins: [tailwindcss()],
 	},

@@ -1,4 +1,4 @@
-name: Apps
+name: App
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
     paths:
       - .github/workflows/*
-      - apps/**
+      - app/**
 
 jobs:
   build:
@@ -28,13 +28,13 @@ jobs:
         with:
           runtime: nub
           scripts: check,build
-          cwd: ./apps/frontend
+          cwd: ./app
 
       - name: 🚚 Upload distribution files
         uses: actions/upload-artifact@v7
         with:
           name: dist-files
-          path: apps/frontend/out
+          path: app/out
 
   deploy:
     needs: build
@@ -54,7 +54,7 @@ jobs:
         operating-system: [ubuntu-latest]
         deno-version: [2.8]
 
-    name: 🚀 Deploy @siguici apps on Deno-${{ matrix.deno-version }} under ${{ matrix.operating-system }}
+    name: 🚀 Deploy @siguici app on Deno-${{ matrix.deno-version }} under ${{ matrix.operating-system }}
 
     steps:
       - name: 🚚 Get latest code
@@ -64,10 +64,10 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: dist-files
-          path: apps/frontend/out
+          path: app/out
 
       - name: 🗃️ List distribution files
-        run: ls -R apps/frontend/out
+        run: ls -R app/out
 
       - name: 🔨 Configure Deno
         uses: siguici/setup-js@v1
@@ -75,11 +75,11 @@ jobs:
           runtime: deno
           version: ${{ matrix.deno-version }}
           scripts: build
-          cwd: ./apps/backend
+          cwd: ./app
 
       - name: 📂 Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: siguici
-          entrypoint: backend/_fresh/server.js
-          root: apps
+          entrypoint: out/server/entry.mjs
+          root: app
