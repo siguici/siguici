@@ -80,5 +80,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: siguici
-          entrypoint: backend/start.ts
+          entrypoint: backend/_fresh/server.js
           root: apps
