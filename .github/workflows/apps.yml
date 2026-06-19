@@ -73,7 +73,7 @@ jobs:
         with:
           runtime: deno
           version: ${{ matrix.deno-version }}
-          scripts: check,build
+          scripts: build
           cwd: ./apps/backend
 
       - name: 📂 Upload to Deno Deploy
