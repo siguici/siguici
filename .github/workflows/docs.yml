@@ -34,6 +34,7 @@ jobs:
       - name: 🔧 Setup JS
         uses: siguici/setup-js@v1
         with:
+          runtime: nub
           scripts: check,build
           cwd: ./docs
 
