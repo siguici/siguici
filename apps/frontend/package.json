@@ -1,11 +1,6 @@
 {
 	"name": "sigui.ci",
 	"description": "Sigui Kessé Emmanuel's web application.",
-	"engines": {
-		"node": ">=22.17",
-		"pnpm": ">=10.13"
-	},
-	"packageManager": "pnpm@10.13.1",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -24,8 +19,8 @@
 		"build": "astro build",
 		"check": "astro check",
 		"dev": "astro dev",
-		"preview": "pnpm build && pnpm -C ../.. serve",
-		"prod": "pnpm check && pnpm build",
+		"preview": "nub run build && nub --cwd ../.. run serve",
+		"prod": "nub run check && nub run build",
 		"start": "astro dev --open"
 	},
 	"dependencies": {

@@ -3,9 +3,9 @@
   "description": "Sigui Kessé Emmanuel's personal monorepo",
   "engines": {
     "node": ">=24.17",
-    "pnpm": ">=11.8"
+    "nub": ">=0.1"
   },
-  "packageManager": "pnpm@11.8.0",
+  "packageManager": "nub@0.1.4",
   "publishConfig": {
     "access": "public"
   },
@@ -18,7 +18,7 @@
     "check:format": "biome format .",
     "check:lint": "biome check .",
     "deploy": "deployctl deploy --project=siguici --no-static --include=./apps/ ./apps/backend/start.ts",
-    "fix": "pnpm lint && pnpm format",
+    "fix": "nub run lint && nub run format",
     "fix:unsafe": "biome lint --write --unsafe",
     "format": "biome format --write .",
     "lint": "biome check --write .",
@@ -26,5 +26,20 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "nub",
+      "version": "^0.1.4",
+      "onFail": "warn"
+    }
+  },
+  "workspaces": [
+    "apps/*",
+    "docs"
+  ],
+  "allowBuilds": {
+    "esbuild": true,
+    "sharp": true
   }
 }
