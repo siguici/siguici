@@ -16,7 +16,11 @@ interface Props {
 const { title, description, animate = "fade" } = Astro.props;
 ---
 
-<html lang="en" transition:animate={animate}>
+<html
+  lang="en"
+  transition:animate={animate}
+  class="scroll-smooth"
+  >
 	<head>
 		<PageHead title={title} description={description} />
 	</head>
