@@ -32,19 +32,7 @@
     "fix": "deno lint . && deno fmt .",
     "serve": "deno run -A out/server/entry.mjs"
   },
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< HEAD
   "exclude": ["**/out/*"],
-=======
-  "exclude": ["**/out/*", "**/_fresh/*"],
->>>>>>> 863788a (🏗️ Simplify the backend)
-=======
-  "exclude": ["**/out/*"],
->>>>>>> Stashed changes
-=======
-  "exclude": ["**/out/*"],
->>>>>>> Stashed changes
   "imports": {
     "~/": "../",
     "@/": "./"
