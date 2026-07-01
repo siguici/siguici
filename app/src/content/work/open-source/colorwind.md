@@ -1,7 +1,7 @@
 ---
 title: ColorWind
 pubDate: 2020-03-04 00:00:00
-img: /assets/colorwind.png
+img: /images/colorwind.png
 img_alt: ColorWind website screenshot displaying the library features and usage examples.
 description: |
   ColorWind is a library designed to simplify color management in TailwindCSS applications,

@@ -1,7 +1,7 @@
 ---
 title: QwikDev/Astro
 pubDate: 2024-09-30 00:00:00
-img: /assets/qwikdev-astro.png
+img: /images/qwikdev-astro.png
 img_alt: GitHub repository screenshot showing the QwikDev/Astro project structure and documentation.
 description: |
   QwikDev/Astro is a TypeScript library integrating the Qwik framework into Astro for optimized,

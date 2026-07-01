@@ -1,7 +1,7 @@
 ---
 title: Ahlabik.TN
 pubDate: 2024-10-05 00:00:00
-img: /assets/ahlabik.png
+img: /images/ahlabik.png
 img_alt: Screenshot of the Ahlabik homepage showcasing the user-friendly interface and product listings.
 description: |
   A collaborative e-commerce platform where partners can list their products,

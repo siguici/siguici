@@ -1,7 +1,7 @@
 ---
 title: PDC – Job Application Management Platform
 pubDate: 2024-09-25 00:00:00
-img: /assets/pdc.png
+img: /images/pdc.png
 img_alt: Screenshot of the PDC website highlighting the job application interface and user registration.
 description: |
   I developed the official website for Punic Development Company, from concept to deployment on a dedicated server.
