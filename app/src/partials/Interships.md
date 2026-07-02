@@ -1,4 +1,3 @@
-
 - **Web Developer - Avempace**
   - June - July 2021, Tunisia
   - Developed an application with Express and React, using Redux and Sequelize to retrieve and display data from a database via an API.
@@ -10,5 +9,3 @@
 - **Web Developer - AfterCode**
   - June - July 2020, Tunisia
   - Developed an application with Laravel for a perfumery.
-
-

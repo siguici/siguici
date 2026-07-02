@@ -1,27 +1,34 @@
 {
-	"root": false,
-	"assist": { "actions": { "source": { "organizeImports": "on" } } },
-	"files": {
-		"includes": [
-			"**",
-			"!**/.astro",
-			"!**/node_modules",
-			"!**/out",
-			"!src/assets/**/*",
-			"!public/**/*",
-			"!**/deno.json"
-		]
-	},
-	"linter": {
-		"rules": {
-			"a11y": {
-				"noSvgWithoutTitle": "off"
-			}
-		}
-	},
-	"css": {
-		"parser": {
-			"tailwindDirectives": true
-		}
-	}
+  "$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+  "root": false,
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "files": {
+    "includes": [
+      "**",
+      "!**/.astro",
+      "!**/node_modules",
+      "!**/out",
+      "!src/assets/**/*",
+      "!public/**/*",
+      "!**/deno.json"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single"
+    }
+  }
 }

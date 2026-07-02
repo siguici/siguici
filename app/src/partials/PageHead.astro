@@ -1,18 +1,18 @@
 ---
-import ClientRouter from "astro/components/ClientRouter.astro";
-import "../design/global.css";
-import { app } from "../config";
+import ClientRouter from 'astro/components/ClientRouter.astro';
+import '../design/global.css';
+import { app } from '../config';
 
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
-	transitions?: "animate" | "swap" | "none";
+	transitions?: 'animate' | 'swap' | 'none';
 }
 
 const {
 	title,
-	description = "The personal website of Sigui Kessé Emmanuel",
-	transitions = "animate",
+	description = 'The personal website of Sigui Kessé Emmanuel',
+	transitions = 'animate',
 } = Astro.props;
 ---
 

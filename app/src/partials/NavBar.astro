@@ -1,14 +1,14 @@
 ---
-import Icon from "../components/Icon.astro";
-import type { iconPaths } from "../components/IconPaths";
-import ThemeToggle from "../components/ThemeToggle.astro";
-import { app } from "../config";
+import Icon from '../components/Icon.astro';
+import type { iconPaths } from '../components/IconPaths';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import { app } from '../config';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: "Home", href: "/" },
-	{ label: "Portfolio", href: "/portfolio/" },
-	{ label: "About", href: "/about/" },
+	{ label: 'Home', href: '/' },
+	{ label: 'Portfolio', href: '/portfolio/' },
+	{ label: 'About', href: '/about/' },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -18,11 +18,11 @@ const iconLinks: {
 	icon: keyof typeof iconPaths;
 }[] = [
 	{
-		label: "Twitter",
-		href: "https://twitter.com/siguici",
-		icon: "twitter-logo",
+		label: 'Twitter',
+		href: 'https://twitter.com/siguici',
+		icon: 'twitter-logo',
 	},
-	{ label: "GitHub", href: "https://github.com/siguici", icon: "github-logo" },
+	{ label: 'GitHub', href: 'https://github.com/siguici', icon: 'github-logo' },
 ];
 ---
 

@@ -45,7 +45,7 @@ ensuring a seamless shopping experience across devices.
 #### Impact & Vision
 
 - This platform has enabled Melanoderme to reach a wider audience
-and grow their brand while also fostering a community for other sellers.
+  and grow their brand while also fostering a community for other sellers.
 
 - The platform is designed to scale as the business expands,
-supporting the brand’s mission to celebrate and share cultural identity through fashion.
+  supporting the brand’s mission to celebrate and share cultural identity through fashion.

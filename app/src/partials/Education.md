@@ -1,4 +1,3 @@
-
 - **Master 1 in Big Data**
   - Leaders University, Nabeul, Tunisia
   - Academic Year: 2022-2023
@@ -15,4 +14,3 @@
 - **Middle School Diploma (Brevet d'Études du Premier Cycle, BEPC)**
   - Lycée Moderne de Yopougon Andokoi, Ivory Coast
   - With Honors, July 2011
-

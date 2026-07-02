@@ -45,8 +45,8 @@ integrate the library into their projects effortlessly.
 ### Impact
 
 - ColorWind enhances the user experience by allowing for quick adjustments
-between light and dark themes, making applications more accessible and visually appealing.
+  between light and dark themes, making applications more accessible and visually appealing.
 
 - Its design philosophy aligns with the growing trend of
-dynamic theming in modern web development, positioning it as an essential tool
-for developers leveraging TailwindCSS.
+  dynamic theming in modern web development, positioning it as an essential tool
+  for developers leveraging TailwindCSS.

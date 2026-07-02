@@ -40,9 +40,9 @@ improving developer experience and accessibility.
 ### Impact & Vision
 
 - My contributions aim to streamline and solidify the integration
-of Qwik within the Astro ecosystem, making it easier for developers
-to harness the strengths of both frameworks for scalable,
-performant web applications. As an active maintainer,
+  of Qwik within the Astro ecosystem, making it easier for developers
+  to harness the strengths of both frameworks for scalable,
+  performant web applications. As an active maintainer,
 
 - I continue to drive the project’s growth and usability,
-contributing to the future of web development with Qwik and Astro.
+  contributing to the future of web development with Qwik and Astro.

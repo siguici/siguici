@@ -1,23 +1,23 @@
 ---
-import { type CollectionEntry, getCollection, render } from "astro:content";
-import ContactCTA from "../../components/ContactCTA.astro";
-import Hero from "../../components/Hero.astro";
-import Icon from "../../components/Icon.astro";
-import Pill from "../../components/Pill.astro";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 interface Props {
-	work: CollectionEntry<"work">;
+	work: CollectionEntry<'work'>;
 }
 
-const works = await getCollection("work");
+const works = await getCollection('work');
 
 const { slug } = Astro.params;
 
 const work = works.find((work) => work.id === slug);
 
 if (!work) {
-	return Astro.redirect("/404/");
+	return Astro.redirect('/404/');
 }
 
 const { Content } = await render(work);

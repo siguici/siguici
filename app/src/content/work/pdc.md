@@ -49,7 +49,7 @@ to quickly locate specific profiles, making the hiring process faster and more s
 #### Impact & Vision
 
 - This platform has optimized the recruitment process for PDC’s partners
-by centralizing applications and simplifying candidate management.
+  by centralizing applications and simplifying candidate management.
 
 - By providing automated, well-organized access to applicant profiles,
-PDC’s platform supports more effective and data-driven hiring decisions.
+  PDC’s platform supports more effective and data-driven hiring decisions.

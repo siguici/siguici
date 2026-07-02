@@ -41,12 +41,12 @@ for version control and Docker for containerized, efficient application delivery
 #### Key Features
 
 - An intuitive product management system allows partners
-to list, update, and monitor their products,
-enabling a streamlined multi-vendor environment.
+  to list, update, and monitor their products,
+  enabling a streamlined multi-vendor environment.
 
 - A smooth and interactive interface for customers,
-with dynamic components built using Alpine.js and Livewire,
-creating a responsive shopping experience.
+  with dynamic components built using Alpine.js and Livewire,
+  creating a responsive shopping experience.
 
 #### Impact & Vision
 

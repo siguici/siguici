@@ -1,4 +1,4 @@
-- **Sikessem | Online Development Agency**  
+- **Sikessem | Online Development Agency**
   - Established and operate Sikessem, a pioneering online development agency providing SaaS solutions and bespoke services to clients.
   - Developed a comprehensive suite of digital services, including website development, marketing solutions, and online sales platforms.
   - Delivered end-to-end solutions tailored to clients' needs, ranging from ready-to-use services to custom development projects.
