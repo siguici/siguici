@@ -1,5 +1,5 @@
 {
-	"name": "sigui.ci",
+	"name": "siguici.deno.dev",
 	"description": "Sigui Kessé Emmanuel's web application.",
 	"publishConfig": {
 		"access": "public"
@@ -7,11 +7,11 @@
 	"private": true,
 	"type": "module",
 	"license": "AGPL-3.0-or-later",
-	"homepage": "https://sigui.deno.dev",
+	"homepage": "https://siguici.deno.dev",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/siguici/siguici",
-		"directory": "apps/frontend"
+		"directory": "app"
 	},
 	"scripts": {
 		"astro": "astro",

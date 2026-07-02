@@ -3,6 +3,7 @@
 	"type": "module",
 	"version": "0.0.0",
 	"description": "📝 Centralized Documentation for Sigui Open-Source Projects.",
+	"license": "AGPL-3.0-or-later",
 	"private": true,
 	"publishConfig": {
 		"access": "public"
@@ -12,6 +13,11 @@
 		"name": "Sigui Kessé Emmanuel",
 		"email": "contact@sigui.ci",
 		"url": "https://sigui.ci"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/siguici/siguici",
+		"directory": "doc"
 	},
 	"scripts": {
 		"astro": "astro",
