@@ -8,7 +8,8 @@
 			"!**/node_modules",
 			"!**/out",
 			"!src/assets/**/*",
-			"!public/**/*"
+			"!public/**/*",
+			"!**/deno.json"
 		]
 	},
 	"linter": {
