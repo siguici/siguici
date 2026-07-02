@@ -14,15 +14,22 @@
   "homepage": "https://sigui.deno.dev",
   "repository": "https://github.com/siguici/siguici",
   "scripts": {
+		"build:app": "nub --cwd app run build",
+		"check:app": "nub --cwd app run check",
     "check": "biome ci .",
     "check:format": "biome format .",
     "check:lint": "biome check .",
     "deploy": "deployctl deploy --project=siguici --no-static --include=./apps/ ./apps/backend/start.ts",
+		"dev:app": "nub --cwd app run dev",
     "fix": "nub run lint && nub run format",
     "fix:unsafe": "biome lint --write --unsafe",
     "format": "biome format --write .",
     "lint": "biome check --write .",
-    "serve": "./app/task serve"
+		"preview:app": "nub --cwd app run preview",
+		"prod:app": "nub --cwd app run prod",
+    "serve:app": "nub --cwd app run serve",
+		"start:app": "nub --cwd app run start",
+		"sync:app": "nub --cwd app run sync"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.0"

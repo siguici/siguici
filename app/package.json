@@ -21,7 +21,8 @@
 		"dev": "astro dev",
 		"preview": "nub run build && ./task serve",
 		"prod": "nub run check && nub run build",
-		"start": "astro dev --open"
+		"start": "astro dev --open",
+    "serve": "./task serve"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.9",
