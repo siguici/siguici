@@ -1,0 +1,43 @@
+{
+	"name": "siguici.github.io",
+	"type": "module",
+	"version": "0.0.0",
+	"description": "📝 Centralized Documentation for Sigui Open-Source Projects.",
+	"license": "AGPL-3.0-or-later",
+	"private": true,
+	"publishConfig": {
+		"access": "public"
+	},
+	"homepage": "https://siguici.github.io",
+	"author": {
+		"name": "Sigui Kessé Emmanuel",
+		"email": "contact@sigui.ci",
+		"url": "https://sigui.ci"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/siguici/siguici",
+		"directory": "doc"
+	},
+	"scripts": {
+		"astro": "astro",
+		"build": "astro build",
+		"check": "astro check",
+		"dev": "astro dev",
+		"preview": "astro preview",
+		"start": "astro dev --open",
+		"sync": "astro sync"
+	},
+	"dependencies": {
+		"@astrojs/starlight": "^0.40.0",
+		"astro": "^6.4.7",
+		"sharp": "^0.34.5"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.9.9",
+		"typescript": "^5.9.3"
+	},
+	"trustedDependencies": [
+		"sharp"
+	]
+}

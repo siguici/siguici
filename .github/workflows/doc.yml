@@ -1,0 +1,84 @@
+name: Doc
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+defaults:
+  run:
+    working-directory: ./doc
+
+jobs:
+  build:
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+
+    name: 📦️ Building @siguici's assets on ${{ matrix.operating-system }}
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v6
+
+      - name: 🔧 Setup JS
+        uses: siguici/setup-js@v1
+        with:
+          runtime: nub
+          scripts: check,build
+          cwd: ./doc
+
+      - name: 🚚 Upload distribution files
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist-files
+          path: doc/dist
+
+  deploy:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: https://siguici.github.io
+
+    strategy:
+      fail-fast: true
+      matrix:
+        operating-system: [ubuntu-latest]
+
+    name: 🚀 Deploy siguici.github.io on ${{ matrix.operating-system }}
+
+    steps:
+      - name: 🚚 Checkout the repository
+        uses: actions/checkout@v6
+
+      - name: 🍱 Download distribution files
+        uses: actions/download-artifact@v8
+        with:
+          name: dist-files
+          path: doc/dist
+
+      - name: 🗃️ List distribution files
+        run: ls -R dist
+
+      - name: 📂 Deploy to GitHub Pages
+        id: deployment
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: doc/dist
+          destination_dir: .
+          external_repository: siguici/siguici.github.io

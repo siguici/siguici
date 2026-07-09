@@ -1,8 +1,8 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "extends": ["./apps/frontend/biome.json", "./docs/biome.json"],
+  "extends": ["./app/biome.json", "./doc/biome.json"],
   "files": {
-    "includes": ["!**/apps/backend", "!**/node_modules"]
+    "includes": ["!**/node_modules"]
   },
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {

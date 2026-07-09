@@ -1,0 +1,149 @@
+---
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Achievements from '../partials/Achievements.md';
+import Background from '../partials/Background.md';
+import Contact from '../partials/Contact.md';
+import Education from '../partials/Education.md';
+import Hobbies from '../partials/Hobbies.md';
+import Interships from '../partials/Interships.md';
+import Skills from '../partials/Skills.md';
+---
+
+<BaseLayout title="About" description="About Sigui Kessé Emmanuel">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/images/at-work.jpg"
+					alt="Sigui at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">🧑‍💻 Profile</h2>
+				<div class="content">
+          <p>
+            I am a passionate and self-motivated Full Stack Web Developer with expertise in Business Intelligence
+            and System Administration. Over the years, I have gained extensive experience in developing
+            and deploying various web projects independently. I thrive in challenging environments
+            and enjoy exploring new technologies to create innovative solutions.
+          </p>
+        </div>
+			</section>
+			<section>
+				<h2 class="section-title">💼 Background</h2>
+				<div class="content">
+          <Background />
+        </div>
+			</section>
+			<section>
+				<h2 class="section-title">🧑‍💼 Internships</h2>
+				<div class="content">
+          <Interships />
+        </div>
+			</section>
+			<section>
+				<h2 class="section-title">🎓 Education</h2>
+				<div class="content">
+          <Education />
+        </div>
+			</section>
+			<section>
+				<h2 class="section-title">🏆 Achievements</h2>
+				<div class="content">
+          <Achievements />
+        </div>
+			</section>
+			<section>
+				<h2 class="section-title">💻 Skills</h2>
+				<div class="content">
+					<Skills />
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">🌍 Languages</h2>
+				<div class="content">
+					<ul>
+            <li><b>French:</b> Native</li>
+            <li><b>English:</b> Fluent</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">🎨 Hobbies</h2>
+				<div class="content">
+					<Hobbies />
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">📞 Contact</h2>
+				<div class="content">
+					<Contact />
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+  @reference '../design/global.css';
+
+	.about {
+		@apply flex flex-col gap-14 my-14;
+
+		@media (min-width: 50em) {
+			& {
+				@apply grid;
+				grid-template-columns: 1fr 60% 1fr;
+			}
+
+			& > :global(:first-child) {
+				grid-column-start: 2;
+			}
+		}
+	}
+
+	img {
+		@apply mt-6 rounded-3xl;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		@apply flex flex-col gap-2 text-[var(--gray-200)];
+
+		@media (min-width: 50em) {
+			& {
+				@apply contents text-xl;
+			}
+		}
+	}
+
+	.section-title {
+		@apply text-2xl text-[var(--gray-0)];
+		grid-column-start: 1;
+	}
+
+	.content {
+    grid-column: 2 / 4;
+
+		& :global(a) {
+			text-decoration: 1px solid underline transparent;
+			text-underline-offset: 0.25em;
+			transition: text-decoration-color var(--theme-transition);
+		}
+
+		& :global(a:hover),
+		& :global(a:focus) {
+			text-decoration-color: currentColor;
+		}
+	}
+</style>

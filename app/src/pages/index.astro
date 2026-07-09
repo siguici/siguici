@@ -1,0 +1,222 @@
+---
+import CallToAction from '../components/CallToAction.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import Features from '../components/Features.astro';
+import Grid from '../components/Grid.astro';
+import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
+import Pill from '../components/Pill.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sortWork } from '../utils';
+
+// Content Fetching: List four most recent work projects
+const projects = (await sortWork()).slice(0, 4);
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<BaseLayout>
+	<div class="stack gap-20 lg:gap-48">
+		<div class="wrapper stack gap-8 lg:gap-20">
+			<header class="hero">
+				<Hero
+					title="Hello 👋🏽, I'm SIGUI Kessé Emmanuel"
+					tagline="Full Stack Web Developer, Business Intelligence Specialist, and Expert Web Server Administrator."
+					align="start"
+				>
+					<div class="roles">
+						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
+						<Pill><Icon icon="pencil-line" size="1.33em" /> Designer</Pill>
+						<Pill><Icon icon="rocket-launch" size="1.33em" /> DevOps</Pill>
+					</div>
+				</Hero>
+
+				<img
+					alt="Sigui smiling in a red plaid shirt and tortoise shell glasses"
+					width="480"
+					height="620"
+					src="/images/portrait.jpg"
+				/>
+			</header>
+
+			<Features />
+		</div>
+
+		<main class="wrapper stack gap-20 lg:gap-48">
+			<section class="section with-background with-cta">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Selected Work</h3>
+					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+				</header>
+
+				<div class="gallery">
+					<Grid variant="offset">
+						{
+							projects.map((project) => (
+								<li>
+									<PortfolioPreview project={project} />
+								</li>
+							))
+						}
+					</Grid>
+				</div>
+
+				<div class="cta">
+					<CallToAction href="/portfolio/">
+						View All
+						<Icon icon="arrow-right" size="1.2em" />
+					</CallToAction>
+				</div>
+			</section>
+
+			<section class="section with-background bg-variant">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Mentions</h3>
+					<p>
+						I have been fortunate enough to recieve praise for my work in several publications. Take
+						a look below to learn more.
+					</p>
+				</header>
+
+				<div class="gallery">
+					<Grid variant="small">
+						{
+							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+								<li class="mention-card">
+									<p>{brand}</p>
+								</li>
+							))
+						}
+					</Grid>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+  @reference '../design/global.css';
+
+	.hero {
+		@apply flex flex-col items-center gap-8;
+
+		& img {
+			@apply object-cover object-top rounded-[3.75rem];
+			aspect-ratio: 5 / 4;
+			box-shadow: var(--shadow-md);
+
+			@media (min-width: 50em) {
+				& {
+					@apply object-cover rounded-[2.75rem];
+					aspect-ratio: 3 / 4;
+				}
+			}
+		}
+
+		@media (min-width: 50em) {
+			& {
+				@apply grid gap-14;
+				grid-template-columns: 6fr 4fr;
+				padding-inline: 2.5rem;
+			}
+		}
+	}
+
+	.roles {
+		@apply hidden;
+
+		@media (min-width: 50em) {
+			& {
+				@apply flex mt-2 gap-2;
+			}
+		}
+	}
+
+	/* ====================================================== */
+
+	.section {
+  	@apply grid gap-8 my-8;
+
+    &-header {
+			@apply justify-self-center text-center text-lg;
+			max-width: 50ch;
+			color: var(--gray-300);
+			
+			& h3 {
+				@apply text-3xl;
+			}
+
+			@media (min-width: 50em) {
+				& {
+					@apply text-xl;
+					grid-area: header;
+				}
+
+				& h3 {
+					@apply text-5xl;
+				}
+
+				.with-cta & {
+					@apply justify-self-start text-left;
+				}
+			}
+		}
+
+		@media (min-width: 50em) {
+			& {
+				@apply grid-cols-4 gap-20;
+				grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
+			}
+
+			&.with-cta {
+				grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
+			}
+		}
+	}
+
+	.with-background {
+		@apply relative;
+
+		&::before {
+			@apply content-[''] absolute pointer-events-none left-1/2 w-screen top-0 -translate-y-3/4 -translate-x-1/2 -z-[1];
+			--hero-bg: var(--bg-image-subtle-2);
+			aspect-ratio: calc(2.25 / var(--bg-scale));
+			background: url('/images/backgrounds/noise.png') top center/220px repeat,
+				var(--hero-bg) center center / var(--bg-gradient-size) no-repeat, var(--gray-999);
+			background-blend-mode: overlay, normal, normal, normal;
+			mix-blend-mode: var(--bg-blend-mode);
+		}
+
+		&.bg-variant::before {
+			--hero-bg: var(--bg-image-subtle-1);
+		}
+	}
+
+	@media (min-width: 50em) {
+		.gallery {
+			grid-area: gallery;
+		}
+
+		.cta {
+			grid-area: cta;
+		}
+	}
+
+	/* ====================================================== */
+
+	.mention-card {
+		@apply flex h-28 justify-center items-center text-center rounded-3xl border border-[var(--gray-800)] text-[var(--gray-300)];
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+
+		@media (min-width: 50em) {
+			& {
+				@apply rounded-3xl h-36;
+			}
+		}
+	}
+</style>

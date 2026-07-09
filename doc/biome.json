@@ -1,0 +1,14 @@
+{
+	"$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+	"root": false,
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
+	"files": {
+		"includes": [
+			"**",
+			"!**/.astro",
+			"!**/dist",
+			"!src/assets/**/*",
+			"!public/**/*"
+		]
+	}
+}
