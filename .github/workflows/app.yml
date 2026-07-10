@@ -27,7 +27,7 @@ jobs:
         uses: siguici/setup-js@v1
         with:
           runtime: nub
-          scripts: check,build
+          scripts: build
           cwd: ./app
 
       - name: 🚚 Upload distribution files
