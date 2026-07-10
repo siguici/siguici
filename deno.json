@@ -1,0 +1,48 @@
+{
+  "license": "AGPL-3.0-or-later",
+  "nodeModulesDir": "auto",
+  "lock": true,
+  "unstable": ["kv"],
+  "workspace": ["./app", "./doc"],
+  "allowScripts": ["npm:esbuild@0.27.7", "npm:sharp@0.34.5"],
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "**/out/**",
+    "**/dist/**",
+    "**/.astro/**",
+    "**/pagefind/**"
+  ],
+  "lint": {
+    "rules": { "tags": ["recommended"] }
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": true,
+    "proseWrap": "preserve"
+  },
+  "tasks": {
+    "build:app": "deno task --cwd app build",
+    "build:doc": "deno task --cwd doc build",
+    "check:app": "deno task --cwd app check",
+    "check:doc": "deno task --cwd doc check",
+    "check": "deno fmt --check && deno check --sloppy-imports && deno lint",
+    "deploy": "deployctl deploy --project=siguici --no-static --include=./app/ ./app/out/server/entry.mjs",
+    "dev:app": "deno task --cwd app dev",
+    "dev:doc": "deno task --cwd doc dev",
+    "fix": "deno lint --fix && deno fmt",
+    "preview:app": "deno task --cwd app preview",
+    "preview:doc": "deno task --cwd doc preview",
+    "prod:app": "deno task --cwd app prod",
+    "serve:app": "deno task --cwd app serve",
+    "start:app": "deno task --cwd app start",
+    "start:doc": "deno task --cwd doc start",
+    "sync:app": "deno task --cwd app sync",
+    "sync:doc": "deno task --cwd doc sync"
+  }
+}

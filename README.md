@@ -1,15 +1,21 @@
 # 👋🏽 Hi, I'm **SIGUI Kessé Emmanuel**
-**Senior Full-Stack Developer** — crafting scalable systems, elegant interfaces, and tools that bridge **technology and creativity**.
 
-💡 I enjoy building **intuitive developer tools, performant web architectures, and creative coding experiences**.
+**Senior Full-Stack Developer** — crafting scalable systems, elegant interfaces,
+and tools that bridge **technology and creativity**.
+
+💡 I enjoy building **intuitive developer tools, performant web architectures,
+and creative coding experiences**.
 
 ---
 
 ## 🚀 Expertise
 
-- ⚡ **Full-Stack Development** — Web applications, APIs, and scalable architectures  
-- 🎨 **UI / UX & Creative Coding** — interactive interfaces and expressive front-end systems  
-- 💚 **Open Source** — tools, libraries, and experiments for the developer ecosystem  
+- ⚡ **Full-Stack Development** — Web applications, APIs, and scalable
+  architectures
+- 🎨 **UI / UX & Creative Coding** — interactive interfaces and expressive
+  front-end systems
+- 💚 **Open Source** — tools, libraries, and experiments for the developer
+  ecosystem
 
 ---
 
@@ -43,7 +49,8 @@
 
 ## 🤝 Connect
 
-- 💼 [LinkedIn](https://linkedin.com/in/siguici)  
+- 💼 [LinkedIn](https://linkedin.com/in/siguici)
 - 🐦 [𝕏 / Twitter](https://x.com/siguici)
 
-☕ **Open to open-source collaborations, creative experiments, and impactful projects.**
+☕ **Open to open-source collaborations, creative experiments, and impactful
+projects.**

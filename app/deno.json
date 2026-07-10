@@ -1,6 +1,4 @@
 {
-  "license": "AGPL-3.0-or-later",
-  "unstable": ["kv"],
   "compilerOptions": {
     "strict": true,
     "lib": [
@@ -11,31 +9,12 @@
       "deno.unstable"
     ]
   },
-  "lint": {
-    "exclude": ["out/"],
-    "rules": { "tags": ["recommended"] }
-  },
-  "fmt": {
-    "useTabs": false,
-    "lineWidth": 80,
-    "indentWidth": 2,
-    "semiColons": true,
-    "singleQuote": true,
-    "proseWrap": "preserve",
-    "exclude": ["out/"]
-  },
-  "nodeModulesDir": "manual",
-  "lock": true,
   "test": { "include": ["tests/"], "exclude": ["out/"] },
   "tasks": {
-    "check": "deno fmt --check . && deno check",
-    "fix": "deno lint . && deno fmt .",
     "serve": "deno run -A out/server/entry.mjs"
   },
-  "exclude": ["**/out/*"],
   "imports": {
     "~/": "../",
     "@/": "./"
-  },
-  "allowScripts": ["npm:esbuild@0.27.7", "npm:sharp@0.34.5"]
+  }
 }
