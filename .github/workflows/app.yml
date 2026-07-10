@@ -16,8 +16,9 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
+        deno-version: [2.9]
 
-    name: 📦️ Building @siguici's assets on ${{ matrix.operating-system }}
+    name: 📦️ Building @siguici's assets on Deno-${{ matrix.deno-version }} under ${{ matrix.operating-system }}
 
     steps:
       - name: 🚚 Get latest code
@@ -26,6 +27,8 @@ jobs:
       - name: 🔧 Setup JS
         uses: siguici/setup-js@v1
         with:
+          runtime: deno
+          version: ${{ matrix.deno-version }}
           scripts: build
           cwd: ./app
 
@@ -51,8 +54,9 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
+        deno-version: [2.9]
 
-    name: 🚀 Deploy @siguici app on ${{ matrix.operating-system }}
+    name: 🚀 Deploy @siguici app on Deno-${{ matrix.deno-version }} under ${{ matrix.operating-system }}
 
     steps:
       - name: 🚚 Get latest code
@@ -70,6 +74,8 @@ jobs:
       - name: 🔨 Configure Deno
         uses: siguici/setup-js@v1
         with:
+          runtime: deno
+          version: ${{ matrix.deno-version }}
           scripts: check,build
           cwd: ./app
 
