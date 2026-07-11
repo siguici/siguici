@@ -37,7 +37,7 @@ export default defineConfig({
         },
       ],
       editLink: {
-        baseUrl: 'https://github.com/siguici/siguici/edit/0.x/docs/',
+        baseUrl: 'https://github.com/siguici/siguici/edit/0.x/doc/',
       },
       sidebar: [
         {
