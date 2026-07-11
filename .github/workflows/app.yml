@@ -80,8 +80,4 @@ jobs:
           cwd: ./app
 
       - name: 📂 Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: siguici
-          entrypoint: out/server/entry.mjs
-          root: app
+        run: deno task deploy

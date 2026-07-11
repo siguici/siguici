@@ -32,7 +32,7 @@
     "check:app": "deno task --cwd app check",
     "check:doc": "deno task --cwd doc check",
     "check": "deno fmt --check && deno check --sloppy-imports && deno lint",
-    "deploy": "deployctl deploy --project=siguici --no-static --include=./app/ ./app/out/server/entry.mjs",
+    "deploy": "deno deploy app --org=sigui --app=emmanuel --prod",
     "dev:app": "deno task --cwd app dev",
     "dev:doc": "deno task --cwd doc dev",
     "fix": "deno lint --fix && deno fmt",
