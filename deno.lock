@@ -3856,10 +3856,20 @@
         "packageJson": {
           "dependencies": [
             "npm:@astrojs/check@~0.9.9",
+            "npm:@astrojs/rss@^4.0.18",
+            "npm:@astrojs/sitemap@^3.7.3",
             "npm:@astrojs/starlight@0.40",
+            "npm:@deno/astro-adapter@~0.5.2",
+            "npm:@tailwindcss/vite@^4.3.1",
+            "npm:@types/node@^24.13.2",
             "npm:astro@^6.4.7",
+            "npm:autoprefixer@^10.5.0",
             "npm:sharp@~0.34.5",
-            "npm:typescript@^5.9.3"
+            "npm:tailwindcss@^4.3.1",
+            "npm:ts-node@^10.9.2",
+            "npm:tslib@^2.8.1",
+            "npm:typescript@^5.9.3",
+            "npm:vite@^7.3.5"
           ]
         }
       }

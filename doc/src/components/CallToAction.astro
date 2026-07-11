@@ -1,0 +1,42 @@
+---
+interface Props {
+	href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a href={href}><slot /></a>
+
+<style>
+  @reference '../design/global.css';
+
+	a {
+		@apply relative flex place-content-center text-center text-xl px-8 py-3 leading-5 gap-3 no-underline rounded-full overflow-hidden whitespace-nowrap text-[var(--accent-text-over)];
+		background: var(--gradient-accent-orange);
+		box-shadow: var(--shadow-md);
+
+		/* Overlay for hover effects. */
+		&::after {
+			@apply absolute inset-0 pointer-events-none mix-blend-overlay content-[''];
+			transition: background-color var(--theme-transition);
+		}
+
+		&:focus::after,
+		&:hover::after {
+			background-color: hsla(var(--gray-999-basis), 0.3);
+		}
+
+		@media (min-width: 20em) {
+			& {
+				@apply text-2xl;
+			}
+		}
+
+		@media (min-width: 50em) {
+			& {
+				@apply py-5 px-10 text-3xl;
+			}
+		}
+	}
+</style>

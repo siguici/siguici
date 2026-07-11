@@ -1,0 +1,143 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+	work: CollectionEntry<'work'>;
+}
+
+const works = await getCollection('work');
+
+const { slug } = Astro.params;
+
+const work = works.find((work) => work.id === slug);
+
+if (!work) {
+	return Astro.redirect('/404/');
+}
+
+const { Content } = await render(work);
+---
+
+<BaseLayout title={work!.data.title} description={work!.data.description}>
+	<div class="stack gap-20">
+		<div class="stack gap-15">
+			<header>
+				<div class="wrapper stack gap-2">
+					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
+					<Hero title={work!.data.title ?? "Sigui's work"} align="start">
+						<div class="details">
+							<div class="tags">
+								{work!.data.tags.map((t) => <Pill>{t}</Pill>)}
+							</div>
+							<p class="description">{work!.data.description}</p>
+						</div>
+					</Hero>
+				</div>
+			</header>
+			<main class="wrapper">
+				<div class="stack gap-10 content">
+					{work!.data.img && <img src={work!.data.img} alt={work!.data.img_alt || ''} />}
+					<div class="content">
+            <Content />
+					</div>
+				</div>
+			</main>
+		</div>
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+@reference '../../design/global.css';
+
+	header {
+		@apply pb-10 border-b border-[var(--gray-800)];
+	}
+
+	.back-link {
+		@apply hidden;
+
+		@media (min-width: 50em) {
+			.back-link {
+				@apply block self-start;
+			}
+		}
+	}
+
+	.details {
+		@apply flex flex-col p-1 gap-6 justify-between items-center;
+
+		@media (min-width: 50em) {
+			& {
+				@apply flex-row gap-10;
+			}
+		}
+	}
+
+	.tags {
+		@apply flex gap-1;
+	}
+
+	.description {
+		@apply text-xl;
+		max-width: 54ch;
+	}
+
+	.content {
+    @apply my-8;
+
+    max-width: 65ch;
+		margin-inline: auto;
+
+		& > :global(* + *) {
+			@apply my-4;
+		}
+
+		& :global(h1),
+		& :global(h2),
+		& :global(h3),
+		& :global(h4),
+		& :global(h5) {
+			@apply my-6 mx-0;
+		}
+
+		& :global(img) {
+			@apply rounded-3xl border border-[var(--gray-800)];
+			box-shadow: var(--shadow-sm);
+			background: var(--gradient-subtle);
+		}
+
+		& :global(blockquote) {
+			@apply text-xl font-semibold leading-5 text-[var(--gray-0)];
+			font-size: var(--text-lg);
+			font-family: var(--font-brand);
+			padding-inline-start: 1.5rem;
+			border-inline-start: 0.25rem solid var(--accent-dark);
+
+			@media (min-width: 50em) {
+				& {
+					@apply text-3xl;
+				}
+			}
+		}
+	}
+
+	.back-link,
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.back-link:hover,
+	.back-link:focus,
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+</style>

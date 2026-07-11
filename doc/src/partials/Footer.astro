@@ -1,0 +1,65 @@
+---
+import Icon from '../components/Icon.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+	<p class="group">
+		<span class="relative">Made with ❤️ by Sigui Kessé Emmanuel</span>
+		<span>&copy; {currentYear} — All rights reserved</span>
+	</p>
+	<p class="socials">
+		<a href="https://twitter.com/siguici"><Icon icon="twitter-logo" size="1.2em" /> <span>Twitter</span></a>
+		<a href="https://github.com/siguici"><Icon icon="github-logo" size="1.2em" /> <span>GitHub</span></a>
+	</p>
+</footer>
+<style>
+  @reference '../design/global.css';
+
+	footer {
+		@apply flex flex-col gap-12 mt-auto py-12 px-8 text-center text-sm;
+		color: var(--gray-400);
+
+		& a {
+			@apply inline-flex underline underline-offset-2 decoration-solid decoration-transparent;
+			color: var(--gray-400);
+			transition: text-decoration-color var(--theme-transition);
+
+			& span {
+				@apply ml-1;
+			}
+		}
+
+		& a:hover,
+		& a:focus {
+			@apply decoration-current;
+		}
+
+		@media (min-width: 50em) {
+			& {
+				@apply flex-row justify-between py-10 px-20;
+			}
+		}
+	}
+
+	.group {
+		@apply flex flex-col gap-1 justify-center items-center;
+
+		@media (min-width: 50em) {
+			& {
+				@apply flex-row flex-wrap;
+			}
+		}
+	}
+
+	.socials {
+		@apply flex justify-center gap-4 flex-wrap;
+
+		@media (min-width: 50em) {
+			& {
+				@apply justify-end;
+			}
+		}
+	}
+</style>

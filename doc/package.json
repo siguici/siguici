@@ -25,6 +25,7 @@
     "check": "astro check",
     "dev": "astro dev",
     "preview": "astro preview",
+    "prod": "./task check && ./task build",
     "start": "astro dev --open",
     "sync": "astro sync"
   },
@@ -35,7 +36,18 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "typescript": "^5.9.3"
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.3",
+    "@deno/astro-adapter": "^0.5.2",
+    "@tailwindcss/vite": "^4.3.1",
+    "@types/node": "^24.13.2",
+    "astro": "^6.4.7",
+    "autoprefixer": "^10.5.0",
+    "tailwindcss": "^4.3.1",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.5"
   },
   "trustedDependencies": [
     "sharp"
