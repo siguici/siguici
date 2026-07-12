@@ -7,9 +7,6 @@ import { app } from './src/config';
 // https://astro.build/config
 export default defineConfig({
   site: app.url,
-  srcDir: './src',
-  outDir: './dist',
-  publicDir: './public',
   compressHTML: true,
   image: {
     service: passthroughImageService(),
