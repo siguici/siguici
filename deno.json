@@ -6,7 +6,7 @@
   "allowScripts": ["npm:esbuild@0.27.7", "npm:sharp@0.34.5"],
   "compilerOptions": {
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
     "lib": [
       "dom",
       "dom.asynciterable",
@@ -15,17 +15,11 @@
       "deno.unstable"
     ]
   },
-  "test": { "include": ["tests/"], "exclude": ["out/"] },
-  "tasks": {
-    "dev": "deno run -A npm:astro dev",
-    "build": "deno run -A npm:astro build",
-    "check": "deno run -A npm:astro check"
-    "serve": "deno run -A out/server/entry.mjs"
-  },
+  "test": { "include": ["tests/"], "exclude": ["dist/"] },
   "imports": {
     "~/": "./",
     "@/": "./src/"
-  }
+  },
   "exclude": [
     "**/dist/**",
     "**/.astro/**",
@@ -43,22 +37,16 @@
     "proseWrap": "preserve"
   },
   "tasks": {
-    "build:app": "deno task --cwd app build",
-    "build:doc": "deno task --cwd doc build",
-    "check:app": "deno task --cwd app check",
-    "check:doc": "deno task --cwd doc check",
-    "check": "deno fmt --check && deno check --sloppy-imports && deno lint",
+    "build": "deno run -A npm:astro build",
+    "check": "deno run -A npm:astro check && deno fmt --check && deno check --sloppy-imports && deno lint",
     "deploy": "deno deploy app --org=sigui --app=emmanuel --prod",
-    "dev:app": "deno task --cwd app dev",
-    "dev:doc": "deno task --cwd doc dev",
-    "fix": "deno lint --fix && deno fmt",
-    "preview:app": "deno task --cwd app preview",
-    "preview:doc": "deno task --cwd doc preview",
-    "prod:app": "deno task --cwd app prod",
-    "serve:app": "deno task --cwd app serve",
-    "start:app": "deno task --cwd app start",
-    "start:doc": "deno task --cwd doc start",
-    "sync:app": "deno task --cwd app sync",
-    "sync:doc": "deno task --cwd doc sync"
+    "dev": "deno run -A npm:astro dev",
+    "fix": "./run sync && deno lint --fix && deno fmt",
+    "preview": "deno run -A npm:astro preview",
+    "prod": "./run check && ./run build",
+    "serve": "deno run -A dist/server/entry.mjs",
+    "start": "deno run -A npm:astro dev --open",
+    "sync": "deno run -A npm:astro sync",
+    "upgrade": "deno run -A npm:@astrojs/upgrade"
   }
 }

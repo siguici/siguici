@@ -16,5 +16,4 @@ export const collections = {
       img_alt: z.string().optional(),
     }),
   }),
-  docs:
 };

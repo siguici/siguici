@@ -19,16 +19,6 @@
     "url": "https://github.com/siguici/siguici",
     "directory": "doc"
   },
-  "scripts": {
-    "astro": "astro",
-    "build": "astro build",
-    "check": "astro check",
-    "dev": "astro dev",
-    "preview": "astro preview",
-    "prod": "./task check && ./task build",
-    "start": "astro dev --open",
-    "sync": "astro sync"
-  },
   "dependencies": {
     "@astrojs/starlight": "^0.40.0",
     "astro": "^6.4.7",
