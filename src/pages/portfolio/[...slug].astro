@@ -10,6 +10,20 @@ interface Props {
 	work: CollectionEntry<'work'>;
 }
 
+// This is a dynamic route that generates a page for every Markdown file in src/content/
+// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
+// https://docs.astro.build/en/guides/routing/#dynamic-routes
+export async function getStaticPaths() {
+  const works = await getCollection('work');
+  return works.map((work) => ({
+    params: { slug: work.id },
+    props: { work },
+  }));
+}
+
+const { work } = Astro.props;
+
+/*
 const works = await getCollection('work');
 
 const { slug } = Astro.params;
@@ -19,6 +33,7 @@ const work = works.find((work) => work.id === slug);
 if (!work) {
 	return Astro.redirect('/404/');
 }
+*/
 
 const { Content } = await render(work);
 ---

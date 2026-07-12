@@ -1,8 +1,6 @@
 import sitemap from '@astrojs/sitemap';
 import starlight from '@astrojs/starlight';
-import deno from '@deno/astro-adapter';
 import tailwindcss from '@tailwindcss/vite';
-import type { AstroIntegration } from 'astro';
 import { defineConfig, passthroughImageService } from 'astro/config';
 import { app } from './src/config';
 
@@ -13,11 +11,9 @@ export default defineConfig({
   outDir: './dist',
   publicDir: './public',
   compressHTML: true,
-  output: 'server',
   image: {
     service: passthroughImageService(),
   },
-  adapter: deno() as AstroIntegration,
   legacy: {
     collectionsBackwardsCompat: true,
   },

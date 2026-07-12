@@ -28,7 +28,6 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.3",
-    "@deno/astro-adapter": "^0.5.2",
     "@tailwindcss/vite": "^4.3.1",
     "@types/node": "^24.13.2",
     "astro": "^6.4.7",
