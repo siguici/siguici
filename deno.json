@@ -3,14 +3,30 @@
   "nodeModulesDir": "auto",
   "lock": true,
   "unstable": ["kv"],
-  "workspace": ["./app", "./doc"],
   "allowScripts": ["npm:esbuild@0.27.7", "npm:sharp@0.34.5"],
   "compilerOptions": {
     "strict": true,
     "skipLibCheck": true
+    "lib": [
+      "dom",
+      "dom.asynciterable",
+      "dom.iterable",
+      "deno.ns",
+      "deno.unstable"
+    ]
   },
+  "test": { "include": ["tests/"], "exclude": ["out/"] },
+  "tasks": {
+    "dev": "deno run -A npm:astro dev",
+    "build": "deno run -A npm:astro build",
+    "check": "deno run -A npm:astro check"
+    "serve": "deno run -A out/server/entry.mjs"
+  },
+  "imports": {
+    "~/": "./",
+    "@/": "./src/"
+  }
   "exclude": [
-    "**/out/**",
     "**/dist/**",
     "**/.astro/**",
     "**/pagefind/**"

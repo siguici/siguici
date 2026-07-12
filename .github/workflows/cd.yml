@@ -1,13 +1,9 @@
-name: Doc
+name: CD
 
 on:
   push:
     branches:
       - main
-
-    paths:
-      - .github/workflows/*
-      - doc/**
 
   workflow_dispatch:
 
@@ -16,10 +12,6 @@ permissions:
   pages: write
   id-token: write
   actions: read
-
-defaults:
-  run:
-    working-directory: ./doc
 
 jobs:
   build:
@@ -30,7 +22,7 @@ jobs:
         operating-system: [ubuntu-latest]
         deno-version: [2.9]
 
-    name: 📦️ Building @siguici's assets on Deno-${{ matrix.deno-version }} under ${{ matrix.operating-system }}
+    name: 📦️ Building @siguici's pages
 
     steps:
       - name: 🚚 Get latest code
@@ -42,13 +34,12 @@ jobs:
           runtime: deno
           version: ${{ matrix.deno-version }}
           scripts: check,build
-          cwd: ./doc
 
       - name: 🚚 Upload distribution files
         uses: actions/upload-artifact@v7
         with:
           name: dist-files
-          path: doc/dist
+          path: dist
 
   deploy:
     needs: build
@@ -74,7 +65,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: dist-files
-          path: doc/dist
+          path: dist
 
       - name: 🗃️ List distribution files
         run: ls -R dist
@@ -85,6 +76,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: doc/dist
+          publish_dir: dist
           destination_dir: .
           external_repository: siguici/siguici.github.io

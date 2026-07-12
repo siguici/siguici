@@ -10,7 +10,7 @@ import { app } from './src/config';
 export default defineConfig({
   site: app.url,
   srcDir: './src',
-  outDir: './out',
+  outDir: './dist',
   publicDir: './public',
   compressHTML: true,
   output: 'server',
