@@ -35,6 +35,7 @@ export default defineConfig({
         alt: 'S-shaped logo',
       },
       title: 'Sigui Kessé Emmanuel',
+      disable404Route: true,
       social: [
         {
           icon: 'github',
