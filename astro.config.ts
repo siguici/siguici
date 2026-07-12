@@ -80,9 +80,6 @@ export default defineConfig({
     }),
   ],
   vite: {
-    ssr: {
-      noExternal: ['path-to-regexp'],
-    },
     plugins: [tailwindcss()],
   },
 });

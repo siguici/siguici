@@ -45,7 +45,6 @@
     "preview": "deno run -A npm:astro preview",
     "prod": "./run check && ./run build",
     "serve": "deno run -A dist/server/entry.mjs",
-    "start": "deno run -A npm:astro dev --open",
     "sync": "deno run -A npm:astro sync",
     "upgrade": "deno run -A npm:@astrojs/upgrade"
   }
