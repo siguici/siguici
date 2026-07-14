@@ -2,7 +2,7 @@
   "name": "siguici.github.io",
   "type": "module",
   "version": "0.0.0",
-  "description": "📝 Centralized Documentation for Sigui Open-Source Projects.",
+  "description": "Personal website, documentation, and technical knowledge base.",
   "license": "AGPL-3.0-or-later",
   "private": true,
   "publishConfig": {
@@ -12,12 +12,11 @@
   "author": {
     "name": "Sigui Kessé Emmanuel",
     "email": "contact@sigui.ci",
-    "url": "https://sigui.ci"
+    "url": "https://siguici.github.io"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/siguici/siguici",
-    "directory": "doc"
+    "url": "https://github.com/siguici/siguici"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.40.0",
